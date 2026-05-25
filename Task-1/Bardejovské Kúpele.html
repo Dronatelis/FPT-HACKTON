@@ -1,0 +1,1813 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bardejovské Kúpele — Nemocničný informačný systém</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://unpkg.com/alpinejs@3.13.5/dist/cdn.min.js"></script>
+<!-- html2pdf for PDF download of patient documentation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- FPT brand typefaces: Gilroy (headlines) + Graphik (body), served via cdnfonts.com -->
+<link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/graphik" rel="stylesheet">
+<!-- Inter as final fallback for both, in case the CDN above is unreachable -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Graphik', 'Inter', 'ui-sans-serif', 'system-ui'],
+          display: ['Gilroy', 'Gilroy-Bold', 'Inter', 'ui-sans-serif'],
+        },
+        colors: {
+          /* FPT Digital — primary */
+          fdx: {
+            navy:    '#0E2A5E',   /* FDX Navy Blue */
+            navy80:  '#3E547E',
+            navy60:  '#6E7E9E',
+            navy40:  '#9EA9BF',
+            navy20:  '#CFD4DF',
+            maas:    '#001737',   /* FDX Maastricht Blue */
+            char:    '#2D3035',   /* FDX Charcoal */
+            blue:    '#1F5BFF',   /* FDX Blue (secondary) */
+            lblue:   '#62A5FF',   /* FDX Light Blue */
+            cyan:    '#00C8E6',   /* FDX Cyan */
+            smoke:   '#F4F5F7',   /* White Smoke */
+            ink:     '#1A1A1F',   /* Eerie Black */
+          },
+          ink: {
+            50:'#F7F8FA', 100:'#EEF0F4', 200:'#DCE0E8', 300:'#B7BFCC',
+            400:'#8A93A4', 500:'#5F6878', 600:'#444D5E', 700:'#2F3645',
+            800:'#1B2233', 900:'#0E1424',
+          },
+        },
+        boxShadow: {
+          card: '0 1px 2px rgba(14,42,94,.04), 0 1px 3px rgba(14,42,94,.06)',
+          float:'0 14px 36px -14px rgba(14,42,94,.25), 0 2px 6px rgba(14,42,94,.06)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  /* FPT typography
+     · Headlines (Gilroy): -1px tracking for smaller, -2px for larger
+     · Body (Graphik): 0 for paragraphs, -0.2px for hero/lead paragraphs */
+  html, body { font-family: 'Graphik', 'Inter', sans-serif; letter-spacing: 0; }
+  .display     { font-family: 'Gilroy', 'Gilroy-Bold', 'Inter', sans-serif; font-weight: 700; letter-spacing: -1px; }
+  .display-lg  { letter-spacing: -2px; }
+  .hero-p      { letter-spacing: -0.2px; }
+  [x-cloak] { display: none !important; }
+
+  /* FPT brand pattern — overlapping circles */
+  .fpt-pattern {
+    background:
+      radial-gradient(circle at 18% 22%, rgba(0,200,230,.55) 0, rgba(0,200,230,0) 18%),
+      radial-gradient(circle at 30% 40%, rgba(31,91,255,.45) 0, rgba(31,91,255,0) 22%),
+      radial-gradient(circle at 65% 30%, rgba(98,165,255,.40) 0, rgba(98,165,255,0) 20%),
+      radial-gradient(circle at 80% 60%, rgba(0,200,230,.45) 0, rgba(0,200,230,0) 25%),
+      radial-gradient(circle at 50% 80%, rgba(31,91,255,.40) 0, rgba(31,91,255,0) 22%),
+      linear-gradient(135deg, #001737 0%, #0E2A5E 55%, #1F5BFF 100%);
+  }
+  .fpt-rings {
+    position:absolute; inset:0; pointer-events:none; opacity:.55;
+  }
+
+  /* Subtle dotted bg for empty states */
+  .bg-grid { background-image: radial-gradient(rgba(14,42,94,.10) 1px, transparent 1px); background-size: 14px 14px; }
+
+  /* Recording pulse */
+  @keyframes pulseRec { 0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,.55);} 50% { box-shadow: 0 0 0 8px rgba(239,68,68,0);} }
+  .rec-pulse { animation: pulseRec 1.4s ease-out infinite; }
+
+  /* Critical pulse */
+  @keyframes pulseCrit { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+  .crit-pulse { animation: pulseCrit 1.6s ease-in-out infinite; }
+
+  /* Scrollbar */
+  .scroller::-webkit-scrollbar { width:8px; height:8px; }
+  .scroller::-webkit-scrollbar-thumb { background:#B7BFCC; border-radius:8px; }
+  .scroller::-webkit-scrollbar-track { background:transparent; }
+
+  /* Editor focus ring */
+  [contenteditable="true"]:focus { outline: none; box-shadow: inset 0 0 0 2px #62A5FF; border-radius:.5rem; }
+  [contenteditable="true"][data-empty="true"]:empty:before {
+    content: attr(data-placeholder); color:#8A93A4; font-style: italic;
+  }
+
+  /* BP chart bars */
+  .bp-bar { background: linear-gradient(180deg,#1F5BFF,#0E2A5E); border-radius:4px 4px 0 0; }
+
+  /* Sidebar nav active */
+  .nav-link.active { background:#001737; color:#fff; }
+  .nav-link.active .nav-dot { background:#00C8E6; }
+
+  /* Logo cluster (FPT-style overlapping circles) */
+  .logo-mark {
+    display:inline-grid; place-content:center; position:relative;
+  }
+  .logo-mark .c { position:absolute; border-radius:9999px; mix-blend-mode:screen; }
+
+  /* Print: only show the documentation print target. */
+  @media print {
+    body * { visibility: hidden !important; }
+    #print-target, #print-target * { visibility: visible !important; }
+    #print-target {
+      position: absolute !important; left: 0; top: 0; width: 100% !important;
+      padding: 18mm 16mm; background: #fff !important; color: #0E1424 !important;
+      box-shadow: none !important; border: none !important;
+    }
+    .no-print { display: none !important; }
+    @page { size: A4; margin: 0; }
+  }
+</style>
+</head>
+<body class="bg-ink-50 text-fdx-char antialiased min-h-screen">
+
+<div x-data="app()" x-init="init()" x-cloak class="min-h-screen">
+
+  <!-- ============ PRIHLÁSENIE / LOGIN ============ -->
+  <section x-show="view==='login'" class="min-h-screen grid lg:grid-cols-5">
+    <!-- Visual side -->
+    <div class="relative lg:col-span-3 fpt-pattern overflow-hidden hidden lg:block">
+      <!-- Overlapping rings ornament (FPT brand pattern) -->
+      <svg class="fpt-rings" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" fill="none">
+        <g stroke="rgba(255,255,255,.18)" stroke-width="1.2">
+          <circle cx="140" cy="180" r="120"/>
+          <circle cx="220" cy="220" r="120"/>
+          <circle cx="300" cy="160" r="120"/>
+          <circle cx="560" cy="380" r="160"/>
+          <circle cx="640" cy="440" r="160"/>
+          <circle cx="700" cy="320" r="160"/>
+          <circle cx="180" cy="780" r="140"/>
+          <circle cx="280" cy="820" r="140"/>
+        </g>
+        <g stroke="rgba(0,200,230,.55)" stroke-width="1.4">
+          <circle cx="200" cy="200" r="200"/>
+          <circle cx="600" cy="400" r="240"/>
+          <circle cx="240" cy="800" r="220"/>
+        </g>
+      </svg>
+
+      <div class="relative z-10 h-full flex flex-col justify-between p-12 text-white">
+        <!-- FPT + spa lockup -->
+        <div class="flex items-center gap-4">
+          <!-- FPT Digital logo mark (overlapping circles) -->
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#1F5BFF" opacity=".95"/>
+            <circle cx="28" cy="16" r="14" fill="#00C8E6" opacity=".85" style="mix-blend-mode:screen"/>
+            <circle cx="22" cy="28" r="14" fill="#62A5FF" opacity=".85" style="mix-blend-mode:screen"/>
+          </svg>
+          <div class="leading-tight">
+            <div class="display text-base text-white">FPT Digital</div>
+            <div class="text-[10px] text-white/70 tracking-[.25em] uppercase">Healthcare · Slovensko</div>
+          </div>
+          <div class="h-8 w-px bg-white/20 mx-2"></div>
+          <div class="leading-tight">
+            <div class="display text-base">Bardejovské Kúpele</div>
+            <div class="text-[10px] text-white/70 tracking-[.2em] uppercase">Kúpele &amp; Nemocnica · est. 1505</div>
+          </div>
+        </div>
+
+        <div class="max-w-xl">
+          <div class="text-white/70 text-xs uppercase tracking-[.25em] mb-4">NIS · v4.2 „Pramenistá voda"</div>
+          <h1 class="display display-lg text-5xl xl:text-6xl leading-[1.02] text-white">Liečivá starostlivosť,<br/>zaznamenaná s rovnakou starostlivosťou.</h1>
+          <p class="hero-p mt-6 text-white/80 text-base leading-relaxed max-w-lg">Jedno pracovné prostredie pre triáž, plánovanie balneoterapie a prepúšťanie — prepojené s <span class="font-semibold text-white">eZdravím</span> a vnútornou lekárňou.</p>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs text-white/60 flex-wrap">
+          <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved"></i> Certifikované NCZI</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-link"></i> Pripojené na eZdravie</div>
+          <div class="flex items-center gap-2"><i class="fa-solid fa-lock"></i> Šifrovanie AES‑256</div>
+          <div class="flex items-center gap-2 ml-auto"><span>Powered by</span> <span class="text-white font-semibold">FPT Digital</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form side -->
+    <div class="lg:col-span-2 flex items-center justify-center p-8 bg-white">
+      <div class="w-full max-w-sm">
+        <div class="lg:hidden flex items-center gap-3 mb-10">
+          <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+            <circle cx="16" cy="16" r="14" fill="#1F5BFF"/>
+            <circle cx="28" cy="16" r="14" fill="#00C8E6" opacity=".8"/>
+            <circle cx="22" cy="28" r="14" fill="#62A5FF" opacity=".8"/>
+          </svg>
+          <div class="display text-lg text-fdx-navy">Bardejovské Kúpele</div>
+        </div>
+
+        <div class="text-xs uppercase tracking-[.25em] text-fdx-blue font-semibold mb-3">Prihlásenie</div>
+        <h2 class="display display-lg text-3xl leading-tight mb-2 text-fdx-maas">Vitajte späť, doktorka.</h2>
+        <p class="text-ink-500 text-sm mb-8">Utorok — 14 pacientov v dnešnom rozpise.</p>
+
+        <form class="space-y-4" @submit.prevent="view='dashboard'">
+          <label class="block">
+            <span class="text-xs font-semibold text-ink-700 uppercase tracking-wide">Používateľské meno</span>
+            <div class="mt-1.5 relative">
+              <i class="fa-regular fa-user absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-400 text-sm"></i>
+              <input value="dr.kovacova" class="w-full pl-10 pr-3 py-3 rounded-xl border border-ink-200 bg-ink-50 focus:bg-white focus:border-fdx-blue focus:ring-2 focus:ring-fdx-blue/15 outline-none text-sm" />
+            </div>
+          </label>
+
+          <label class="block">
+            <span class="text-xs font-semibold text-ink-700 uppercase tracking-wide flex items-center justify-between">
+              Heslo
+              <a class="text-fdx-blue normal-case tracking-normal font-medium hover:underline">Zabudnuté?</a>
+            </span>
+            <div class="mt-1.5 relative">
+              <i class="fa-solid fa-lock absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-400 text-sm"></i>
+              <input type="password" value="••••••••••" class="w-full pl-10 pr-3 py-3 rounded-xl border border-ink-200 bg-ink-50 focus:bg-white focus:border-fdx-blue focus:ring-2 focus:ring-fdx-blue/15 outline-none text-sm tracking-widest" />
+            </div>
+          </label>
+
+          <button type="submit" class="w-full py-3 rounded-xl bg-fdx-navy hover:bg-fdx-maas transition text-white font-semibold text-sm shadow-card">
+            Prihlásiť sa <i class="fa-solid fa-arrow-right ml-1"></i>
+          </button>
+        </form>
+
+        <div class="flex items-center gap-3 my-5">
+          <div class="h-px bg-ink-200 flex-1"></div>
+          <span class="text-xs text-ink-400 uppercase tracking-widest">alebo</span>
+          <div class="h-px bg-ink-200 flex-1"></div>
+        </div>
+
+        <button @click="view='dashboard'" class="group w-full py-4 rounded-xl border-2 border-dashed border-fdx-blue/40 hover:border-fdx-blue hover:bg-fdx-blue/5 transition text-left flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-fdx-blue/10 grid place-content-center text-fdx-blue group-hover:bg-fdx-blue group-hover:text-white transition">
+            <i class="fa-solid fa-id-badge text-lg"></i>
+          </div>
+          <div class="flex-1">
+            <div class="text-sm font-semibold text-fdx-maas">Priložte RFID kartu</div>
+            <div class="text-xs text-ink-500">Priložte zamestnaneckú kartu k čítačke</div>
+          </div>
+          <i class="fa-solid fa-wifi text-fdx-cyan -rotate-90"></i>
+        </button>
+
+        <div class="mt-10 text-[11px] text-ink-400 flex items-center justify-between">
+          <span>© 2026 Bardejovské Kúpele a.s.</span>
+          <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Systémy v poriadku</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ APP SHELL ============ -->
+  <div x-show="view!=='login'" class="flex min-h-screen">
+
+    <!-- Sidebar -->
+    <aside
+      :class="mobileNav ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'"
+      class="fixed lg:static z-40 inset-y-0 left-0 w-72 bg-fdx-maas text-ink-200 flex flex-col transition-transform">
+      <div class="px-5 py-5 flex items-center gap-3 border-b border-white/5">
+        <svg width="36" height="36" viewBox="0 0 44 44" fill="none">
+          <circle cx="16" cy="16" r="14" fill="#1F5BFF"/>
+          <circle cx="28" cy="16" r="14" fill="#00C8E6" opacity=".85" style="mix-blend-mode:screen"/>
+          <circle cx="22" cy="28" r="14" fill="#62A5FF" opacity=".85" style="mix-blend-mode:screen"/>
+        </svg>
+        <div>
+          <div class="display text-white text-base leading-tight">Bardejovské Kúpele</div>
+          <div class="text-[10px] text-ink-400 uppercase tracking-[.25em]">Kúpele · Nemocnica</div>
+        </div>
+        <button class="lg:hidden ml-auto text-ink-400" @click="mobileNav=false"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- User -->
+      <div class="px-3 py-4 border-b border-white/5">
+        <div class="flex items-center gap-3 p-2 rounded-xl hover:bg-white/5 cursor-pointer">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-fdx-cyan to-fdx-blue grid place-content-center text-white font-semibold text-sm">EK</div>
+          <div class="flex-1 min-w-0">
+            <div class="text-sm font-semibold text-white truncate">MUDr. Eva Kováčová</div>
+            <div class="text-[11px] text-ink-400 truncate">Vnútorné lekárstvo · Oddelenie B</div>
+          </div>
+          <i class="fa-solid fa-chevron-down text-ink-400 text-xs"></i>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <nav class="p-3 space-y-1 flex-1">
+        <div class="text-[10px] uppercase tracking-[.25em] text-ink-500 px-3 mb-2 mt-1">Pracovisko</div>
+        <template x-for="item in nav" :key="item.id">
+          <button @click="goTo(item.id)"
+                  :disabled="(item.id==='patient' || item.id==='procedures') && !patientLoaded"
+                  :title="(item.id==='patient' || item.id==='procedures') && !patientLoaded ? 'Najprv vyberte pacienta v Nástenke (Vyšetriť)' : ''"
+                  class="nav-link w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition"
+                  :class="[
+                    view===item.id ? 'active' : '',
+                    ((item.id==='patient' || item.id==='procedures') && !patientLoaded)
+                      ? 'opacity-40 cursor-not-allowed'
+                      : 'hover:bg-white/5'
+                  ]">
+            <span class="nav-dot w-1.5 h-1.5 rounded-full bg-ink-600"></span>
+            <i :class="item.icon" class="w-5 text-center text-ink-400"></i>
+            <span x-text="item.label" class="font-medium">Nástenka</span>
+            <i x-show="(item.id==='patient' || item.id==='procedures') && !patientLoaded"
+               class="fa-solid fa-lock ml-auto text-[10px] text-ink-500"></i>
+            <span x-show="item.badge && !((item.id==='patient' || item.id==='procedures') && !patientLoaded)"
+                  class="ml-auto text-[10px] px-1.5 py-0.5 rounded-full bg-rose-500/20 text-rose-300 font-semibold" x-text="item.badge"></span>
+          </button>
+        </template>
+
+        <div class="text-[10px] uppercase tracking-[.25em] text-ink-500 px-3 mb-2 mt-6">Nástroje</div>
+        <button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-white/5 text-ink-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-ink-600"></span>
+          <i class="fa-solid fa-flask w-5 text-center text-ink-400"></i> Laboratórne objednávky
+        </button>
+        <button class="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-white/5 text-ink-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-ink-600"></span>
+          <i class="fa-solid fa-message w-5 text-center text-ink-400"></i> Správy
+          <span class="ml-auto text-[10px] px-1.5 py-0.5 rounded-full bg-white/10 text-ink-200 font-semibold">3</span>
+        </button>
+      </nav>
+
+      <!-- Mineral water card -->
+      <div class="m-3 p-4 rounded-xl bg-gradient-to-br from-fdx-blue to-fdx-navy text-white relative overflow-hidden">
+        <i class="fa-solid fa-droplet absolute -right-3 -bottom-3 text-7xl text-white/10"></i>
+        <div class="text-[10px] uppercase tracking-[.25em] text-white/70">Dnešný prameň</div>
+        <div class="display text-lg leading-tight mt-0.5">Alžbeta · 14 °C</div>
+        <div class="text-[11px] text-white/70 mt-1">Bikarbonátová, bohatá na železo</div>
+        <button class="mt-3 text-[11px] font-semibold inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-white/15 hover:bg-white/25">
+          Denný report <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        </button>
+      </div>
+
+      <div class="px-5 pb-4 text-[10px] text-ink-500 flex items-center gap-2">
+        <span>Powered by</span>
+        <span class="display text-white text-xs">FPT Digital</span>
+      </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div x-show="mobileNav" @click="mobileNav=false" class="fixed inset-0 z-30 bg-fdx-maas/60 lg:hidden"></div>
+
+    <!-- Main -->
+    <main class="flex-1 min-w-0 flex flex-col">
+      <!-- Top bar -->
+      <header class="h-16 border-b border-ink-200 bg-white px-5 lg:px-8 flex items-center gap-4 sticky top-0 z-20">
+        <button class="lg:hidden text-ink-700 -ml-1 p-2" @click="mobileNav=true"><i class="fa-solid fa-bars"></i></button>
+
+        <div class="hidden md:flex items-center gap-2 text-sm text-ink-500">
+          <i class="fa-regular fa-calendar text-ink-400"></i>
+          <span>Utorok, 21. mája 2026</span>
+          <span class="text-ink-300">·</span>
+          <span class="font-semibold text-ink-800">Týždeň 21</span>
+        </div>
+
+        <div class="ml-auto flex items-center gap-2">
+          <div class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-ink-100 text-sm text-ink-500 w-72">
+            <i class="fa-solid fa-magnifying-glass text-ink-400"></i>
+            <input placeholder="Hľadať pacienta, ID, liek…" class="bg-transparent outline-none flex-1 text-ink-700 placeholder-ink-400" />
+            <kbd class="text-[10px] text-ink-400 border border-ink-300 px-1 rounded">⌘K</kbd>
+          </div>
+
+          <button class="relative w-10 h-10 grid place-content-center rounded-lg hover:bg-ink-100 text-ink-600">
+            <i class="fa-regular fa-bell"></i>
+            <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
+          </button>
+          <button class="w-10 h-10 grid place-content-center rounded-lg hover:bg-ink-100 text-ink-600">
+            <i class="fa-regular fa-circle-question"></i>
+          </button>
+          <div class="h-8 w-px bg-ink-200 mx-1"></div>
+          <button @click="view='login'" class="flex items-center gap-2 pr-2 pl-1 py-1 rounded-lg hover:bg-ink-100">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-fdx-cyan to-fdx-blue grid place-content-center text-white font-semibold text-xs">EK</div>
+            <span class="hidden sm:inline text-sm font-medium text-fdx-maas">MUDr. Kováčová</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- ============ DASHBOARD / NÁSTENKA ============ -->
+      <section x-show="view==='dashboard'" class="p-6 lg:p-8 scroller overflow-auto">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <div class="text-xs uppercase tracking-[.25em] text-fdx-blue font-semibold mb-1">Triážna tabuľa</div>
+            <h1 class="display display-lg text-3xl lg:text-4xl text-fdx-maas">Dobré ráno, Eva.</h1>
+            <p class="text-ink-500 text-sm mt-1">14 pacientov v rozpise · 3 čakajú na vyšetrenie · 1 kritické upozornenie.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="px-3.5 py-2 rounded-lg border border-ink-200 text-sm font-medium text-ink-700 hover:bg-ink-100 flex items-center gap-2">
+              <i class="fa-solid fa-filter text-ink-400"></i> Oddelenie B <i class="fa-solid fa-chevron-down text-ink-400 text-[10px]"></i>
+            </button>
+            <button class="px-3.5 py-2 rounded-lg bg-fdx-navy text-white text-sm font-semibold hover:bg-fdx-maas flex items-center gap-2 shadow-card">
+              <i class="fa-solid fa-plus"></i> Nové prijatie
+            </button>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <!-- Patients Handled -->
+          <div class="bg-white rounded-xl border border-ink-200 p-5 shadow-card relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="text-xs uppercase tracking-[.2em] text-ink-500 font-semibold">Vybavení pacienti</div>
+                <div class="display text-4xl mt-2 text-fdx-maas">11<span class="text-ink-300 text-2xl">/14</span></div>
+                <div class="text-xs text-emerald-600 mt-1 font-medium"><i class="fa-solid fa-arrow-up text-[10px]"></i> +18 % oproti včerajšku</div>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 grid place-content-center"><i class="fa-solid fa-stethoscope"></i></div>
+            </div>
+            <div class="mt-4 h-1.5 rounded-full bg-ink-100 overflow-hidden">
+              <div class="h-full bg-emerald-500 rounded-full" style="width:78%"></div>
+            </div>
+          </div>
+
+          <!-- Waiting Room -->
+          <div class="bg-white rounded-xl border border-ink-200 p-5 shadow-card relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="text-xs uppercase tracking-[.2em] text-ink-500 font-semibold">Čakáreň</div>
+                <div class="display text-4xl mt-2 text-fdx-maas">3 <span class="text-ink-400 text-base font-sans align-middle">v rade</span></div>
+                <div class="text-xs text-ink-500 mt-1">Priemerné čakanie <span class="text-fdx-maas font-medium">22 min</span></div>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-amber-50 text-amber-600 grid place-content-center"><i class="fa-regular fa-clock"></i></div>
+            </div>
+            <div class="mt-4 flex -space-x-1.5">
+              <div class="w-7 h-7 rounded-full ring-2 ring-white bg-rose-200 text-rose-700 grid place-content-center text-[10px] font-semibold">JN</div>
+              <div class="w-7 h-7 rounded-full ring-2 ring-white bg-fdx-blue/20 text-fdx-blue grid place-content-center text-[10px] font-semibold">MK</div>
+              <div class="w-7 h-7 rounded-full ring-2 ring-white bg-fdx-cyan/20 text-fdx-navy grid place-content-center text-[10px] font-semibold">AH</div>
+              <div class="w-7 h-7 rounded-full ring-2 ring-white bg-ink-100 text-ink-500 grid place-content-center text-[10px] font-semibold">+0</div>
+            </div>
+          </div>
+
+          <!-- Critical Lab Alerts -->
+          <div class="bg-rose-50/60 rounded-xl border border-rose-200 p-5 shadow-card relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="text-xs uppercase tracking-[.2em] text-rose-700 font-semibold flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-rose-500 crit-pulse"></span> Kritické lab. upozornenia
+                </div>
+                <div class="display text-4xl mt-2 text-rose-700">1</div>
+                <div class="text-xs text-rose-700/80 mt-1">Jozef Novák · K⁺ 6,4 mmol/l</div>
+              </div>
+              <div class="w-10 h-10 rounded-lg bg-rose-100 text-rose-600 grid place-content-center"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            </div>
+            <button class="mt-3 text-xs font-semibold text-rose-700 hover:underline inline-flex items-center gap-1">Skontrolovať teraz <i class="fa-solid fa-arrow-right text-[10px]"></i></button>
+          </div>
+        </div>
+
+        <!-- Waiting Room table -->
+        <div class="bg-white rounded-xl border border-ink-200 shadow-card">
+          <div class="px-5 py-4 flex items-center justify-between border-b border-ink-200">
+            <div>
+              <h2 class="font-semibold text-fdx-maas display">Čakáreň</h2>
+              <div class="text-xs text-ink-500">Vyšetrovňa 2 · automatická aktualizácia každých 30 s</div>
+            </div>
+            <div class="flex items-center gap-1 text-xs">
+              <button class="px-2.5 py-1 rounded-md bg-ink-100 text-fdx-maas font-medium">Všetci <span class="text-ink-400">3</span></button>
+              <button class="px-2.5 py-1 rounded-md text-ink-500 hover:bg-ink-100">Prijatia</button>
+              <button class="px-2.5 py-1 rounded-md text-ink-500 hover:bg-ink-100">Kontroly</button>
+              <button class="px-2.5 py-1 rounded-md text-ink-500 hover:bg-ink-100">Prepustenia</button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-left text-[11px] uppercase tracking-[.2em] text-ink-500 bg-ink-50 border-b border-ink-200">
+                  <th class="px-5 py-3 font-semibold">Čas</th>
+                  <th class="px-5 py-3 font-semibold">Pacient</th>
+                  <th class="px-5 py-3 font-semibold">Dôvod</th>
+                  <th class="px-5 py-3 font-semibold">Fáza</th>
+                  <th class="px-5 py-3 font-semibold">Stav</th>
+                  <th class="px-5 py-3 font-semibold text-right">Akcia</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-ink-100">
+                <!-- Jozef -->
+                <tr class="hover:bg-ink-50/60 transition">
+                  <td class="px-5 py-4">
+                    <div class="font-semibold text-fdx-maas">09:15</div>
+                    <div class="text-xs text-rose-600 font-medium">meškanie +18 min</div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-700 grid place-content-center font-semibold">JN</div>
+                      <div>
+                        <div class="font-semibold text-fdx-maas">Jozef Novák</div>
+                        <div class="text-xs text-ink-500">68 r. · M · ID 470314/8821</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <div class="text-fdx-char">Bolesť na hrudi, odoslanie pre hypertenziu</div>
+                    <div class="text-xs text-ink-500">Od VLD · eZdravie pripravené</div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-fdx-blue/10 text-fdx-blue text-xs font-semibold border border-fdx-blue/20">
+                      <i class="fa-solid fa-door-open text-[10px]"></i> Nové prijatie
+                    </span>
+                  </td>
+                  <td class="px-5 py-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-rose-50 text-rose-700 text-xs font-semibold border border-rose-100">
+                      <span class="w-1.5 h-1.5 rounded-full bg-rose-500 crit-pulse"></span> Oneskorené
+                    </span>
+                  </td>
+                  <td class="px-5 py-4 text-right">
+                    <button @click="examinePatient('jozef')"
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-fdx-navy text-white text-xs font-semibold hover:bg-fdx-maas transition">
+                      Vyšetriť <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Maria -->
+                <tr class="hover:bg-ink-50/60 transition">
+                  <td class="px-5 py-4">
+                    <div class="font-semibold text-fdx-maas">09:45</div>
+                    <div class="text-xs text-ink-500">Načas</div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-fdx-blue/15 text-fdx-blue grid place-content-center font-semibold">MK</div>
+                      <div>
+                        <div class="font-semibold text-fdx-maas">Mária Kollárová</div>
+                        <div class="text-xs text-ink-500">54 r. · Ž · ID 720508/2245</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <div class="text-fdx-char">Priebežná kontrola · deň 8/14</div>
+                    <div class="text-xs text-ink-500">Balneo program: Hypertenzia</div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-fdx-cyan/15 text-fdx-navy text-xs font-semibold border border-fdx-cyan/30">
+                      <i class="fa-solid fa-arrows-rotate text-[10px]"></i> Priebežná
+                    </span>
+                  </td>
+                  <td class="px-5 py-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-700 text-xs font-semibold border border-amber-100">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Čaká
+                    </span>
+                  </td>
+                  <td class="px-5 py-4 text-right">
+                    <button @click="examinePatient('maria')"
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-fdx-navy text-white text-xs font-semibold hover:bg-fdx-maas transition">
+                      Vyšetriť <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Anton -->
+                <tr class="hover:bg-ink-50/60 transition">
+                  <td class="px-5 py-4">
+                    <div class="font-semibold text-fdx-maas">10:10</div>
+                    <div class="text-xs text-ink-500">o 12 min</div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-fdx-cyan/20 text-fdx-navy grid place-content-center font-semibold">AH</div>
+                      <div>
+                        <div class="font-semibold text-fdx-maas">Anton Hric</div>
+                        <div class="text-xs text-ink-500">61 r. · M · ID 650912/1144</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <div class="text-fdx-char">Prepúšťacia epikríza · deň 14/14</div>
+                    <div class="text-xs text-ink-500">Rehab. po MSK · výsledky pripravené</div>
+                  </td>
+                  <td class="px-5 py-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-semibold border border-emerald-100">
+                      <i class="fa-solid fa-door-closed text-[10px]"></i> Prepustenie
+                    </span>
+                  </td>
+                  <td class="px-5 py-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-50 text-sky-700 text-xs font-semibold border border-sky-100">
+                      <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span> Očakávaný
+                    </span>
+                  </td>
+                  <td class="px-5 py-4 text-right">
+                    <button @click="examinePatient('anton')"
+                            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-fdx-navy text-white text-xs font-semibold hover:bg-fdx-maas transition">
+                      Vyšetriť <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="px-5 py-3 border-t border-ink-100 text-xs text-ink-500 flex items-center justify-between">
+            <span>Zobrazuje sa 3 z 3 pacientov v rade</span>
+            <span>Posledná synchronizácia 09:21:08 · eZdravie</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DETAIL PACIENTA ============ -->
+      <section x-show="view==='patient'" class="flex-1 flex flex-col min-h-0">
+        <!-- Patient header -->
+        <div class="px-6 lg:px-8 pt-6 pb-4 border-b border-ink-200 bg-white">
+          <div class="flex flex-wrap items-center gap-4">
+            <button @click="view='dashboard'" class="w-9 h-9 rounded-lg border border-ink-200 hover:bg-ink-100 grid place-content-center text-ink-600">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl grid place-content-center text-lg font-bold"
+                   :class="patient.avatarBg + ' ' + patient.avatarFg" x-text="patient.initials"></div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h1 class="display text-2xl text-fdx-maas" x-text="patient.name"></h1>
+                  <span class="px-2 py-0.5 rounded-md text-[11px] font-semibold border"
+                        :class="patient.scenarioColor" x-text="patient.scenarioLabel"></span>
+                </div>
+                <div class="text-xs text-ink-500 mt-0.5">
+                  <span x-text="patient.demo"></span> · ID <span x-text="patient.id"></span> · Izba <span x-text="patient.room"></span> · Deň <span x-text="patient.day"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vital chips -->
+            <div class="flex items-center gap-2 ml-auto flex-wrap">
+              <div class="px-3 py-2 rounded-lg bg-ink-100 border border-ink-200">
+                <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">TK</div>
+                <div class="text-sm font-bold text-fdx-maas" x-text="patient.bp"></div>
+              </div>
+              <div class="px-3 py-2 rounded-lg bg-ink-100 border border-ink-200">
+                <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">TF</div>
+                <div class="text-sm font-bold text-fdx-maas" x-text="patient.hr + '/min'"></div>
+              </div>
+              <div class="px-3 py-2 rounded-lg bg-ink-100 border border-ink-200">
+                <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">SpO₂</div>
+                <div class="text-sm font-bold text-fdx-maas" x-text="patient.spo2 + ' %'"></div>
+              </div>
+              <div class="px-3 py-2 rounded-lg bg-ink-100 border border-ink-200">
+                <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">Tepl.</div>
+                <div class="text-sm font-bold text-fdx-maas" x-text="patient.temp + ' °C'"></div>
+              </div>
+              <button @click="view='procedures'" class="ml-1 px-3.5 py-2 rounded-lg bg-fdx-blue hover:bg-fdx-navy text-white text-sm font-semibold flex items-center gap-2 shadow-card">
+                <i class="fa-solid fa-spa"></i> Procedúry
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Split -->
+        <div class="flex-1 grid lg:grid-cols-3 min-h-0">
+          <!-- LEFT: Clinical context -->
+          <div class="lg:col-span-1 border-r border-ink-200 bg-ink-50/60 p-5 lg:p-6 scroller overflow-auto space-y-5">
+
+            <!-- Scenario A — Jozef -->
+            <template x-if="patient.scenario==='A'">
+              <div class="rounded-xl border-2 border-dashed border-fdx-blue/40 bg-white p-5">
+                <div class="flex items-center gap-2 text-fdx-blue text-xs font-semibold uppercase tracking-[.2em]">
+                  <i class="fa-solid fa-circle-info"></i> Prázdna interná história
+                </div>
+                <p class="text-sm text-fdx-char mt-2 leading-relaxed">Prvé prijatie. Žiadne predchádzajúce záznamy v Bardejove. Načítavanie z národného zdroja <span class="font-semibold">eZdravie</span>…</p>
+                <div class="mt-3 space-y-2 text-xs">
+                  <div class="flex items-center gap-2 text-emerald-700"><i class="fa-solid fa-check-circle"></i> Demografia importovaná</div>
+                  <div class="flex items-center gap-2 text-emerald-700"><i class="fa-solid fa-check-circle"></i> Zoznam liekov (4 položky)</div>
+                  <div class="flex items-center gap-2 text-emerald-700"><i class="fa-solid fa-check-circle"></i> Odporúčací list od VLD</div>
+                  <div class="flex items-center gap-2 text-amber-600"><i class="fa-solid fa-spinner fa-spin"></i> História lab. nálezov (2024 – 2026)…</div>
+                </div>
+                <button class="mt-4 w-full text-xs font-semibold py-2 rounded-lg bg-fdx-blue text-white hover:bg-fdx-navy">Zobraziť externý záznam</button>
+              </div>
+            </template>
+
+            <!-- Scenario B — Maria BP trend -->
+            <template x-if="patient.scenario==='B'">
+              <div class="rounded-xl border border-ink-200 bg-white p-5">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <div class="text-xs uppercase tracking-[.2em] text-ink-500 font-semibold">Krvný tlak · 8 dní</div>
+                    <div class="display text-xl text-fdx-maas mt-1">Klesajúci trend <span class="text-emerald-600 text-sm font-sans font-semibold">−14 / −6 mmHg</span></div>
+                  </div>
+                  <i class="fa-solid fa-heart-pulse text-fdx-blue text-xl"></i>
+                </div>
+                <div class="mt-4 h-32 flex items-end gap-1.5">
+                  <template x-for="(v,i) in [[156,98],[152,96],[150,95],[148,94],[145,93],[143,90],[142,89],[142,92]]" :key="i">
+                    <div class="flex-1 flex flex-col items-center gap-0.5 group">
+                      <div class="bp-bar w-full" :style="'height:'+ ((v[0]-120)*1.6) +'px'"></div>
+                      <div class="w-full bg-fdx-lblue rounded-b" :style="'height:'+ ((v[1]-70)*1.0) +'px'"></div>
+                    </div>
+                  </template>
+                </div>
+                <div class="flex justify-between text-[10px] text-ink-400 mt-1.5">
+                  <span>Deň 1</span><span>3</span><span>5</span><span>7</span><span>8</span>
+                </div>
+                <div class="flex items-center gap-3 mt-3 text-[11px]">
+                  <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-fdx-navy"></span> Systolický</span>
+                  <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-fdx-lblue"></span> Diastolický</span>
+                </div>
+              </div>
+            </template>
+
+            <!-- Scenario C — Anton outcomes -->
+            <template x-if="patient.scenario==='C'">
+              <div class="rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-5">
+                <div class="flex items-center gap-2 text-emerald-700 text-xs font-semibold uppercase tracking-[.2em]">
+                  <i class="fa-solid fa-trophy"></i> Súhrn prepustenia · úspech
+                </div>
+                <div class="display text-xl text-fdx-maas mt-1">14‑dňový program ukončený</div>
+                <div class="grid grid-cols-2 gap-3 mt-4">
+                  <div class="p-3 rounded-lg bg-white border border-emerald-100">
+                    <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">Hmotnosť</div>
+                    <div class="text-lg font-bold text-fdx-maas">−4,2 kg</div>
+                    <div class="text-[11px] text-emerald-600 font-semibold">88,5 → 84,3 kg</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-white border border-emerald-100">
+                    <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">Pohyblivosť</div>
+                    <div class="text-lg font-bold text-fdx-maas">+40 %</div>
+                    <div class="text-[11px] text-emerald-600 font-semibold">ROM L4‑L5 zlepšená</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-white border border-emerald-100">
+                    <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">VAS bolesť</div>
+                    <div class="text-lg font-bold text-fdx-maas">7 → 2</div>
+                    <div class="text-[11px] text-emerald-600 font-semibold">−71 %</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-white border border-emerald-100">
+                    <div class="text-[10px] uppercase tracking-[.2em] text-ink-500">Spánok</div>
+                    <div class="text-lg font-bold text-fdx-maas">6,8 h</div>
+                    <div class="text-[11px] text-emerald-600 font-semibold">+1,4 h v priemere</div>
+                  </div>
+                </div>
+              </div>
+            </template>
+
+            <!-- Vitals -->
+            <div class="rounded-xl border border-ink-200 bg-white p-5">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-semibold text-fdx-maas text-sm display">Vitálne funkcie · dnes ráno</h3>
+                <button class="text-xs text-fdx-blue font-semibold hover:underline">Všetky merania</button>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3 rounded-lg bg-ink-50">
+                  <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-[.2em] text-ink-500"><i class="fa-solid fa-heart-pulse text-rose-500"></i> Krvný tlak</div>
+                  <div class="text-xl font-bold mt-1 text-fdx-maas" x-text="patient.bp"></div>
+                  <div class="text-[11px]" :class="patient.bpFlag.color" x-text="patient.bpFlag.label"></div>
+                </div>
+                <div class="p-3 rounded-lg bg-ink-50">
+                  <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-[.2em] text-ink-500"><i class="fa-solid fa-heart text-fdx-blue"></i> Tepová frekvencia</div>
+                  <div class="text-xl font-bold mt-1 text-fdx-maas"><span x-text="patient.hr"></span> <span class="text-ink-400 text-xs font-sans">/min</span></div>
+                  <div class="text-[11px] text-emerald-600">Normálny sínusový rytmus</div>
+                </div>
+                <div class="p-3 rounded-lg bg-ink-50">
+                  <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-[.2em] text-ink-500"><i class="fa-solid fa-lungs text-sky-500"></i> SpO₂</div>
+                  <div class="text-xl font-bold mt-1 text-fdx-maas"><span x-text="patient.spo2"></span><span class="text-ink-400 text-xs font-sans"> %</span></div>
+                  <div class="text-[11px] text-emerald-600">Vzduch v miestnosti</div>
+                </div>
+                <div class="p-3 rounded-lg bg-ink-50">
+                  <div class="flex items-center gap-1.5 text-[10px] uppercase tracking-[.2em] text-ink-500"><i class="fa-solid fa-temperature-half text-orange-500"></i> Teplota</div>
+                  <div class="text-xl font-bold mt-1 text-fdx-maas"><span x-text="patient.temp"></span><span class="text-ink-400 text-xs font-sans"> °C</span></div>
+                  <div class="text-[11px] text-ink-500">Tympanická</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Allergies & Diagnoses -->
+            <div class="rounded-xl border border-ink-200 bg-white p-5">
+              <h3 class="font-semibold text-fdx-maas text-sm mb-3 display">Alergie</h3>
+              <div class="flex flex-wrap gap-1.5">
+                <template x-for="a in patient.allergies" :key="a">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-rose-50 text-rose-700 text-xs font-semibold border border-rose-200">
+                    <i class="fa-solid fa-triangle-exclamation text-[10px]"></i> <span x-text="a"></span>
+                  </span>
+                </template>
+                <template x-if="patient.allergies.length===0">
+                  <span class="text-xs text-ink-500">Žiadne známe alergie nezaznamenané.</span>
+                </template>
+              </div>
+              <div class="h-px bg-ink-100 my-4"></div>
+              <h3 class="font-semibold text-fdx-maas text-sm mb-3 display">Diagnózy <span class="text-ink-400 font-normal font-sans">· MKCH‑10</span></h3>
+              <div class="space-y-1.5">
+                <template x-for="d in patient.dx" :key="d.code">
+                  <div class="flex items-center gap-2 text-sm">
+                    <span class="px-2 py-0.5 rounded-md bg-ink-100 text-fdx-maas text-[11px] font-bold font-mono" x-text="d.code"></span>
+                    <span class="text-fdx-char" x-text="d.label"></span>
+                    <span x-show="d.primary" class="ml-auto text-[10px] uppercase tracking-[.2em] text-fdx-blue font-semibold">primárna</span>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Meds -->
+            <div class="rounded-xl border border-ink-200 bg-white p-5">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-semibold text-fdx-maas text-sm display">Aktívna medikácia</h3>
+                <span class="text-xs text-ink-500" x-text="patient.meds.length + ' položiek'"></span>
+              </div>
+              <div class="space-y-2.5">
+                <template x-for="m in patient.meds" :key="m.name">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-fdx-blue/10 text-fdx-blue grid place-content-center text-xs"><i class="fa-solid fa-pills"></i></div>
+                    <div class="flex-1 min-w-0">
+                      <div class="text-sm font-semibold text-fdx-maas" x-text="m.name"></div>
+                      <div class="text-xs text-ink-500" x-text="m.dose"></div>
+                    </div>
+                    <span class="text-[10px] uppercase tracking-[.2em] font-semibold" :class="m.flagColor" x-text="m.flag"></span>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Smart Editor -->
+          <div class="lg:col-span-2 flex flex-col min-h-0">
+            <!-- Toolbar -->
+            <div class="px-6 py-3 border-b border-ink-200 bg-white flex items-center gap-2 flex-wrap">
+              <select class="text-sm font-semibold border border-ink-200 rounded-lg px-3 py-1.5 bg-white text-fdx-maas focus:outline-none focus:ring-2 focus:ring-fdx-blue/15">
+                <option x-text="patient.reportType"></option>
+                <option>Vstupné prijatie</option>
+                <option>Denný priebeh</option>
+                <option>Priebežná kontrola</option>
+                <option>Záverečná epikríza</option>
+              </select>
+              <div class="h-6 w-px bg-ink-200 mx-1"></div>
+              <span class="text-[11px] uppercase tracking-[.2em] text-ink-500 font-semibold mr-1">Vložiť:</span>
+              <button @click="insertBlock('exercise')"
+                      :disabled="hasBlock('exercise')"
+                      :class="hasBlock('exercise') ? 'opacity-40 cursor-not-allowed bg-ink-50' : 'hover:bg-fdx-blue/5 hover:text-fdx-blue'"
+                      class="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-fdx-maas border border-ink-200 flex items-center gap-1.5 transition">
+                🏃 Cvičenie
+                <i x-show="hasBlock('exercise')" class="fa-solid fa-check text-emerald-500 text-[10px]"></i>
+              </button>
+              <button @click="insertBlock('diet')"
+                      :disabled="hasBlock('diet')"
+                      :class="hasBlock('diet') ? 'opacity-40 cursor-not-allowed bg-ink-50' : 'hover:bg-fdx-blue/5 hover:text-fdx-blue'"
+                      class="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-fdx-maas border border-ink-200 flex items-center gap-1.5 transition">
+                🍎 Diéta
+                <i x-show="hasBlock('diet')" class="fa-solid fa-check text-emerald-500 text-[10px]"></i>
+              </button>
+              <button @click="insertBlock('mineral')"
+                      :disabled="hasBlock('mineral')"
+                      :class="hasBlock('mineral') ? 'opacity-40 cursor-not-allowed bg-ink-50' : 'hover:bg-fdx-blue/5 hover:text-fdx-blue'"
+                      class="px-2.5 py-1.5 rounded-lg text-xs font-semibold text-fdx-maas border border-ink-200 flex items-center gap-1.5 transition">
+                💧 Pitná kúra
+                <i x-show="hasBlock('mineral')" class="fa-solid fa-check text-emerald-500 text-[10px]"></i>
+              </button>
+              <div class="ml-auto flex items-center gap-2 text-xs text-ink-500">
+                <i class="fa-solid fa-cloud-arrow-up text-emerald-500"></i> Automaticky uložené pred 12 s
+              </div>
+            </div>
+
+            <!-- Editor body -->
+            <div class="flex-1 overflow-auto scroller bg-white">
+              <div class="max-w-3xl mx-auto p-6 lg:p-10 space-y-7">
+
+                <!-- Subjective -->
+                <div class="group">
+                  <div class="flex items-center justify-between mb-2">
+                    <h2 class="font-semibold text-fdx-maas flex items-center gap-2 display">
+                      <span class="w-6 h-6 rounded-md bg-fdx-blue/10 text-fdx-blue grid place-content-center text-xs font-bold">S</span>
+                      Subjektívne
+                    </h2>
+                    <button @click="toggleDictate('subjective')"
+                            class="text-xs font-semibold flex items-center gap-1.5 px-2.5 py-1 rounded-md border transition"
+                            :class="dictating==='subjective' ? 'bg-rose-50 border-rose-200 text-rose-700 rec-pulse' : 'border-ink-200 text-ink-600 hover:bg-ink-50'">
+                      <span class="w-1.5 h-1.5 rounded-full" :class="dictating==='subjective' ? 'bg-rose-500' : 'bg-ink-400'"></span>
+                      <span x-text="dictating==='subjective' ? 'Nahráva sa…' : '🎙️ Diktovať'"></span>
+                    </button>
+                  </div>
+                  <div contenteditable="true" :data-empty="!patient.note.subjective"
+                       data-placeholder="Symptómy hlásené pacientom, anamnéza súčasného ochorenia…"
+                       class="px-4 py-3 rounded-lg border border-ink-200 min-h-[80px] text-sm leading-relaxed text-fdx-char"
+                       x-html="patient.note.subjective"></div>
+                </div>
+
+                <!-- Objective -->
+                <div class="group">
+                  <div class="flex items-center justify-between mb-2">
+                    <h2 class="font-semibold text-fdx-maas flex items-center gap-2 display">
+                      <span class="w-6 h-6 rounded-md bg-fdx-blue/10 text-fdx-blue grid place-content-center text-xs font-bold">O</span>
+                      Objektívne
+                    </h2>
+                    <button @click="toggleDictate('objective')"
+                            class="text-xs font-semibold flex items-center gap-1.5 px-2.5 py-1 rounded-md border transition"
+                            :class="dictating==='objective' ? 'bg-rose-50 border-rose-200 text-rose-700 rec-pulse' : 'border-ink-200 text-ink-600 hover:bg-ink-50'">
+                      <span class="w-1.5 h-1.5 rounded-full" :class="dictating==='objective' ? 'bg-rose-500' : 'bg-ink-400'"></span>
+                      <span x-text="dictating==='objective' ? 'Nahráva sa…' : '🎙️ Diktovať'"></span>
+                    </button>
+                  </div>
+                  <div contenteditable="true" :data-empty="!patient.note.objective"
+                       data-placeholder="Nálezy fyzikálneho vyšetrenia, vitálne funkcie, lab. výsledky…"
+                       class="px-4 py-3 rounded-lg border border-ink-200 min-h-[80px] text-sm leading-relaxed text-fdx-char"
+                       x-html="patient.note.objective"></div>
+                </div>
+
+                <!-- Assessment -->
+                <div class="group">
+                  <div class="flex items-center justify-between mb-2">
+                    <h2 class="font-semibold text-fdx-maas flex items-center gap-2 display">
+                      <span class="w-6 h-6 rounded-md bg-fdx-blue/10 text-fdx-blue grid place-content-center text-xs font-bold">A</span>
+                      Hodnotenie a plán
+                    </h2>
+                    <button @click="toggleDictate('assessment')"
+                            class="text-xs font-semibold flex items-center gap-1.5 px-2.5 py-1 rounded-md border transition"
+                            :class="dictating==='assessment' ? 'bg-rose-50 border-rose-200 text-rose-700 rec-pulse' : 'border-ink-200 text-ink-600 hover:bg-ink-50'">
+                      <span class="w-1.5 h-1.5 rounded-full" :class="dictating==='assessment' ? 'bg-rose-500' : 'bg-ink-400'"></span>
+                      <span x-text="dictating==='assessment' ? 'Nahráva sa…' : '🎙️ Diktovať'"></span>
+                    </button>
+                  </div>
+                  <div contenteditable="true" :data-empty="!patient.note.assessment"
+                       data-placeholder="Klinický záver, diferenciálna diagnóza, plán liečby…"
+                       class="px-4 py-3 rounded-lg border border-ink-200 min-h-[80px] text-sm leading-relaxed text-fdx-char"
+                       x-html="patient.note.assessment"></div>
+                </div>
+
+                <!-- Injected blocks — each is editable and has its own dictate button.
+                     Only one of each kind (exercise / diet / mineral) can be inserted. -->
+                <template x-for="(b,i) in injected" :key="b.kind">
+                  <div class="rounded-xl border border-fdx-blue/30 bg-fdx-blue/5 p-4">
+                    <div class="flex items-center justify-between mb-2">
+                      <h3 class="font-semibold text-fdx-navy text-sm flex items-center gap-2 display" x-html="b.title"></h3>
+                      <div class="flex items-center gap-1.5">
+                        <button @click="toggleDictate('block-'+b.kind)"
+                                class="text-xs font-semibold flex items-center gap-1.5 px-2.5 py-1 rounded-md border transition"
+                                :class="dictating==='block-'+b.kind ? 'bg-rose-50 border-rose-200 text-rose-700 rec-pulse' : 'border-fdx-blue/30 bg-white text-fdx-navy hover:bg-white'">
+                          <span class="w-1.5 h-1.5 rounded-full" :class="dictating==='block-'+b.kind ? 'bg-rose-500' : 'bg-fdx-blue'"></span>
+                          <span x-text="dictating==='block-'+b.kind ? 'Nahráva sa…' : '🎙️ Diktovať'"></span>
+                        </button>
+                        <button @click="injected.splice(i,1); if(dictating==='block-'+b.kind) dictating=null"
+                                title="Odstrániť blok"
+                                class="w-7 h-7 grid place-content-center rounded-md text-ink-400 hover:text-rose-500 hover:bg-white">
+                          <i class="fa-solid fa-xmark text-xs"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div contenteditable="true"
+                         class="text-sm text-fdx-char leading-relaxed bg-white/70 rounded-lg p-3 border border-fdx-blue/15 focus:bg-white"
+                         x-html="b.body"></div>
+                  </div>
+                </template>
+
+                <!-- Sign-off bar -->
+                <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-ink-100">
+                  <button class="px-4 py-2 rounded-lg bg-fdx-navy hover:bg-fdx-maas text-white text-sm font-semibold shadow-card flex items-center gap-2">
+                    <i class="fa-solid fa-pen-nib"></i> Podpísať a uzamknúť záznam
+                  </button>
+                  <button class="px-3.5 py-2 rounded-lg border border-ink-200 text-sm font-medium text-fdx-maas hover:bg-ink-100">Uložiť koncept</button>
+                  <span class="ml-auto text-xs text-ink-500">Podpísané záznamy sa objavia v eZdraví do 5 minút.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROCEDÚRY ============ -->
+      <section x-show="view==='procedures'" class="p-6 lg:p-8 scroller overflow-auto">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <div class="text-xs uppercase tracking-[.25em] text-fdx-blue font-semibold mb-1">Plánovač balneoterapie</div>
+            <h1 class="display display-lg text-3xl lg:text-4xl text-fdx-maas">Kúpeľné procedúry</h1>
+            <p class="text-ink-500 text-sm mt-1">Pre <span class="font-semibold text-fdx-maas" x-text="patient.name"></span> · Týždeň 18. — 24. mája</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button class="px-3.5 py-2 rounded-lg border border-ink-200 text-sm font-medium text-fdx-maas hover:bg-ink-100 flex items-center gap-2">
+              <i class="fa-solid fa-print text-ink-400"></i> Tlačiť rozvrh
+            </button>
+            <button class="px-3.5 py-2 rounded-lg bg-fdx-navy text-white text-sm font-semibold hover:bg-fdx-maas flex items-center gap-2 shadow-card">
+              <i class="fa-solid fa-calendar-plus"></i> Rezervovať procedúru
+            </button>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <!-- LEFT -->
+          <div class="space-y-5 lg:col-span-1">
+            <!-- Contraindication -->
+            <div class="rounded-xl border border-rose-200 bg-rose-50 p-4">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-600 grid place-content-center"><i class="fa-solid fa-ban"></i></div>
+                <div class="flex-1">
+                  <div class="text-xs uppercase tracking-[.2em] text-rose-700 font-bold">Kontraindikácia</div>
+                  <div class="text-sm font-semibold text-fdx-maas mt-0.5">Hypertenzia II. stupňa — žiadne horúce bahenné zábaly</div>
+                  <div class="text-xs text-rose-700/80 mt-1">Vynechať: rašelinové zábaly &gt; 38 °C · Povolené: chladné CO₂ kúpele, suchá masáž.</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-1.5 mt-3 text-[11px] flex-wrap">
+                <span class="px-2 py-0.5 rounded-md bg-white border border-rose-200 text-rose-700 font-semibold line-through">Rašelinový zábal 40 °C</span>
+                <span class="px-2 py-0.5 rounded-md bg-white border border-rose-200 text-rose-700 font-semibold line-through">Sauna</span>
+                <span class="px-2 py-0.5 rounded-md bg-white border border-emerald-200 text-emerald-700 font-semibold">CO₂ kúpeľ 32 °C</span>
+                <span class="px-2 py-0.5 rounded-md bg-white border border-emerald-200 text-emerald-700 font-semibold">Pitná kúra</span>
+              </div>
+            </div>
+
+            <!-- Packages -->
+            <div class="rounded-xl border border-ink-200 bg-white p-5">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="font-semibold text-fdx-maas display">Kúpeľné balíky</h3>
+                <span class="text-xs text-ink-500">Klepnutím vybrať</span>
+              </div>
+              <div class="space-y-2">
+                <template x-for="(p,i) in packages" :key="p.id">
+                  <button @click="activePackage=p.id"
+                          class="w-full text-left p-3 rounded-lg border transition flex items-start gap-3"
+                          :class="activePackage===p.id ? 'border-fdx-blue bg-fdx-blue/5' : 'border-ink-200 hover:border-fdx-blue/40 hover:bg-ink-50'">
+                    <div class="w-9 h-9 rounded-lg grid place-content-center text-lg" :class="p.bg" x-html="p.icon"></div>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-2">
+                        <span class="font-semibold text-fdx-maas text-sm" x-text="p.name"></span>
+                        <span x-show="p.recommended" class="text-[10px] uppercase tracking-[.2em] font-bold text-fdx-blue">Odporúčané</span>
+                      </div>
+                      <div class="text-xs text-ink-500 mt-0.5" x-text="p.desc"></div>
+                      <div class="text-[11px] text-ink-500 mt-1.5"><i class="fa-regular fa-clock mr-1"></i> <span x-text="p.duration"></span> · <span x-text="p.sessions + ' sedení'"></span></div>
+                    </div>
+                    <i class="fa-solid fa-check text-fdx-blue mt-1" x-show="activePackage===p.id"></i>
+                  </button>
+                </template>
+              </div>
+            </div>
+
+            <!-- This week -->
+            <div class="rounded-xl border border-ink-200 bg-white p-5">
+              <h3 class="font-semibold text-fdx-maas mb-3 text-sm display">Tento týždeň</h3>
+              <div class="space-y-3">
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-ink-600">Vykonané procedúry</span>
+                    <span class="font-semibold text-fdx-maas">9 / 14</span>
+                  </div>
+                  <div class="h-1.5 rounded-full bg-ink-100 overflow-hidden"><div class="h-full bg-emerald-500" style="width:64%"></div></div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-ink-600">Dodržiavanie</span>
+                    <span class="font-semibold text-fdx-maas">93 %</span>
+                  </div>
+                  <div class="h-1.5 rounded-full bg-ink-100 overflow-hidden"><div class="h-full bg-fdx-blue" style="width:93%"></div></div>
+                </div>
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="text-ink-600">Naplánované hodiny</span>
+                    <span class="font-semibold text-fdx-maas">8,5 h</span>
+                  </div>
+                  <div class="h-1.5 rounded-full bg-ink-100 overflow-hidden"><div class="h-full bg-amber-500" style="width:42%"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: timeline -->
+          <div class="lg:col-span-2">
+            <div class="rounded-xl border border-ink-200 bg-white overflow-hidden">
+              <div class="grid grid-cols-[80px_repeat(5,minmax(0,1fr))] border-b border-ink-200 bg-ink-50">
+                <div class="px-3 py-3 text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold">Čas</div>
+                <template x-for="d in days" :key="d.label">
+                  <div class="px-3 py-3 border-l border-ink-200">
+                    <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold" x-text="d.label"></div>
+                    <div class="text-sm font-bold text-fdx-maas flex items-center gap-1.5">
+                      <span x-text="d.date"></span>
+                      <span x-show="d.today" class="text-[9px] font-bold uppercase tracking-[.2em] text-fdx-blue bg-fdx-blue/10 px-1.5 py-0.5 rounded">Dnes</span>
+                    </div>
+                  </div>
+                </template>
+              </div>
+
+              <div class="relative">
+                <template x-for="t in times" :key="t">
+                  <div class="grid grid-cols-[80px_repeat(5,minmax(0,1fr))] border-b border-ink-100 last:border-b-0 min-h-[64px]">
+                    <div class="px-3 py-2 text-xs text-ink-500 font-semibold" x-text="t"></div>
+                    <template x-for="dayIdx in [0,1,2,3,4]" :key="dayIdx">
+                      <div class="border-l border-ink-100 p-1 relative">
+                        <template x-for="p in proceduresAt(dayIdx, t)" :key="p.id">
+                          <div class="rounded-md p-2 text-xs leading-tight border h-full"
+                               :class="p.color">
+                            <div class="font-semibold flex items-center gap-1" x-text="p.title"></div>
+                            <div class="opacity-70 mt-0.5" x-text="p.room"></div>
+                            <span class="inline-flex items-center gap-1 mt-1 px-1.5 py-0.5 rounded text-[10px] font-bold"
+                                  :class="p.badge">
+                              <span x-show="p.status==='done'"><i class="fa-solid fa-check"></i></span>
+                              <span x-show="p.status==='now'" class="w-1.5 h-1.5 rounded-full bg-current crit-pulse"></span>
+                              <span x-text="p.statusLabel"></span>
+                            </span>
+                          </div>
+                        </template>
+                      </div>
+                    </template>
+                  </div>
+                </template>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="mt-4 flex flex-wrap items-center gap-4 text-xs text-ink-600">
+              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-emerald-200 border border-emerald-300"></span> Hotové</span>
+              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-fdx-blue/20 border border-fdx-blue/40"></span> Prebieha</span>
+              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-sky-100 border border-sky-200"></span> Pripravované</span>
+              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-rose-100 border border-rose-200"></span> Kontraindikované</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DOKUMENTÁCIA / HISTORY ============ -->
+      <section x-show="view==='documents'" class="p-6 lg:p-8 scroller overflow-auto">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <div class="text-xs uppercase tracking-[.25em] text-fdx-blue font-semibold mb-1">Archív záznamov</div>
+            <h1 class="display display-lg text-3xl lg:text-4xl text-fdx-maas">Dokumentácia</h1>
+            <p class="text-ink-500 text-sm mt-1">Celá história pacientskej dokumentácie · tlač a PDF na vyžiadanie.</p>
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <div class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-white border border-ink-200 text-sm w-64">
+              <i class="fa-solid fa-magnifying-glass text-ink-400 text-xs"></i>
+              <input x-model="docQuery" placeholder="Hľadať podľa pacienta, typu, lekára…" class="bg-transparent outline-none flex-1 text-fdx-maas placeholder-ink-400 text-sm" />
+            </div>
+            <select x-model="docFilter" class="px-3 py-2 rounded-lg border border-ink-200 text-sm font-medium text-fdx-maas bg-white focus:outline-none focus:ring-2 focus:ring-fdx-blue/15">
+              <option value="all">Všetci pacienti</option>
+              <template x-for="(p, key) in patients" :key="key">
+                <option :value="key" x-text="p.name"></option>
+              </template>
+            </select>
+          </div>
+        </div>
+
+        <!-- Stat strip -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+          <div class="bg-white border border-ink-200 rounded-xl p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold">Záznamov celkom</div>
+            <div class="display text-3xl text-fdx-maas mt-1" x-text="documents.length"></div>
+          </div>
+          <div class="bg-white border border-ink-200 rounded-xl p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold">Podpísané</div>
+            <div class="display text-3xl text-emerald-600 mt-1" x-text="documents.filter(d=>d.status==='signed').length"></div>
+          </div>
+          <div class="bg-white border border-ink-200 rounded-xl p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold">Koncepty</div>
+            <div class="display text-3xl text-amber-600 mt-1" x-text="documents.filter(d=>d.status==='draft').length"></div>
+          </div>
+          <div class="bg-white border border-ink-200 rounded-xl p-4 shadow-card">
+            <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold">Externé (eZdravie)</div>
+            <div class="display text-3xl text-amber-600 mt-1" x-text="documents.filter(d=>d.type.includes('externe')).length"></div>
+          </div>
+        </div>
+
+        <!-- Documents table -->
+        <div class="bg-white rounded-xl border border-ink-200 shadow-card overflow-hidden">
+          <div class="px-5 py-4 border-b border-ink-200 flex items-center justify-between flex-wrap gap-2">
+            <h2 class="display text-lg text-fdx-maas">Záznamy</h2>
+            <div class="text-xs text-ink-500" x-text="filteredDocs.length + ' z ' + documents.length + ' záznamov'"></div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-left text-[11px] uppercase tracking-[.2em] text-ink-500 bg-ink-50 border-b border-ink-200">
+                  <th class="px-5 py-3 font-semibold">Dátum</th>
+                  <th class="px-5 py-3 font-semibold">Pacient</th>
+                  <th class="px-5 py-3 font-semibold">Typ záznamu</th>
+                  <th class="px-5 py-3 font-semibold">Lekár</th>
+                  <th class="px-5 py-3 font-semibold">Stav</th>
+                  <th class="px-5 py-3 font-semibold text-right">Akcie</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-ink-100">
+                <template x-for="d in filteredDocs" :key="d.id">
+                  <tr class="hover:bg-ink-50/60 cursor-pointer transition" @click="openDoc(d.id)">
+                    <td class="px-5 py-4">
+                      <div class="font-semibold text-fdx-maas" x-text="d.date"></div>
+                      <div class="text-xs text-ink-500" x-text="d.time"></div>
+                    </td>
+                    <td class="px-5 py-4">
+                      <div class="font-semibold text-fdx-maas" x-text="d.patient"></div>
+                      <div class="text-xs text-ink-500">ID <span x-text="d.patientId"></span></div>
+                    </td>
+                    <td class="px-5 py-4">
+                      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border" :class="d.typeColor">
+                        <i :class="d.typeIcon" class="text-[10px]"></i> <span x-text="d.type"></span>
+                      </span>
+                      <div class="text-xs text-ink-500 mt-1 max-w-md truncate" x-text="d.summary"></div>
+                    </td>
+                    <td class="px-5 py-4">
+                      <div class="text-fdx-maas font-medium" x-text="d.doctor"></div>
+                      <div class="text-xs text-ink-500" x-text="d.dept"></div>
+                    </td>
+                    <td class="px-5 py-4">
+                      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border"
+                            :class="d.status==='signed' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'">
+                        <i :class="d.status==='signed' ? 'fa-solid fa-circle-check' : 'fa-solid fa-pen'" class="text-[10px]"></i>
+                        <span x-text="d.status==='signed' ? 'Podpísané' : 'Koncept'"></span>
+                      </span>
+                      <div class="text-[11px] text-ink-500 mt-1" x-text="d.pages + ' s.'"></div>
+                    </td>
+                    <td class="px-5 py-4 text-right">
+                      <div class="inline-flex items-center gap-1.5" @click.stop>
+                        <button @click="openDoc(d.id)" title="Otvoriť" class="w-8 h-8 grid place-content-center rounded-md border border-ink-200 text-ink-600 hover:bg-ink-100 hover:text-fdx-navy">
+                          <i class="fa-regular fa-eye text-xs"></i>
+                        </button>
+                        <button @click="printDoc(d.id)" title="Tlačiť" class="w-8 h-8 grid place-content-center rounded-md border border-ink-200 text-ink-600 hover:bg-ink-100 hover:text-fdx-navy">
+                          <i class="fa-solid fa-print text-xs"></i>
+                        </button>
+                        <button @click="downloadPdf(d.id)" title="Stiahnuť PDF"
+                                class="inline-flex items-center gap-1.5 px-2.5 h-8 rounded-md bg-fdx-navy text-white text-xs font-semibold hover:bg-fdx-maas">
+                          <i class="fa-solid fa-file-pdf text-[11px]"></i> PDF
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </template>
+                <template x-if="filteredDocs.length===0">
+                  <tr><td colspan="6" class="px-5 py-10 text-center text-ink-500 text-sm">Žiadne záznamy nezodpovedajú filtru.</td></tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section x-show="view==='inventory'" class="p-6 lg:p-8 scroller overflow-auto">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <div class="text-xs uppercase tracking-[.25em] text-fdx-blue font-semibold mb-1">Lekáreň</div>
+            <h1 class="display display-lg text-3xl lg:text-4xl text-fdx-maas">Sklad liekov</h1>
+            <p class="text-ink-500 text-sm mt-1">42 položiek · 3 kritické · posledná inventúra 06:00.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-ink-200 text-sm w-64">
+              <i class="fa-solid fa-magnifying-glass text-ink-400 text-xs"></i>
+              <input placeholder="Hľadať liek, ATC kód…" class="bg-transparent outline-none flex-1 text-fdx-maas placeholder-ink-400 text-sm" />
+            </div>
+            <button class="px-3.5 py-2 rounded-lg bg-fdx-navy text-white text-sm font-semibold hover:bg-fdx-maas flex items-center gap-2 shadow-card">
+              <i class="fa-solid fa-truck"></i> Doobjednať
+            </button>
+          </div>
+        </div>
+
+        <!-- Filter chips -->
+        <div class="flex items-center gap-2 mb-5 flex-wrap">
+          <button class="px-3 py-1.5 rounded-lg bg-fdx-navy text-white text-xs font-semibold">Všetky <span class="opacity-60">12</span></button>
+          <button class="px-3 py-1.5 rounded-lg bg-white border border-ink-200 text-xs font-semibold text-fdx-maas hover:bg-ink-100">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block mr-1.5"></span> Na sklade <span class="text-ink-400">7</span>
+          </button>
+          <button class="px-3 py-1.5 rounded-lg bg-white border border-ink-200 text-xs font-semibold text-fdx-maas hover:bg-ink-100">
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500 inline-block mr-1.5"></span> Nízky stav <span class="text-ink-400">2</span>
+          </button>
+          <button class="px-3 py-1.5 rounded-lg bg-white border border-ink-200 text-xs font-semibold text-fdx-maas hover:bg-ink-100">
+            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 inline-block mr-1.5"></span> Kritický <span class="text-ink-400">3</span>
+          </button>
+          <button class="px-3 py-1.5 rounded-lg bg-white border border-ink-200 text-xs font-semibold text-fdx-maas hover:bg-ink-100 ml-auto">
+            <i class="fa-solid fa-arrow-down-wide-short text-ink-400 mr-1"></i> Zoradiť: stav skladu
+          </button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          <template x-for="m in inventory" :key="m.name">
+            <div class="rounded-xl border bg-white p-4 hover:shadow-float transition relative overflow-hidden"
+                 :class="m.state==='critical' ? 'border-rose-200' : 'border-ink-200'">
+              <div class="flex items-start justify-between mb-3">
+                <div class="w-11 h-11 rounded-lg grid place-content-center text-lg" :class="m.bg" x-html="m.icon"></div>
+                <span class="text-[10px] uppercase tracking-[.2em] font-bold px-2 py-1 rounded-md"
+                      :class="{
+                        'bg-emerald-50 text-emerald-700 border border-emerald-200': m.state==='ok',
+                        'bg-amber-50 text-amber-700 border border-amber-200': m.state==='low',
+                        'bg-rose-50 text-rose-700 border border-rose-200 crit-pulse': m.state==='critical'
+                      }"
+                      x-text="m.state==='ok' ? 'Na sklade' : m.state==='low' ? 'Nízky' : 'Kritický'"></span>
+              </div>
+              <div class="font-semibold text-fdx-maas text-base leading-tight display" x-text="m.name"></div>
+              <div class="text-xs text-ink-500 mt-0.5" x-text="m.indication"></div>
+
+              <div class="mt-4">
+                <div class="flex items-end justify-between mb-1">
+                  <div>
+                    <span class="text-2xl font-bold text-fdx-maas" x-text="m.units"></span>
+                    <span class="text-xs text-ink-500" x-text="' / ' + m.max + ' ' + m.unitLabel"></span>
+                  </div>
+                  <span class="text-xs font-semibold"
+                        :class="{'text-emerald-600': m.state==='ok','text-amber-600': m.state==='low','text-rose-600': m.state==='critical'}"
+                        x-text="Math.round(m.units / m.max * 100) + ' %'"></span>
+                </div>
+                <div class="h-2 rounded-full bg-ink-100 overflow-hidden">
+                  <div class="h-full rounded-full"
+                       :class="{'bg-emerald-500': m.state==='ok','bg-amber-500': m.state==='low','bg-rose-500 crit-pulse': m.state==='critical'}"
+                       :style="'width:' + Math.max(4, Math.round(m.units / m.max * 100)) + '%'"></div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between mt-3 text-[11px] text-ink-500">
+                <span>ATC <span class="font-mono text-fdx-maas" x-text="m.atc"></span></span>
+                <span>Exp. <span class="text-fdx-maas font-medium" x-text="m.exp"></span></span>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ============ DOCUMENT VIEWER MODAL ============ -->
+  <div x-show="selectedDoc" x-cloak
+       class="fixed inset-0 z-50 bg-fdx-maas/60 backdrop-blur-sm overflow-y-auto no-print"
+       @keydown.escape.window="closeDoc()">
+    <div class="min-h-full flex items-start justify-center p-4 lg:p-10">
+      <div class="relative w-full max-w-3xl">
+        <!-- Toolbar -->
+        <div class="sticky top-0 z-10 bg-white rounded-t-2xl border border-ink-200 border-b-0 px-5 py-3 flex items-center justify-between gap-3 shadow-card">
+          <div class="flex items-center gap-3 min-w-0">
+            <button @click="closeDoc()" class="w-9 h-9 grid place-content-center rounded-lg border border-ink-200 text-ink-600 hover:bg-ink-100">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="min-w-0">
+              <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold" x-text="selectedDoc?.type"></div>
+              <div class="display text-base text-fdx-maas truncate" x-text="selectedDoc?.patient + ' · ' + selectedDoc?.date"></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button @click="printDoc()" class="inline-flex items-center gap-1.5 px-3 h-9 rounded-lg border border-ink-200 text-fdx-maas text-sm font-semibold hover:bg-ink-100">
+              <i class="fa-solid fa-print"></i> <span class="hidden sm:inline">Tlačiť</span>
+            </button>
+            <button @click="downloadPdf()" class="inline-flex items-center gap-1.5 px-3 h-9 rounded-lg bg-fdx-navy text-white text-sm font-semibold hover:bg-fdx-maas">
+              <i class="fa-solid fa-file-pdf"></i> <span class="hidden sm:inline">Stiahnuť PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Printable / exportable document -->
+        <div id="print-target" x-show="selectedDoc"
+             class="bg-white rounded-b-2xl border border-ink-200 shadow-float px-8 py-10 lg:px-12 lg:py-14 text-fdx-char">
+          <!-- Letterhead -->
+          <header class="flex items-start justify-between gap-6 pb-6 border-b-2 border-fdx-navy">
+            <div class="flex items-center gap-4">
+              <svg width="48" height="48" viewBox="0 0 44 44" fill="none">
+                <circle cx="16" cy="16" r="14" fill="#1F5BFF"/>
+                <circle cx="28" cy="16" r="14" fill="#00C8E6" opacity=".75"/>
+                <circle cx="22" cy="28" r="14" fill="#62A5FF" opacity=".75"/>
+              </svg>
+              <div>
+                <div class="display display-lg text-2xl text-fdx-maas leading-tight">Bardejovské Kúpele, a.s.</div>
+                <div class="text-xs text-ink-500 mt-0.5">Kúpele a nemocnica · Špitálska 11, 086 31 Bardejovské Kúpele</div>
+                <div class="text-[11px] text-ink-500">IČO 31650502 · IČZ 70720000401 · Tel. +421 54 477 2300</div>
+              </div>
+            </div>
+            <div class="text-right shrink-0">
+              <div class="text-[10px] uppercase tracking-[.25em] text-ink-500 font-semibold">Zdravotný záznam</div>
+              <div class="display text-base text-fdx-maas mt-0.5" x-text="selectedDoc?.type"></div>
+              <div class="text-[11px] text-ink-500" x-text="'Č. záznamu: ' + (selectedDoc?.id || '').toUpperCase()"></div>
+            </div>
+          </header>
+
+          <!-- Patient info -->
+          <section class="grid grid-cols-2 gap-6 py-6 border-b border-ink-200">
+            <div>
+              <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold mb-1">Pacient</div>
+              <div class="display text-xl text-fdx-maas" x-text="selectedDoc?.patient"></div>
+              <div class="text-sm text-ink-600" x-text="'ID: ' + (selectedDoc?.patientId || '')"></div>
+              <template x-if="selectedDoc && patients[selectedDoc.patientKey]">
+                <div class="text-sm text-ink-600" x-text="patients[selectedDoc.patientKey].demo"></div>
+              </template>
+            </div>
+            <div>
+              <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold mb-1">Vyhotovené</div>
+              <div class="text-sm text-fdx-maas font-semibold"><span x-text="selectedDoc?.date"></span> · <span x-text="selectedDoc?.time"></span></div>
+              <div class="text-sm text-ink-600" x-text="selectedDoc?.doctor"></div>
+              <div class="text-xs text-ink-500" x-text="selectedDoc?.dept"></div>
+            </div>
+          </section>
+
+          <!-- Body -->
+          <article class="py-6 space-y-5 text-[13px] leading-relaxed">
+            <div class="bg-fdx-blue/5 border-l-4 border-fdx-blue rounded-r-md px-4 py-3">
+              <div class="text-[10px] uppercase tracking-[.2em] text-fdx-blue font-semibold mb-0.5">Súhrn</div>
+              <div class="text-fdx-maas" x-text="selectedDoc?.summary"></div>
+            </div>
+            <template x-for="s in (selectedDoc?.sections || [])" :key="s.h">
+              <div>
+                <h3 class="display text-base text-fdx-maas mb-1.5" x-text="s.h"></h3>
+                <p class="text-fdx-char" x-text="s.p"></p>
+              </div>
+            </template>
+          </article>
+
+          <!-- Footer / signature -->
+          <footer class="grid grid-cols-2 gap-6 mt-8 pt-6 border-t border-ink-200">
+            <div>
+              <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold mb-3">Vyhotovil</div>
+              <div class="border-b border-ink-400 h-12 flex items-end pb-1 italic text-fdx-maas font-semibold" x-text="selectedDoc?.doctor"></div>
+              <div class="text-[11px] text-ink-500 mt-1" x-text="selectedDoc?.dept"></div>
+            </div>
+            <div class="text-right">
+              <div class="text-[10px] uppercase tracking-[.2em] text-ink-500 font-semibold mb-3">Stav záznamu</div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold border"
+                   :class="selectedDoc?.status==='signed' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : 'bg-amber-50 text-amber-700 border-amber-200'">
+                <i :class="selectedDoc?.status==='signed' ? 'fa-solid fa-circle-check' : 'fa-solid fa-pen'" class="text-[10px]"></i>
+                <span x-text="selectedDoc?.status==='signed' ? 'Elektronicky podpísané' : 'Koncept · nepodpísané'"></span>
+              </div>
+              <div class="text-[11px] text-ink-500 mt-2">Strán: <span x-text="selectedDoc?.pages"></span></div>
+            </div>
+          </footer>
+
+          <div class="mt-10 pt-4 border-t border-ink-100 text-[10px] text-ink-400 flex items-center justify-between">
+            <span>Generované systémom Bardejovské Kúpele NIS · Powered by FPT Digital</span>
+            <span x-text="'Vytlačené ' + new Date().toLocaleDateString('sk-SK')"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function app() {
+  return {
+    view: 'login',
+    mobileNav: false,
+    dictating: null,
+    activePackage: 'hypertension',
+    injected: [],   /* [{kind:'exercise'|'diet'|'mineral', title, body}] */
+
+    /* Has the doctor opened a patient yet? Detail pacienta + Procedúry
+       in the sidebar stay locked until this flips true (set in examinePatient). */
+    patientLoaded: false,
+
+    nav: [
+      { id:'dashboard', label:'Nástenka', icon:'fa-solid fa-gauge-high' },
+      { id:'patient',   label:'Detail pacienta', icon:'fa-solid fa-user-doctor' },
+      { id:'procedures',label:'Procedúry', icon:'fa-solid fa-spa' },
+      { id:'documents', label:'Dokumentácia', icon:'fa-solid fa-folder-open' },
+      { id:'inventory', label:'Lekáreň', icon:'fa-solid fa-prescription-bottle-medical', badge:'3' },
+    ],
+
+    patients: {
+      jozef: {
+        scenario:'A', scenarioLabel:'Nové prijatie', scenarioColor:'bg-fdx-blue/10 text-fdx-blue border-fdx-blue/30',
+        name:'Jozef Novák', id:'470314/8821', demo:'68 r. · M', room:'B‑207', day:'1 / 14',
+        initials:'JN', avatarBg:'bg-rose-100', avatarFg:'text-rose-700',
+        bp:'168 / 102', hr:88, spo2:96, temp:'36,8',
+        bpFlag: { label:'Hypertenzia II. stupňa', color:'text-rose-600' },
+        reportType:'Vstupné prijatie',
+        allergies:['Penicilín', 'Jódová kontrastná látka'],
+        dx: [
+          { code:'I10', label:'Esenciálna hypertenzia', primary:true },
+          { code:'E11.9', label:'Diabetes mellitus 2. typu, bez komplikácií' },
+          { code:'E78.5', label:'Hyperlipidémia, nešpecifikovaná' },
+        ],
+        meds: [
+          { name:'Ramipril 5 mg', dose:'1‑0‑0 · p.o.', flag:'doma', flagColor:'text-ink-500' },
+          { name:'Metformín 1000 mg', dose:'1‑0‑1 · p.o.', flag:'doma', flagColor:'text-ink-500' },
+          { name:'Atorvastatín 20 mg', dose:'0‑0‑1 · p.o.', flag:'doma', flagColor:'text-ink-500' },
+          { name:'ASA 100 mg', dose:'1‑0‑0 · p.o.', flag:'doma', flagColor:'text-ink-500' },
+        ],
+        note: { subjective:'', objective:'', assessment:'' }
+      },
+      maria: {
+        scenario:'B', scenarioLabel:'Priebežná kontrola', scenarioColor:'bg-fdx-cyan/15 text-fdx-navy border-fdx-cyan/40',
+        name:'Mária Kollárová', id:'720508/2245', demo:'54 r. · Ž', room:'A‑114', day:'8 / 14',
+        initials:'MK', avatarBg:'bg-fdx-blue/15', avatarFg:'text-fdx-blue',
+        bp:'142 / 92', hr:74, spo2:98, temp:'36,6',
+        bpFlag: { label:'Zlepšenie · pre‑HTN', color:'text-amber-600' },
+        reportType:'Priebežná kontrola',
+        allergies:['Aspirín (mierna urtikária)'],
+        dx:[
+          { code:'I10', label:'Esenciálna hypertenzia', primary:true },
+          { code:'M54.5', label:'Bolesti dolnej časti chrbta' },
+        ],
+        meds:[
+          { name:'Amlodipín 5 mg', dose:'1‑0‑0 · p.o.', flag:'na mieste', flagColor:'text-fdx-blue' },
+          { name:'Mg‑sulfát i.v.', dose:'2 g · 3×/týž.', flag:'kúpele', flagColor:'text-fdx-blue' },
+          { name:'Diosmín 500 mg', dose:'1‑0‑1 · p.o.', flag:'na mieste', flagColor:'text-fdx-blue' },
+        ],
+        note: {
+          subjective:'Pacientka uvádza výrazne zlepšený spánok (priemerne 6,8 h), zmiernenie ranných bolestí hlavy. CO₂ kúpele toleruje dobre, bez závratov po kúpeli. Pokračuje pitná kúra (prameň Alžbeta, 200 ml 3× denne).',
+          objective:'TK 142/92 (pokles zo 156/98 pri prijatí). TF 74/min, pravidelná. Pľúca čisté. Bez periférnych edémov. ROM driekovej chrbtice zlepšená o ~25 % oproti vstupu. Hmotnosť 76,2 kg (−1,8 kg).',
+          assessment:'Hypertenzia reaguje priaznivo na kombinovanú balneo + farmakologickú liečbu. Pokračovať v 5‑dňovom protokole s CO₂ kúpeľmi a suchou masážou. V deň 12 prehodnotiť dávku antihypertenzív. Bez nových kontraindikácií.',
+        }
+      },
+      anton: {
+        scenario:'C', scenarioLabel:'Prepustenie', scenarioColor:'bg-emerald-50 text-emerald-700 border-emerald-200',
+        name:'Anton Hric', id:'650912/1144', demo:'61 r. · M', room:'C‑305', day:'14 / 14',
+        initials:'AH', avatarBg:'bg-fdx-cyan/20', avatarFg:'text-fdx-navy',
+        bp:'128 / 82', hr:68, spo2:99, temp:'36,5',
+        bpFlag: { label:'Normotenzia', color:'text-emerald-600' },
+        reportType:'Záverečná epikríza (prepustenie)',
+        allergies:[],
+        dx:[
+          { code:'M51.1', label:'Postihnutie driekovej platničky s radikulopatiou', primary:true },
+          { code:'M54.4', label:'Lumbago s ischiasom' },
+        ],
+        meds:[
+          { name:'Diclofenac 50 mg', dose:'p.p. · max 2/deň', flag:'prepustenie', flagColor:'text-emerald-700' },
+          { name:'Tolperizón 150 mg', dose:'1‑1‑1 · p.o.', flag:'prepustenie', flagColor:'text-emerald-700' },
+        ],
+        note: {
+          subjective:'Pacient uvádza takmer úplné vymiznutie radikulárnej bolesti dolnej končatiny (VAS 2/10 z 7/10 pri prijatí). Vrátil sa k chôdzi 5 km denne. Spí cez celú noc bez liekov. Veľmi spokojný s pobytom.',
+          objective:'ROM driek. chrbtice: flexia 80° (vstup 40°). Lasègue negat. obojstranne. Hmotnosť 84,3 kg (−4,2 kg). TK 128/82 stabilný bez antihypertenzív. Chôdza normálna, bez antalgickej zložky.',
+          assessment:'Vynikajúca odpoveď na 14‑dňový MSK rehab. program (rašelinové zábaly, podvodná trakcia, Mg pitná kúra). Prepustený v stabilnom stave. Domáci cvičebný program prebraný s pacientom. Kontrola u VLD o 4 týždne; odporúčam zopakovať pobyt o 12 mesiacov pre udržanie efektu.',
+        }
+      },
+    },
+    patient: {},
+
+    packages: [
+      { id:'hypertension', name:'Hypertenzná kúra', desc:'CO₂ kúpele + Mg pitná kúra', duration:'14 dní', sessions:18, icon:'💧', bg:'bg-fdx-blue/15', recommended:true },
+      { id:'msk', name:'MSK rehabilitácia', desc:'Rašelinové zábaly + podvodná trakcia', duration:'14 dní', sessions:22, icon:'🧘', bg:'bg-fdx-cyan/20' },
+      { id:'detox', name:'Detoxikácia a metabolizmus', desc:'Diéta + minerálna voda + sauna', duration:'10 dní', sessions:14, icon:'🍃', bg:'bg-emerald-100' },
+      { id:'respir', name:'Respiračná starostlivosť', desc:'Inhalácie + soľná jaskyňa', duration:'7 dní', sessions:10, icon:'🌬️', bg:'bg-sky-100' },
+    ],
+
+    days: [
+      { label:'Pon', date:'18.' },
+      { label:'Uto', date:'19.' },
+      { label:'Str', date:'20.' },
+      { label:'Štv', date:'21.', today:true },
+      { label:'Pia', date:'22.' },
+    ],
+    times: ['08:00','09:00','10:00','11:00','13:00','14:00','15:00'],
+    schedule: [
+      [0,'09:00','Minerálny kúpeľ','Bazén A · Alžbeta', 'done'],
+      [0,'11:00','Suchá masáž','Kabína 4', 'done'],
+      [0,'14:00','Mg pitná kúra','Pitná hala', 'done'],
+      [1,'08:00','CO₂ kúpeľ','Bazén B', 'done'],
+      [1,'10:00','Inhalácia','Inhalačná hala', 'done'],
+      [1,'15:00','Pilates','Štúdio 1', 'done'],
+      [2,'09:00','Minerálny kúpeľ','Bazén A · Alžbeta', 'done'],
+      [2,'13:00','Podvodná masáž','Kabína 7', 'done'],
+      [3,'08:00','Odber krvi','Laboratórium 1', 'done'],
+      [3,'09:00','Vyšetrenie · MUDr. Kováčová','B‑207', 'now'],
+      [3,'11:00','CO₂ kúpeľ','Bazén B', 'upcoming'],
+      [3,'14:00','Mg pitná kúra','Pitná hala', 'upcoming'],
+      [3,'15:00','Pilates','Štúdio 1', 'upcoming'],
+      [4,'09:00','Minerálny kúpeľ','Bazén A · Alžbeta', 'upcoming'],
+      [4,'10:00','Rašelinový zábal 40 °C','Zábalovňa 2', 'contra'],
+      [4,'13:00','Suchá masáž','Kabína 4', 'upcoming'],
+    ],
+
+    /* ============ DOCUMENTATION HISTORY ============ */
+    selectedDoc: null,
+    docFilter: 'all',    /* 'all' | patient key */
+    docQuery: '',
+
+    documents: [
+      {
+        id:'d-2026-05-21-anton-epi',
+        patientKey:'anton', patient:'Anton Hric', patientId:'650912/1144',
+        type:'Záverečná epikríza', typeIcon:'fa-solid fa-door-closed', typeColor:'text-emerald-700 bg-emerald-50 border-emerald-200',
+        date:'21.05.2026', time:'08:45', doctor:'MUDr. Eva Kováčová', dept:'Vnútorné lekárstvo · Odd. B',
+        status:'draft', pages:3,
+        summary:'Záverečná epikríza po 14‑dňovom MSK rehabilitačnom programe. Výborná odpoveď, plne mobilný.',
+        sections: [
+          { h:'Anamnéza', p:'61‑ročný pacient, hospitalizovaný pre lumbalgiu s ischiasom (M51.1, M54.4). VAS 7/10 pri prijatí, výrazné obmedzenie pohyblivosti L‑Pa. Hypertenzia v anamnéze, na liečbe.' },
+          { h:'Priebeh hospitalizácie', p:'Pacient absolvoval 14‑dňový kúpeľný program: rašelinové zábaly, podvodná trakcia, Mg pitná kúra (prameň Alžbeta, 200 ml 3×/deň). Bez komplikácií. Postupné zlepšovanie ROM L‑Pa, ústup radikulárnej bolesti.' },
+          { h:'Stav pri prepustení', p:'VAS 2/10. ROM L‑Pa: flexia 80° (vstup 40°). Lasègue negat. obojstranne. Hmotnosť 84,3 kg (−4,2 kg). TK 128/82 stabilný. Chôdza normálna.' },
+          { h:'Odporúčania', p:'Pokračovať v domácom cvičebnom programe podľa priloženého plánu. Kontrola u všeobecného lekára o 4 týždne. Pri pretrvávaní/zhoršení odporúčam zopakovať kúpeľný pobyt o 12 mesiacov.' },
+        ]
+      },
+      {
+        id:'d-2026-05-20-maria-prog',
+        patientKey:'maria', patient:'Mária Kollárová', patientId:'720508/2245',
+        type:'Priebežná kontrola', typeIcon:'fa-solid fa-arrows-rotate', typeColor:'text-fdx-navy bg-fdx-cyan/15 border-fdx-cyan/30',
+        date:'20.05.2026', time:'10:12', doctor:'MUDr. Eva Kováčová', dept:'Vnútorné lekárstvo · Odd. B',
+        status:'signed', pages:2,
+        summary:'Priebežná kontrola na 7. deň pobytu. TK klesá, pacientka toleruje balneo dobre.',
+        sections: [
+          { h:'Subjektívne', p:'Pacientka udáva zlepšenie spánku (priemerne 6,8 h), úbytok ranných bolestí hlavy. Pri CO₂ kúpeľoch bez závratov.' },
+          { h:'Objektívne', p:'TK 145/93. TF 76/min. Bez periférnych edémov. Hmotnosť 76,8 kg (−1,2 kg od prijatia).' },
+          { h:'Hodnotenie a plán', p:'Hypertenzia zlepšujúca sa. Pokračovať v 5‑dňovom protokole CO₂ kúpeľov. V deň 12 prehodnotiť dávku antihypertenzív.' },
+        ]
+      },
+      {
+        id:'d-2026-05-18-maria-prog',
+        patientKey:'maria', patient:'Mária Kollárová', patientId:'720508/2245',
+        type:'Priebežná kontrola', typeIcon:'fa-solid fa-arrows-rotate', typeColor:'text-fdx-navy bg-fdx-cyan/15 border-fdx-cyan/30',
+        date:'18.05.2026', time:'09:30', doctor:'MUDr. Eva Kováčová', dept:'Vnútorné lekárstvo · Odd. B',
+        status:'signed', pages:2,
+        summary:'Kontrola na 5. deň. Reaguje priaznivo, prvý pokles TK pozorovaný.',
+        sections: [
+          { h:'Subjektívne', p:'Pacientka bez akútnych ťažkostí. Spánok mierne lepší.' },
+          { h:'Objektívne', p:'TK 150/95. TF 78/min, pravidelná. Pľúca čisté.' },
+          { h:'Hodnotenie a plán', p:'Pokračovať v plánovanom programe bez úprav.' },
+        ]
+      },
+      {
+        id:'d-2026-05-14-maria-lab',
+        patientKey:'maria', patient:'Mária Kollárová', patientId:'720508/2245',
+        type:'Laboratórny nález', typeIcon:'fa-solid fa-flask', typeColor:'text-violet-700 bg-violet-50 border-violet-200',
+        date:'14.05.2026', time:'07:00', doctor:'MUDr. Peter Hudák', dept:'Centrálne laboratórium',
+        status:'signed', pages:1,
+        summary:'Vstupný panel: hematológia, biochémia, lipidové spektrum. Bez kritických hodnôt.',
+        sections: [
+          { h:'Hematológia', p:'Hb 138 g/l · WBC 6,2 · Plt 245 · Hkt 0,41. Bez patologického nálezu.' },
+          { h:'Biochémia', p:'Na 141 · K 4,1 · Urea 5,8 · Kreat. 78 · ALT 21 · AST 19 · CRP 2,1. V referenčných medziach.' },
+          { h:'Lipidové spektrum', p:'Cholesterol 5,8 (↑) · LDL 3,9 (↑) · HDL 1,3 · TAG 1,9. Mierne zvýšené LDL.' },
+        ]
+      },
+      {
+        id:'d-2026-05-13-maria-adm',
+        patientKey:'maria', patient:'Mária Kollárová', patientId:'720508/2245',
+        type:'Vstupné prijatie', typeIcon:'fa-solid fa-door-open', typeColor:'text-fdx-blue bg-fdx-blue/10 border-fdx-blue/30',
+        date:'13.05.2026', time:'13:20', doctor:'MUDr. Eva Kováčová', dept:'Vnútorné lekárstvo · Odd. B',
+        status:'signed', pages:4,
+        summary:'Prijímacia správa pre 14‑dňový kúpeľný pobyt pre arteriálnu hypertenziu.',
+        sections: [
+          { h:'Anamnéza', p:'54‑ročná pacientka prichádza na opakovaný kúpeľný pobyt pre arteriálnu hypertenziu I10. Pred 12 mesiacmi absolvovala podobný program s dobrým efektom. Bez akútnych ťažkostí.' },
+          { h:'Status praesens', p:'TK 156/98. TF 82/min. Vážiteľná osoba, vážená 78,0 kg, BMI 28,4. Pľúca i srdce bez patologického nálezu.' },
+          { h:'Plán', p:'14‑dňový balneo program: CO₂ kúpele, Mg pitná kúra, suchá masáž, pilates. Antihypertenzívna liečba bez úprav.' },
+        ]
+      },
+      {
+        id:'d-2026-05-21-jozef-adm',
+        patientKey:'jozef', patient:'Jozef Novák', patientId:'470314/8821',
+        type:'Vstupné prijatie', typeIcon:'fa-solid fa-door-open', typeColor:'text-fdx-blue bg-fdx-blue/10 border-fdx-blue/30',
+        date:'21.05.2026', time:'09:33', doctor:'MUDr. Eva Kováčová', dept:'Vnútorné lekárstvo · Odd. B',
+        status:'draft', pages:2,
+        summary:'Prijímacia správa — nové prijatie pre hypertenziu, čaká sa na lab. nálezy.',
+        sections: [
+          { h:'Dôvod prijatia', p:'68‑ročný pacient odoslaný od VLD pre nestabilnú hypertenziu (I10), opakované bolesti na hrudi pri záťaži. Pri prijatí TK 168/102.' },
+          { h:'Anamnéza', p:'DM 2. typu (E11.9), hyperlipidémia (E78.5). Lieky: Ramipril 5 mg, Metformín 1000 mg, Atorvastatín 20 mg, ASA 100 mg.' },
+          { h:'Plán', p:'Doplniť EKG, ECHO, lipidové spektrum. Po výsledkoch zvážiť úpravu antihypertenznej liečby a kúpeľný program.' },
+        ]
+      },
+      {
+        id:'d-2026-05-14-anton-adm',
+        patientKey:'anton', patient:'Anton Hric', patientId:'650912/1144',
+        type:'Vstupné prijatie', typeIcon:'fa-solid fa-door-open', typeColor:'text-fdx-blue bg-fdx-blue/10 border-fdx-blue/30',
+        date:'14.05.2026', time:'08:15', doctor:'MUDr. Eva Kováčová', dept:'Vnútorné lekárstvo · Odd. B',
+        status:'signed', pages:3,
+        summary:'Prijatie pre lumbalgiu s ischiasom — plán 14‑dňového MSK programu.',
+        sections: [
+          { h:'Anamnéza', p:'61‑ročný pacient s chronickou lumbalgiou L‑Pa, akútna exacerbácia pred 3 týždňami. VAS 7/10. M51.1, M54.4.' },
+          { h:'Status', p:'Antalgický postoj, obmedzená flexia L‑Pa (40°), Lasègue pozit. PDK 45°. Hmotnosť 88,5 kg, BMI 29,7.' },
+          { h:'Plán', p:'14‑dňový rehabilitačný program: rašelinové zábaly, podvodná trakcia, kineziterapia. Diclofenac p.p., Tolperizón 150 mg 1‑1‑1.' },
+        ]
+      },
+      {
+        id:'d-2025-11-12-maria-prev',
+        patientKey:'maria', patient:'Mária Kollárová', patientId:'720508/2245',
+        type:'Predchádzajúci pobyt', typeIcon:'fa-solid fa-clock-rotate-left', typeColor:'text-ink-700 bg-ink-100 border-ink-200',
+        date:'12.11.2025', time:'14:00', doctor:'MUDr. Jana Janovičová', dept:'Vnútorné lekárstvo · Odd. A',
+        status:'signed', pages:5,
+        summary:'Archivovaný záverečný záznam z 14‑dňového hypertenzného pobytu (11/2025).',
+        sections: [
+          { h:'Epikríza', p:'Pacientka absolvovala plánovaný 14‑dňový kúpeľný pobyt. TK pri prepustení 138/86 (vstup 162/100). Bez komplikácií.' },
+          { h:'Odporúčania', p:'Pokračovať v antihypertenznej liečbe, kontrola u VLD o 3 mesiace. Odporúčam opakovať pobyt o 6 mesiacov.' },
+        ]
+      },
+      {
+        id:'d-2025-03-02-anton-prev',
+        patientKey:'anton', patient:'Anton Hric', patientId:'650912/1144',
+        type:'Predchádzajúci pobyt', typeIcon:'fa-solid fa-clock-rotate-left', typeColor:'text-ink-700 bg-ink-100 border-ink-200',
+        date:'02.03.2025', time:'11:15', doctor:'MUDr. Peter Hudák', dept:'Rehabilitačné odd.',
+        status:'signed', pages:4,
+        summary:'Archivovaný záznam z prvého MSK rehabilitačného pobytu pacienta (3/2025).',
+        sections: [
+          { h:'Epikríza', p:'Pacient absolvoval 10‑dňový rehabilitačný program. VAS klesla zo 6 na 3. ROM L‑Pa zlepšená.' },
+          { h:'Odporúčania', p:'Domáce cvičenie, vyhýbať sa ťažkým bremenám. Kontrola o 6 mesiacov.' },
+        ]
+      },
+      {
+        id:'d-2024-09-15-jozef-ext',
+        patientKey:'jozef', patient:'Jozef Novák', patientId:'470314/8821',
+        type:'Hospitalizácia (externe)', typeIcon:'fa-solid fa-hospital', typeColor:'text-amber-700 bg-amber-50 border-amber-200',
+        date:'15.09.2024', time:'—', doctor:'MUDr. Lukáš Petraš', dept:'Krajská NsP Prešov',
+        status:'signed', pages:6,
+        summary:'Externý záznam z eZdravia — krátka hospitalizácia pre hypertenznú krízu.',
+        sections: [
+          { h:'Dôvod hospitalizácie', p:'Pacient prijatý pre hypertenznú krízu (TK 220/120) so symptomatickou bolesťou hlavy. Vylúčená akútna koronárna príhoda.' },
+          { h:'Priebeh', p:'I.v. nitrátová liečba, postupné zníženie TK. Hospitalizácia 4 dni, bez komplikácií.' },
+          { h:'Prepustenie', p:'Úprava antihypertenznej liečby — pridanie Amlodipínu 5 mg. Odporúčaná dispenzarizácia VLD.' },
+        ]
+      },
+    ],
+
+    openDoc(id) {
+      this.selectedDoc = this.documents.find(d => d.id === id) || null;
+    },
+    closeDoc() { this.selectedDoc = null; },
+
+    get filteredDocs() {
+      const q = (this.docQuery || '').trim().toLowerCase();
+      return this.documents.filter(d => {
+        if (this.docFilter !== 'all' && d.patientKey !== this.docFilter) return false;
+        if (!q) return true;
+        return (d.patient + ' ' + d.type + ' ' + d.doctor + ' ' + d.summary + ' ' + d.date)
+                 .toLowerCase().includes(q);
+      });
+    },
+
+    printDoc(id) {
+      if (id) this.openDoc(id);
+      /* Wait for the modal to render, then print. The @media print
+         rules below hide everything except #print-target. */
+      this.$nextTick(() => {
+        setTimeout(() => window.print(), 60);
+      });
+    },
+
+    downloadPdf(id) {
+      if (id) this.openDoc(id);
+      this.$nextTick(() => {
+        const el = document.getElementById('print-target');
+        if (!el || !window.html2pdf) { window.print(); return; }
+        const filename = ('zaznam-' + (this.selectedDoc?.patient || 'pacient') + '-' + (this.selectedDoc?.date || '') + '.pdf').replace(/\s+/g,'_');
+        window.html2pdf().set({
+          margin:       12,
+          filename:     filename,
+          image:        { type:'jpeg', quality:0.95 },
+          html2canvas:  { scale:2, useCORS:true, backgroundColor:'#ffffff' },
+          jsPDF:        { unit:'mm', format:'a4', orientation:'portrait' },
+        }).from(el).save();
+      });
+    },
+
+    inventory: [
+      { name:'Ramipril 5 mg', indication:'ACE inhibítor · HTN', units:420, max:500, unitLabel:'tabl.', atc:'C09AA05', exp:'06/27', state:'ok', icon:'💊', bg:'bg-fdx-blue/15' },
+      { name:'Metformín 1000 mg', indication:'Antidiabetikum · DM 2', units:680, max:800, unitLabel:'tabl.', atc:'A10BA02', exp:'11/26', state:'ok', icon:'💊', bg:'bg-fdx-blue/15' },
+      { name:'Amlodipín 5 mg', indication:'Blokátor Ca kanálov', units:380, max:500, unitLabel:'tabl.', atc:'C08CA01', exp:'04/27', state:'ok', icon:'💊', bg:'bg-fdx-blue/15' },
+      { name:'Diclofenac 50 mg', indication:'NSAID · bolesť', units:240, max:400, unitLabel:'tabl.', atc:'M01AB05', exp:'09/26', state:'ok', icon:'💊', bg:'bg-amber-100' },
+      { name:'Magnézium sulfát', indication:'i.v. · kardio, kúpele', units:95, max:120, unitLabel:'amp.', atc:'B05XA05', exp:'08/26', state:'ok', icon:'🧪', bg:'bg-emerald-100' },
+      { name:'Tolperizón 150 mg', indication:'Myorelaxans', units:140, max:300, unitLabel:'tabl.', atc:'M03BX04', exp:'12/26', state:'ok', icon:'💊', bg:'bg-fdx-cyan/20' },
+      { name:'Atorvastatín 20 mg', indication:'Statín · lipidy', units:180, max:500, unitLabel:'tabl.', atc:'C10AA05', exp:'02/27', state:'low', icon:'💊', bg:'bg-fdx-blue/15' },
+      { name:'Diosmín 500 mg', indication:'Venotonikum', units:62, max:200, unitLabel:'tabl.', atc:'C05CA53', exp:'07/26', state:'low', icon:'💊', bg:'bg-emerald-100' },
+      { name:'Adrenalín 1 mg/ml', indication:'Núdz. · anafylaxia', units:8, max:30, unitLabel:'amp.', atc:'C01CA24', exp:'03/26', state:'critical', icon:'🚨', bg:'bg-rose-100' },
+      { name:'Heparín 5000 IU', indication:'Antikoagulans', units:14, max:80, unitLabel:'amp.', atc:'B01AB01', exp:'05/26', state:'critical', icon:'🧪', bg:'bg-rose-100' },
+      { name:'Inzulín glargín', indication:'Dlhodobý · DM 2', units:6, max:40, unitLabel:'pero', atc:'A10AE04', exp:'04/26', state:'critical', icon:'💉', bg:'bg-rose-100' },
+      { name:'Hydrokortizón 100 mg', indication:'Steroid · pohotovosť', units:34, max:60, unitLabel:'amp.', atc:'H02AB09', exp:'10/26', state:'ok', icon:'🧪', bg:'bg-amber-100' },
+    ],
+
+    init() {
+      /* Default fallback patient so the Detail view template can render
+         once unlocked; the actual loaded patient is set by examinePatient. */
+      this.patient = this.patients.maria;
+    },
+
+    /* DASHBOARD → straight to detail. */
+    examinePatient(key) {
+      this.patient = this.patients[key];
+      this.injected = [];
+      this.dictating = null;
+      this.activePackage = 'hypertension';
+      this.patientLoaded = true;
+      this.view = 'patient';
+    },
+
+    /* Sidebar router — blocks 'patient' and 'procedures' until a patient is chosen. */
+    goTo(id) {
+      if ((id === 'patient' || id === 'procedures') && !this.patientLoaded) return;
+      this.view = id;
+      this.mobileNav = false;
+    },
+
+    /* Legacy alias, kept so any stray callers still work. */
+    loadPatient(key) { this.examinePatient(key); },
+
+    proceduresAt(dayIdx, time) {
+      return this.schedule
+        .filter(s => s[0]===dayIdx && s[1]===time)
+        .map((s,i) => {
+          const status = s[4];
+          const map = {
+            done:     { color:'bg-emerald-50 border-emerald-200 text-emerald-900', badge:'bg-emerald-200/60 text-emerald-800', statusLabel:'Hotové' },
+            now:      { color:'bg-fdx-blue/10 border-fdx-blue/40 text-fdx-navy',   badge:'bg-fdx-blue/20 text-fdx-navy',        statusLabel:'Prebieha' },
+            upcoming: { color:'bg-sky-50 border-sky-200 text-sky-900',             badge:'bg-sky-100 text-sky-800',             statusLabel:'Pripravované' },
+            contra:   { color:'bg-rose-50 border-rose-200 text-rose-900 line-through opacity-80', badge:'bg-rose-100 text-rose-700', statusLabel:'Kontraind.' },
+          }[status];
+          return {
+            id: dayIdx+'-'+time+'-'+i,
+            title: s[2], room: s[3], status, ...map
+          };
+        });
+    },
+
+    toggleDictate(key) {
+      this.dictating = (this.dictating === key) ? null : key;
+    },
+
+    /* True if a block of this kind is already inserted in the note. */
+    hasBlock(kind) {
+      return this.injected.some(b => b.kind === kind);
+    },
+
+    insertBlock(kind) {
+      if (this.hasBlock(kind)) return;   /* Only one of each is allowed. */
+      const map = {
+        exercise: {
+          kind:'exercise',
+          title:'🏃 Predpis cvičenia',
+          body:`<ul class="list-disc pl-5 space-y-1">
+                  <li><b>Aeróbne:</b> Svižná chôdza 30 min ×5/týž., RPE 11‑13.</li>
+                  <li><b>Silové:</b> 2 série × 10 opakovaní, hlavné svalové skupiny, 2×/týž.</li>
+                  <li><b>Flexibilita:</b> Mobilizácia driekovej chrbtice, denne 10 min.</li>
+                  <li><b>Upozornenie:</b> Vyhnúť sa Valsalvovmu manévru; prerušiť ak STK &gt; 180 mmHg.</li>
+                </ul>`
+        },
+        diet: {
+          kind:'diet',
+          title:'🍎 Diétny plán',
+          body:`<ul class="list-disc pl-5 space-y-1">
+                  <li>DASH režim · 1900 kcal/deň, sodík &lt; 2 g.</li>
+                  <li>5 porcií zeleniny, 4 ovocie; celozrnné obilniny; chudé bielkoviny.</li>
+                  <li>Obmedziť alkohol &lt; 14 g/deň; vyhnúť sa údeninám.</li>
+                  <li>Hydratácia: 1,8 l vody + pitná kúra podľa nižšie uvedeného.</li>
+                </ul>`
+        },
+        mineral: {
+          kind:'mineral',
+          title:'💧 Pitná kúra',
+          body:`<ul class="list-disc pl-5 space-y-1">
+                  <li><b>Prameň:</b> Alžbeta · bikarbonátová, bohatá na železo · 14 °C.</li>
+                  <li><b>Dávka:</b> 200 ml 3× denne, 30 min pred jedlom, pomalými dúškami.</li>
+                  <li><b>Trvanie:</b> Deň 1 – 14 pobytu.</li>
+                  <li><b>Monitoring:</b> Denne hmotnosť, TK, glykémia nalačno.</li>
+                </ul>`
+        }
+      };
+      this.injected.push(map[kind]);
+    },
+  };
+}
+</script>
+</body>
+</html>
