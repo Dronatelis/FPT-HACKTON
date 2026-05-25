@@ -1,0 +1,1051 @@
+﻿id,barcode,recipient_name,address,city_district,package_type,size,dimensions_cm,weight_kg,fragile,priority,payment_method,cod_amount_eur,insurance_value_eur,special_instructions,order_date,status
+1,KE00000179,Vladimír Bogdán,"Cottbuská 71, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,XS,10x10x5,0.46,Áno,Štandard,Dobierka,120.17,1303.27,,2026-05-18,Čaká na doručenie
+2,KE00000243,Patrik Kováčik,"Údolná 115/1, Košice - Lorinčík",Lorinčík,Elektronika,XXL,116x77x67,21.11,Áno,Ekonomický,Platba vopred,,694.47,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+3,KE00000322,Zuzana Nagy,"Šrobárova 138, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,XL,73x55x45,19.97,Nie,Štandard,Dobierka,117.81,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+4,KE00000498,Dávid Kiss,"Poľná 117/24, Košice - Poľov",Poľov,Dokument,M,26x22x17,1.7,Nie,Expres,Platba vopred,,1851.53,Skladovať v chlade,2026-05-11,Čaká na doručenie
+5,KE00000592,Michal Gáborík,"Moldavská 84/50, Košice - Krásna",Krásna,Dokument,XS,11x11x5,0.26,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+6,KE00000690,Adam Máté,"Viničná 68, Košice - Myslava",Myslava,Nábytok,XL,72x54x45,18.78,Nie,Štandard,Firemná faktura,,228.2,,2026-05-17,Čaká na doručenie
+7,KE00000710,Helena Mészáros,"Uralská 17, Košice - Západ",Západ,Balík,XL,72x54x45,17.94,Nie,Expres,Firemná faktura,,324.73,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+8,KE00000849,Igor Krajčí,"Horná 46/7, Košice - Kavečany",Kavečany,Knihy,XXL,120x80x70,17.96,Nie,Expres,Platba vopred,,1858.91,Horná strana nahor,2026-05-13,Čaká na doručenie
+9,KE00000964,Lukáš Vincze,"Trieda SNP 62/6, Košice - Sever",Sever,Náhradný diel,L,56x45x33,14.69,Nie,Expres,Platba vopred,,,,2026-05-14,Čaká na doručenie
+10,KE00001039,Dušan Sándor,"Kyjevská 52/26, Košice - Juh",Juh,Dokument,M,29x24x19,2.83,Áno,Štandard,Dobierka,279.19,1265.89,Nezalomovať,2026-05-15,Čaká na doručenie
+11,KE00001164,Milan Fedor,"Ťahanovská 85, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Nábytok,XXL,119x79x69,31.57,Nie,Štandard,Firemná faktura,,867.79,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+12,KE00001219,Marek Tóth,"Kamenná 14/42, Košice - Lorinčík",Lorinčík,Dokument,L,54x43x32,12.21,Nie,Štandard,Firemná faktura,,,Volať vopred,2026-05-16,Čaká na doručenie
+13,KE00001343,Tereza Kováč,"Slnečná 26, Košice - Myslava",Myslava,Krehký tovar,XS,11x11x5,0.44,Áno,Štandard,Firemná faktura,,1970.76,Doručiť osobne,2026-05-18,Čaká na doručenie
+14,KE00001477,Alžbeta Katona,"Záhradná 109/47, Košice - Myslava",Myslava,Elektronika,XXL,119x79x69,17.6,Áno,Ekonomický,Platba vopred,,958.81,Nezalomovať,2026-05-13,Čaká na doručenie
+15,KE00001582,Richard Szabó,"Lomonosovova 131, Košice - Západ",Západ,Potraviny,XL,66x49x41,26.27,Nie,Štandard,Dobierka,299.29,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+16,KE00001622,Jakub Molnár,"Mníšska 67, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,S,18x13x9,0.44,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+17,KE00001743,Eva Szabó,"Galvaniho 55/9, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,S,18x14x9,0.48,Nie,Expres,Platba vopred,,1757.47,,2026-05-14,Čaká na doručenie
+18,KE00001845,Tibor Király,"Moskovská trieda 142, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,S,21x16x10,0.57,Nie,Štandard,Platba vopred,,,,2026-05-17,Čaká na doručenie
+19,KE00001965,Pavel Kováčik,"Partizánska 86/41, Košice - Sídlisko KVP",Sídlisko KVP,Náhradný diel,XXL,117x78x68,38.23,Áno,Štandard,Platba vopred,,1109.52,,2026-05-18,Čaká na doručenie
+20,KE00002032,Martin Balogh,"Ďumbierska 79, Košice - Nad jazerom",Nad jazerom,Knihy,S,21x16x10,1.4,Nie,Expres,Platba vopred,,1601.78,,2026-05-15,Čaká na doručenie
+21,KE00002139,Andrea Katona,"Lorinčícka 46/22, Košice - Lorinčík",Lorinčík,Dokument,XXL,134x89x78,20.67,Áno,Štandard,Platba vopred,,1592.74,Krehké - opatrne,2026-05-11,Čaká na doručenie
+22,KE00002243,Radoslav Szabó,"Trieda SNP 50, Košice - Sever",Sever,Náhradný diel,M,28x23x18,2.79,Áno,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+23,KE00002352,Mária Fodor,"Adlerova 112, Košice - Sídlisko KVP",Sídlisko KVP,Nábytok,XL,95x71x59,6.12,Áno,Štandard,Platba vopred,,1331.83,Skladovať v chlade,2026-05-13,Čaká na doručenie
+24,KE00002410,Andrea Molnár,"Herlianska 77/43, Košice - Šaca",Šaca,Elektronika,L,53x43x32,8.76,Áno,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+25,KE00002591,Barbora Király,"Záhradnícka 54, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,XXL,111x74x65,27.67,Áno,Štandard,Platba vopred,,,Volať vopred,2026-05-17,Čaká na doručenie
+26,KE00002698,Róbert Hudák,"Herlianska 61/15, Košice - Šaca",Šaca,Nábytok,XS,8x8x4,0.49,Áno,Overnight,Platba vopred,,303.67,Horná strana nahor,2026-05-12,Čaká na doručenie
+27,KE00002774,Richard Szűcs,"Orlia 28/15, Košice - Staré Mesto",Staré Mesto,Dokument,XL,78x59x49,18.05,Nie,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+28,KE00002840,Veronika Papp,"Rybná 115/48, Košice - Lorinčík",Lorinčík,Oblečenie,M,33x27x22,4.28,Nie,Expres,Firemná faktura,,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+29,KE00002984,Vladimír Hudák,"Lesná 82/6, Košice - Kavečany",Kavečany,Elektronika,S,19x14x9,0.48,Áno,Štandard,Firemná faktura,,846.09,Nezalomovať,2026-05-12,Čaká na doručenie
+30,KE00003059,Ján Balogh,"Biela 148, Košice - Staré Mesto",Staré Mesto,Potraviny,M,33x27x22,4.34,Nie,Štandard,Platba vopred,,976.43,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+31,KE00003151,Natália Fehér,"Továrenská 43/9, Košice - Šaca",Šaca,Balík,XS,11x11x5,0.34,Nie,Štandard,Platba vopred,,431.2,Volať vopred,2026-05-18,Čaká na doručenie
+32,KE00003229,Pavel Nagy,"Továrenská 72/27, Košice - Šaca",Šaca,Knihy,L,40x32x24,8.55,Áno,Štandard,Platba vopred,,50.56,Môže zanechať u suseda,2026-05-18,Čaká na doručenie
+33,KE00003349,Juraj Mészáros,"Šoltésovej 122/37, Košice - Sever",Sever,Nábytok,XXL,108x72x63,24.76,Nie,Expres,Dobierka,410.55,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+34,KE00003457,Filip Fábián,"Remeselnícka 51, Košice - Poľov",Poľov,Nábytok,S,16x12x8,1.59,Nie,Overnight,Platba vopred,,,,2026-05-13,Čaká na doručenie
+35,KE00003585,Andrea Sipos,"Galvaniho 88, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Liek,XS,9x9x4,0.24,Nie,Expres,Firemná faktura,,,Horná strana nahor,2026-05-11,Čaká na doručenie
+36,KE00003653,Radoslav Papp,"Lesná 63/6, Košice - Kavečany",Kavečany,Potraviny,S,22x16x11,1.23,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-15,Čaká na doručenie
+37,KE00003761,Róbert Nagy,"Horná 71/34, Košice - Kavečany",Kavečany,Elektronika,S,21x16x10,1.08,Áno,Expres,Firemná faktura,,595.53,,2026-05-11,Čaká na doručenie
+38,KE00003878,Alžbeta Bíró,"Považská 149, Košice - Sever",Sever,Knihy,M,29x24x19,3.86,Nie,Štandard,Platba vopred,,247.91,,2026-05-17,Čaká na doručenie
+39,KE00003945,Matúš Szőke,"Bodrocká 56/18, Košice - Západ",Západ,Elektronika,XL,83x62x51,29.47,Áno,Štandard,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+40,KE00004061,Vladimír Fábián,"Partizánska 142, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,L,42x33x25,1.17,Nie,Štandard,Dobierka,30.43,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+41,KE00004148,Miroslav Hudák,"Perešská 148/4, Košice - Pereš",Pereš,Elektronika,XL,94x70x58,5.3,Áno,Štandard,Platba vopred,,,Horná strana nahor,2026-05-12,Čaká na doručenie
+42,KE00004247,Adam Baláž,"Zálesná 146/40, Košice - Lorinčík",Lorinčík,Dokument,S,21x15x10,0.68,Nie,Štandard,Dobierka,6.32,,,2026-05-11,Čaká na doručenie
+43,KE00004319,Anna Szabó,"Gemerská 74/45, Košice - Sídlisko KVP",Sídlisko KVP,Nábytok,XXL,107x71x62,20.58,Nie,Expres,Platba vopred,,,Volať vopred,2026-05-16,Čaká na doručenie
+44,KE00004487,Tibor Papp,"Hemerkova 79/37, Košice - Sídlisko KVP",Sídlisko KVP,Potraviny,XS,9x9x4,0.22,Nie,Ekonomický,Platba vopred,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+45,KE00004591,Ondrej Jakab,"Kavečianska 24, Košice - Kavečany",Kavečany,Oblečenie,XL,94x70x59,29.99,Nie,Štandard,Dobierka,261.89,1174.81,Volať vopred,2026-05-11,Čaká na doručenie
+46,KE00004661,Jana Molnár,"Perešská 121, Košice - Pereš",Pereš,Potraviny,XXL,101x67x58,16.43,Nie,Expres,Platba vopred,,653.31,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+47,KE00004713,Michal Blaho,"Opátska 139, Košice - Vyšné Opátske",Vyšné Opátske,Liek,XL,75x56x47,23.42,Nie,Expres,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+48,KE00004863,Andrea Nagy,"Šoltésovej 80/36, Košice - Sever",Sever,Liek,S,23x17x11,1.84,Nie,Ekonomický,Dobierka,466.66,,,2026-05-14,Čaká na doručenie
+49,KE00004974,Miroslav Farkas,"Okružná 63, Košice - Pereš",Pereš,Krehký tovar,S,23x17x11,1.11,Áno,Overnight,Dobierka,396.05,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+50,KE00005083,Barbora Katona,"Kavečianska 73/38, Košice - Kavečany",Kavečany,Liek,L,57x45x34,7.25,Nie,Štandard,Firemná faktura,,1398.02,,2026-05-13,Čaká na doručenie
+51,KE00005122,Adam Olah,"Hájna 106, Košice - Poľov",Poľov,Krehký tovar,XXL,139x93x81,25.25,Áno,Štandard,Dobierka,253.63,1691.63,,2026-05-13,Čaká na doručenie
+52,KE00005272,Boris Hudák,"Svätá 4/27, Košice - Vyšné Opátske",Vyšné Opátske,Knihy,XS,9x9x4,0.49,Nie,Expres,Dobierka,167.64,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+53,KE00005347,Ondrej Tkáč,"Krásnohorská 18, Košice - Krásna",Krásna,Dokument,S,21x16x10,0.98,Nie,Expres,Dobierka,87.35,1594.33,Nezalomovať,2026-05-14,Čaká na doručenie
+54,KE00005442,Ivana Pintér,"Lipová 111, Košice - Barca",Barca,Krehký tovar,XL,85x64x53,7.86,Áno,Štandard,Platba vopred,,927.69,,2026-05-11,Čaká na doručenie
+55,KE00005571,Tibor Hegedűs,"Záhradná 3/30, Košice - Myslava",Myslava,Knihy,XL,69x51x43,14.93,Nie,Ekonomický,Firemná faktura,,1998.75,,2026-05-11,Čaká na doručenie
+56,KE00005646,Tibor Szűcs,"Jegorova 98/37, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,M,24x20x16,4.24,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+57,KE00005784,Pavel Hegedűs,"Bernoláková 57/40, Košice - Sever",Sever,Krehký tovar,XXL,132x88x77,37.23,Áno,Expres,Platba vopred,,,,2026-05-14,Čaká na doručenie
+58,KE00005824,Adam Pintér,"Ovocná 24/21, Košice - Barca",Barca,Knihy,S,17x13x8,1.62,Nie,Štandard,Firemná faktura,,1742.09,,2026-05-11,Čaká na doručenie
+59,KE00005996,Ondrej Vincze,"Myslavská 37/15, Košice - Myslava",Myslava,Náhradný diel,XXL,143x95x83,48.69,Nie,Štandard,Dobierka,270.6,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+60,KE00006027,Marek Hegedűs,"Horná 98/24, Košice - Kavečany",Kavečany,Náhradný diel,S,19x14x9,1.32,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+61,KE00006162,Marek Polák,"Partizánska 78/8, Košice - Sídlisko KVP",Sídlisko KVP,Náhradný diel,XL,68x51x42,15.25,Nie,Štandard,Dobierka,210.37,,,2026-05-17,Čaká na doručenie
+62,KE00006221,Lucia Polák,"Kavečianska 95, Košice - Kavečany",Kavečany,Náhradný diel,M,25x20x16,3.59,Nie,Ekonomický,Dobierka,141.56,,,2026-05-17,Čaká na doručenie
+63,KE00006310,Vladimír Jakab,"Južná trieda 13/16, Košice - Juh",Juh,Elektronika,S,16x12x8,1.58,Áno,Štandard,Platba vopred,,1802.06,,2026-05-13,Čaká na doručenie
+64,KE00006424,Rastislav Katona,"Čermeľská 34/12, Košice - Kavečany",Kavečany,Elektronika,XS,8x8x4,0.24,Áno,Štandard,Dobierka,136.36,,,2026-05-16,Čaká na doručenie
+65,KE00006517,Barbora Baláž,"Astrová 115/33, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,L,50x40x30,14.24,Nie,Expres,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+66,KE00006677,Jakub Papp,"Okružná 110/32, Košice - Pereš",Pereš,Krehký tovar,XS,11x11x5,0.23,Áno,Štandard,Dobierka,318.37,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+67,KE00006763,Filip Lukáč,"Poľná 130/7, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,XXL,127x84x74,40.76,Áno,Štandard,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+68,KE00006881,Pavel Kiss,"Bulharská 110, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,S,21x16x10,1.05,Áno,Overnight,Dobierka,370.7,1913.68,,2026-05-16,Čaká na doručenie
+69,KE00006923,Dušan Csonka,"Herlianska 106, Košice - Šaca",Šaca,Oblečenie,L,57x45x34,11.09,Nie,Expres,Platba vopred,,,,2026-05-16,Čaká na doručenie
+70,KE00007049,Radoslav Jakab,"Borová 95, Košice - Barca",Barca,Nábytok,S,22x16x11,1.72,Nie,Expres,Dobierka,464.9,1408.37,Nezalomovať,2026-05-14,Čaká na doručenie
+71,KE00007182,Miroslav Jakab,"Priemyselná 2, Košice - Šaca",Šaca,Balík,XXL,115x76x67,15.67,Nie,Štandard,Firemná faktura,,1445.98,Doručiť osobne,2026-05-13,Čaká na doručenie
+72,KE00007246,Natália Tóth,"Ťahanovská 40, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,XXL,99x66x58,27.72,Nie,Štandard,Dobierka,378.7,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+73,KE00007332,Monika Király,"Priečna 79, Košice - Pereš",Pereš,Elektronika,XS,8x8x4,0.22,Áno,Expres,Firemná faktura,,1496.56,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+74,KE00007491,Alžbeta Katona,"Šírková 137/33, Košice - Nad jazerom",Nad jazerom,Balík,M,24x20x16,4.38,Nie,Štandard,Dobierka,159.97,,,2026-05-12,Čaká na doručenie
+75,KE00007553,Mária Kováčik,"Zálesná 30, Košice - Lorinčík",Lorinčík,Knihy,XL,78x59x49,21.62,Nie,Štandard,Dobierka,296.49,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+76,KE00007687,Igor Lukáč,"Bernoláková 44, Košice - Sever",Sever,Knihy,XL,80x60x50,27.46,Nie,Štandard,Platba vopred,,402.57,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+77,KE00007748,Martina Mészáros,"Hronská 46/41, Košice - Nad jazerom",Nad jazerom,Nábytok,XL,88x66x55,15.12,Nie,Expres,Firemná faktura,,889.99,Horná strana nahor,2026-05-16,Čaká na doručenie
+78,KE00007815,Tomáš Krajčí,"Horná 15, Košice - Kavečany",Kavečany,Oblečenie,L,49x39x29,1.8,Nie,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+79,KE00007966,Veronika Lukács,"Slnečná 49, Košice - Myslava",Myslava,Knihy,S,23x17x11,1.01,Áno,Ekonomický,Platba vopred,,,,2026-05-15,Čaká na doručenie
+80,KE00008087,Tibor Farkas,"Pustovnícka 41, Košice - Vyšné Opátske",Vyšné Opátske,Balík,L,55x44x33,10.5,Nie,Expres,Dobierka,51.78,1704.62,Volať vopred,2026-05-12,Čaká na doručenie
+81,KE00008197,Eva Krajčí,"Rovníková 21/10, Košice - Nad jazerom",Nad jazerom,Nábytok,XXL,129x86x75,25.68,Áno,Expres,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+82,KE00008277,Katarína Krajčí,"Opátska 109/2, Košice - Vyšné Opátske",Vyšné Opátske,Liek,S,23x17x11,0.82,Nie,Štandard,Dobierka,151.42,,,2026-05-17,Čaká na doručenie
+83,KE00008367,Dávid Novák,"Pasteurova 34/10, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,XXL,133x88x77,42.36,Áno,Expres,Dobierka,185.33,,Horná strana nahor,2026-05-15,Čaká na doručenie
+84,KE00008442,Veronika Blaho,"Poludníková 62, Košice - Sever",Sever,Liek,M,32x26x21,3.07,Nie,Štandard,Firemná faktura,,1213.28,,2026-05-16,Čaká na doručenie
+85,KE00008554,Jakub Bíró,"Šrobárova 96/7, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,XS,9x9x4,0.41,Nie,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+86,KE00008670,Katarína Polák,"Štefánikova 14, Košice - Staré Mesto",Staré Mesto,Balík,L,59x47x35,6.25,Áno,Štandard,Firemná faktura,,1835.62,Doručiť osobne,2026-05-16,Čaká na doručenie
+87,KE00008789,Peter Oravec,"Dĺžková 115/6, Košice - Nad jazerom",Nad jazerom,Nábytok,S,22x17x11,1.19,Nie,Štandard,Dobierka,154.07,,Môže zanechať u suseda,2026-05-18,Čaká na doručenie
+88,KE00008820,Helena Fehér,"Myslavská 29/32, Košice - Myslava",Myslava,Krehký tovar,XS,10x10x5,0.33,Áno,Štandard,Dobierka,179.64,,Doručiť osobne,2026-05-12,Čaká na doručenie
+89,KE00008923,Lenka Lukács,"Mníšska 18/35, Košice - Vyšné Opátske",Vyšné Opátske,Balík,XL,64x48x40,26.58,Nie,Expres,Dobierka,13.04,1317.64,Krehké - opatrne,2026-05-17,Čaká na doručenie
+90,KE00009035,Jana Sándor,"Sácka 12, Košice - Šaca",Šaca,Liek,S,22x16x11,1.43,Nie,Expres,Dobierka,389.21,97.17,Nezalomovať,2026-05-11,Čaká na doručenie
+91,KE00009166,Veronika Oravec,"Pasteurova 80/35, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,XS,11x11x5,0.18,Áno,Overnight,Firemná faktura,,1780.08,,2026-05-17,Čaká na doručenie
+92,KE00009249,Martina Kiss,"Poľná 48, Košice - Poľov",Poľov,Potraviny,XL,72x54x45,5.23,Nie,Štandard,Firemná faktura,,1325.23,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+93,KE00009356,Lucia Balogh,"Slnečná 110, Košice - Myslava",Myslava,Knihy,L,40x32x24,13.18,Nie,Expres,Platba vopred,,,,2026-05-17,Čaká na doručenie
+94,KE00009483,Helena Hegedűs,"Kláštorná 8, Košice - Vyšné Opátske",Vyšné Opátske,Knihy,L,40x32x24,1.94,Nie,Štandard,Dobierka,80.95,1528.54,Krehké - opatrne,2026-05-11,Čaká na doručenie
+95,KE00009588,Boris Fedor,"Magnetová 94, Košice - Nad jazerom",Nad jazerom,Krehký tovar,S,23x17x11,0.25,Áno,Štandard,Platba vopred,,898.08,,2026-05-14,Čaká na doručenie
+96,KE00009648,Tomáš Papp,"Poľná 52, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,S,23x17x11,1.0,Nie,Overnight,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+97,KE00009771,Róbert Šimko,"Jenisejská 93/8, Košice - Západ",Západ,Náhradný diel,S,22x16x11,0.25,Nie,Štandard,Platba vopred,,1999.19,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+98,KE00009817,Vladimír Molnár,"Svätá 105/5, Košice - Vyšné Opátske",Vyšné Opátske,Náhradný diel,XXL,99x66x58,28.63,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-16,Čaká na doručenie
+99,KE00009988,Dávid Molnár,"Varšavská 40, Košice - Dargovských hrdinov",Dargovských hrdinov,Náhradný diel,XXL,106x71x62,47.9,Nie,Overnight,Dobierka,319.35,,Doručiť osobne,2026-05-14,Čaká na doručenie
+100,KE00010083,Barbora Hudák,"Krásnohorská 129/38, Košice - Krásna",Krásna,Nábytok,S,21x15x10,1.5,Nie,Štandard,Dobierka,432.57,,Nezalomovať,2026-05-17,Čaká na doručenie
+101,KE00010130,Igor Horváth,"Čermeľská 147, Košice - Kavečany",Kavečany,Oblečenie,L,57x46x34,8.64,Nie,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+102,KE00010244,Jana Király,"Tichá 124, Košice - Myslava",Myslava,Knihy,S,18x13x9,1.49,Nie,Ekonomický,Platba vopred,,,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+103,KE00010369,Tibor Farkas,"Viničná 37, Košice - Myslava",Myslava,Krehký tovar,XL,77x58x48,28.99,Áno,Overnight,Firemná faktura,,1991.98,,2026-05-15,Čaká na doručenie
+104,KE00010427,Monika Lukács,"Stará 128, Košice - Pereš",Pereš,Knihy,L,59x47x35,4.01,Nie,Štandard,Firemná faktura,,223.92,,2026-05-14,Čaká na doručenie
+105,KE00010560,Monika Tóth,"Lesná 104, Košice - Kavečany",Kavečany,Oblečenie,XL,81x61x51,12.79,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+106,KE00010627,Miroslav Blaho,"Lipová 143/49, Košice - Barca",Barca,Balík,XL,80x60x50,16.5,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+107,KE00010763,Natália Bogdán,"Robotnícka 82, Košice - Šaca",Šaca,Náhradný diel,M,31x25x20,2.78,Nie,Štandard,Dobierka,408.8,,Krehké - opatrne,2026-05-13,Čaká na doručenie
+108,KE00010814,Boris Rácz,"Novoveská 122, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,XL,82x61x51,22.48,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+109,KE00010994,Andrea Hudák,"Jegorova 5, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,L,53x43x32,6.75,Nie,Ekonomický,Platba vopred,,656.85,,2026-05-16,Čaká na doručenie
+110,KE00011036,Richard Mészáros,"Priečna 97, Košice - Pereš",Pereš,Oblečenie,XL,74x56x46,12.57,Nie,Expres,Dobierka,281.25,,Volať vopred,2026-05-15,Čaká na doručenie
+111,KE00011154,Matúš Fedor,"Stará 123, Košice - Pereš",Pereš,Potraviny,M,25x21x16,3.54,Nie,Overnight,Platba vopred,,1431.14,Nezalomovať,2026-05-14,Čaká na doručenie
+112,KE00011252,Tereza Fedor,"Záhradná 123, Košice - Myslava",Myslava,Nábytok,XL,86x64x53,6.71,Nie,Expres,Dobierka,453.07,209.39,,2026-05-15,Čaká na doručenie
+113,KE00011393,Alžbeta Kováčik,"Perešská 36, Košice - Pereš",Pereš,Liek,L,53x42x31,13.33,Nie,Štandard,Firemná faktura,,1539.76,,2026-05-14,Čaká na doručenie
+114,KE00011452,Andrea Novák,"Poludníková 10/12, Košice - Sever",Sever,Liek,XS,11x11x5,0.26,Nie,Štandard,Firemná faktura,,1209.54,Nezalomovať,2026-05-18,Čaká na doručenie
+115,KE00011596,Lenka Mészáros,"Poľná 140/9, Košice - Košická Nová Ves",Košická Nová Ves,Krehký tovar,M,26x21x17,1.01,Áno,Expres,Platba vopred,,597.1,,2026-05-18,Čaká na doručenie
+116,KE00011652,Mária Nagy,"Moldavská cesta 104/33, Košice - Juh",Juh,Krehký tovar,L,53x42x32,3.59,Áno,Štandard,Platba vopred,,1509.98,Skladovať v chlade,2026-05-14,Čaká na doručenie
+117,KE00011747,Boris Kiss,"Viničná 147, Košice - Košická Nová Ves",Košická Nová Ves,Liek,XXL,107x71x62,36.71,Nie,Štandard,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+118,KE00011820,Vladimír Olah,"Borová 57, Košice - Barca",Barca,Knihy,S,19x14x9,1.98,Nie,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+119,KE00011984,Kristína Lukáč,"Svätá 136/5, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,XS,11x11x5,0.46,Áno,Štandard,Dobierka,167.42,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+120,KE00012037,Michal Mészáros,"Perešská 131, Košice - Pereš",Pereš,Balík,S,20x15x10,1.02,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-12,Čaká na doručenie
+121,KE00012158,Tomáš Fehér,"Ťahanovská 109, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Liek,XS,11x11x5,0.13,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+122,KE00012279,Eva Lukáč,"Poľovská 139, Košice - Poľov",Poľov,Krehký tovar,S,23x17x11,0.91,Áno,Expres,Dobierka,6.72,,Volať vopred,2026-05-18,Čaká na doručenie
+123,KE00012367,Anna Balogh,"Rybná 98/16, Košice - Lorinčík",Lorinčík,Dokument,S,18x13x9,1.89,Nie,Štandard,Platba vopred,,1191.95,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+124,KE00012496,Stanislav Fehér,"Gemerská 12, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,S,22x16x11,1.6,Áno,Štandard,Dobierka,408.81,,,2026-05-13,Čaká na doručenie
+125,KE00012592,Ivana Gáborík,"Sácka 78/43, Košice - Šaca",Šaca,Nábytok,L,46x36x27,1.85,Nie,Overnight,Firemná faktura,,,Nezalomovať,2026-05-11,Čaká na doručenie
+126,KE00012663,Miroslav Krajčí,"Hradná 82/27, Košice - Poľov",Poľov,Elektronika,L,43x34x26,8.53,Áno,Overnight,Platba vopred,,,Nezalomovať,2026-05-11,Čaká na doručenie
+127,KE00012785,Pavel Takáč,"Brestová 35, Košice - Krásna",Krásna,Knihy,M,31x26x21,4.65,Nie,Štandard,Dobierka,137.89,1611.25,,2026-05-18,Čaká na doručenie
+128,KE00012846,Jana Krajčí,"Moldavská 123, Košice - Krásna",Krásna,Dokument,XS,8x8x4,0.18,Nie,Expres,Platba vopred,,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+129,KE00012928,Pavel Kiss,"Remeselnícka 137/20, Košice - Poľov",Poľov,Liek,XL,92x69x57,15.58,Nie,Expres,Dobierka,159.9,,,2026-05-18,Čaká na doručenie
+130,KE00013092,Matúš Pintér,"Alžbetina 142/38, Košice - Staré Mesto",Staré Mesto,Potraviny,M,25x21x17,1.98,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+131,KE00013190,Dávid Šimko,"Okružná 44/23, Košice - Pereš",Pereš,Náhradný diel,XXL,122x81x71,17.36,Nie,Ekonomický,Platba vopred,,283.61,,2026-05-18,Čaká na doručenie
+132,KE00013278,Lenka Mészáros,"Brnianska 39, Košice - Sever",Sever,Nábytok,M,24x20x16,3.37,Nie,Ekonomický,Dobierka,268.45,1447.16,Nezalomovať,2026-05-12,Čaká na doručenie
+133,KE00013361,Petra Novák,"Novoveská 129/44, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,XS,11x11x5,0.31,Áno,Štandard,Firemná faktura,,752.37,,2026-05-14,Čaká na doručenie
+134,KE00013465,Ladislav Hegedűs,"Slnečná 63/15, Košice - Myslava",Myslava,Balík,XS,10x10x5,0.44,Nie,Štandard,Platba vopred,,1004.72,,2026-05-18,Čaká na doručenie
+135,KE00013550,Stanislav Takáč,"Robotnícka 25/3, Košice - Šaca",Šaca,Balík,XXL,138x92x80,29.02,Nie,Ekonomický,Dobierka,273.8,,Doručiť osobne,2026-05-18,Čaká na doručenie
+136,KE00013654,Monika Szabó,"Komenského 37/46, Košice - Staré Mesto",Staré Mesto,Potraviny,M,25x21x17,1.58,Nie,Expres,Platba vopred,,,,2026-05-17,Čaká na doručenie
+137,KE00013765,Tomáš Fekete,"Adlerova 112, Košice - Sídlisko KVP",Sídlisko KVP,Potraviny,XL,88x66x55,28.78,Nie,Ekonomický,Firemná faktura,,1882.87,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+138,KE00013866,Milan Török,"Uralská 22/19, Košice - Západ",Západ,Krehký tovar,XS,8x8x4,0.16,Áno,Expres,Platba vopred,,,Nezalomovať,2026-05-17,Čaká na doručenie
+139,KE00013959,Richard Fodor,"Lipová 27, Košice - Barca",Barca,Dokument,L,51x40x30,8.17,Nie,Štandard,Dobierka,301.03,590.78,,2026-05-13,Čaká na doručenie
+140,KE00014090,Ondrej Farkas,"Galvaniho 63/11, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Liek,S,17x12x8,0.74,Nie,Štandard,Dobierka,153.38,500.71,Krehké - opatrne,2026-05-17,Čaká na doručenie
+141,KE00014135,Vladimír Krajčí,"Priečna 51, Košice - Pereš",Pereš,Nábytok,XS,11x11x5,0.23,Nie,Štandard,Firemná faktura,,1895.09,Volať vopred,2026-05-16,Čaká na doručenie
+142,KE00014235,Tibor Bogdán,"Stará 46/21, Košice - Pereš",Pereš,Elektronika,XXL,126x84x73,48.71,Áno,Štandard,Dobierka,394.0,,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+143,KE00014329,Matúš Mészáros,"Moldavská 141, Košice - Krásna",Krásna,Dokument,XXL,106x70x61,41.91,Nie,Overnight,Firemná faktura,,512.84,,2026-05-16,Čaká na doručenie
+144,KE00014431,Helena Olah,"Kamenná 19, Košice - Lorinčík",Lorinčík,Potraviny,XL,76x57x48,16.68,Nie,Štandard,Platba vopred,,1332.74,,2026-05-17,Čaká na doručenie
+145,KE00014598,Petra Baláž,"Vstupný areál 103/22, Košice - Sídlisko KVP",Sídlisko KVP,Náhradný diel,XS,8x8x4,0.19,Nie,Štandard,Dobierka,190.19,,,2026-05-11,Čaká na doručenie
+146,KE00014666,Marek Tkáč,"Kláštorná 89/31, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,L,58x46x35,2.2,Áno,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+147,KE00014769,Jakub Lukáč,"Záhradná 18, Košice - Myslava",Myslava,Krehký tovar,XS,11x11x5,0.36,Áno,Ekonomický,Platba vopred,,,Krehké - opatrne,2026-05-16,Čaká na doručenie
+148,KE00014818,Dušan Fodor,"Čínska 48, Košice - Sever",Sever,Elektronika,L,40x32x24,9.6,Áno,Štandard,Platba vopred,,1410.48,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+149,KE00014932,Róbert Mészáros,"Varšavská 48, Košice - Dargovských hrdinov",Dargovských hrdinov,Náhradný diel,XS,9x9x4,0.45,Nie,Ekonomický,Firemná faktura,,921.14,Krehké - opatrne,2026-05-17,Čaká na doručenie
+150,KE00015098,Rastislav Polák,"Viničná 22/21, Košice - Košická Nová Ves",Košická Nová Ves,Krehký tovar,M,25x21x16,2.18,Áno,Štandard,Platba vopred,,1274.65,Skladovať v chlade,2026-05-12,Čaká na doručenie
+151,KE00015163,Vladimír Novák,"Tatranskápre 43, Košice - Západ",Západ,Knihy,M,34x28x22,3.29,Nie,Ekonomický,Dobierka,195.05,,Skladovať v chlade,2026-05-11,Čaká na doručenie
+152,KE00015256,Peter Csonka,"Tichá 43, Košice - Myslava",Myslava,Náhradný diel,S,18x13x9,0.69,Nie,Štandard,Firemná faktura,,1552.47,,2026-05-17,Čaká na doručenie
+153,KE00015336,Marek Bogdán,"Krásnohorská 113/28, Košice - Krásna",Krásna,Balík,XXL,132x88x77,21.91,Nie,Štandard,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+154,KE00015496,Vladimír Takáč,"Borová 110, Košice - Barca",Barca,Náhradný diel,S,22x16x11,1.23,Nie,Štandard,Firemná faktura,,1717.45,,2026-05-14,Čaká na doručenie
+155,KE00015590,Boris Šimko,"Arm. gen. Svobodu 106/18, Košice - Dargovských hrdinov",Dargovských hrdinov,Knihy,XXL,137x91x80,19.99,Nie,Overnight,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+156,KE00015655,Andrej Nagy,"Kamenná 116, Košice - Lorinčík",Lorinčík,Knihy,L,50x40x30,4.9,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+157,KE00015768,Petra Takáč,"Galvaniho 102, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Knihy,L,45x36x27,12.6,Nie,Štandard,Firemná faktura,,1569.94,Nezalomovať,2026-05-18,Čaká na doručenie
+158,KE00015831,Ján Fodor,"Mlynská 41, Košice - Staré Mesto",Staré Mesto,Oblečenie,S,23x17x11,1.84,Nie,Štandard,Dobierka,329.02,1808.56,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+159,KE00015925,Stanislav Fodor,"Jiskrova 79/49, Košice - Sídlisko KVP",Sídlisko KVP,Elektronika,XXL,100x66x58,13.81,Áno,Štandard,Dobierka,116.96,693.71,Nezalomovať,2026-05-11,Čaká na doručenie
+160,KE00016011,Zuzana Nagy,"Údolná 123, Košice - Lorinčík",Lorinčík,Knihy,XXL,134x89x78,14.13,Nie,Overnight,Platba vopred,,,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+161,KE00016150,Adam Hudák,"Bajkalská 90/41, Košice - Západ",Západ,Elektronika,L,52x41x31,7.19,Áno,Štandard,Dobierka,377.46,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+162,KE00016240,Alžbeta Király,"Jazerná 71/16, Košice - Nad jazerom",Nad jazerom,Balík,XL,87x65x54,10.69,Nie,Overnight,Platba vopred,,,Volať vopred,2026-05-12,Čaká na doručenie
+163,KE00016370,Igor Király,"Okružná 29, Košice - Pereš",Pereš,Knihy,XS,10x10x5,0.49,Nie,Ekonomický,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+164,KE00016488,Juraj Varga,"Ťahanovská 18, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Oblečenie,XS,11x11x5,0.26,Nie,Expres,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+165,KE00016568,Lenka Takáč,"Poludníková 22, Košice - Nad jazerom",Nad jazerom,Dokument,S,20x15x10,0.9,Nie,Štandard,Platba vopred,,874.62,Môže zanechať u suseda,2026-05-18,Čaká na doručenie
+166,KE00016644,Jakub Šimko,"Fábryho 45, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,XXL,96x64x56,29.86,Nie,Štandard,Platba vopred,,,Doručiť osobne,2026-05-13,Čaká na doručenie
+167,KE00016783,Ivana Szabó,"Cottbuská 86/18, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,M,32x27x21,3.09,Nie,Štandard,Dobierka,430.38,1548.92,Krehké - opatrne,2026-05-16,Čaká na doručenie
+168,KE00016850,Ján Polák,"Jegorova 131, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,XS,9x9x4,0.25,Áno,Štandard,Platba vopred,,838.35,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+169,KE00016957,Lenka Hegedűs,"Kavečianska 147, Košice - Kavečany",Kavečany,Balík,XS,8x8x4,0.42,Áno,Ekonomický,Firemná faktura,,918.92,Krehké - opatrne,2026-05-14,Čaká na doručenie
+170,KE00017013,Natália Polák,"Galaktická 145/48, Košice - Juh",Juh,Elektronika,L,47x37x28,14.61,Áno,Expres,Platba vopred,,,Nezalomovať,2026-05-16,Čaká na doručenie
+171,KE00017121,Ján Fekete,"Poludníková 89/45, Košice - Sever",Sever,Oblečenie,XS,11x11x5,0.25,Nie,Štandard,Dobierka,248.55,,Doručiť osobne,2026-05-18,Čaká na doručenie
+172,KE00017240,Katarína Mészáros,"Gemerská 134, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,XXL,100x66x58,13.82,Áno,Expres,Platba vopred,,,,2026-05-12,Čaká na doručenie
+173,KE00017362,Filip Bogdán,"Záhradnícka 81/26, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,M,27x23x18,1.72,Nie,Ekonomický,Platba vopred,,937.45,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+174,KE00017428,Lucia Krajčí,"Varšavská 92/14, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,L,45x36x27,2.68,Áno,Overnight,Platba vopred,,,,2026-05-15,Čaká na doručenie
+175,KE00017525,Michal Hegedűs,"Toryská 92, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,M,27x22x18,4.96,Nie,Ekonomický,Platba vopred,,1589.68,Horná strana nahor,2026-05-17,Čaká na doručenie
+176,KE00017626,Monika Kiss,"Hlavná 57, Košice - Staré Mesto",Staré Mesto,Nábytok,XXL,126x84x73,35.79,Nie,Štandard,Dobierka,498.59,,,2026-05-15,Čaká na doručenie
+177,KE00017729,Anna Tóth,"Meteorová 32, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,S,23x17x11,0.98,Nie,Štandard,Firemná faktura,,897.56,Doručiť osobne,2026-05-15,Čaká na doručenie
+178,KE00017855,Andrea Máté,"Vstupný areál 63/32, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,L,41x32x24,4.92,Áno,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+179,KE00017977,Kristína Lukács,"Priečna 125, Košice - Pereš",Pereš,Knihy,M,28x23x19,1.31,Áno,Štandard,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+180,KE00018032,Milan Katona,"Borová 60/7, Košice - Barca",Barca,Balík,S,18x13x9,1.67,Nie,Expres,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+181,KE00018121,Eva Szőke,"Bodrocká 82/45, Košice - Západ",Západ,Nábytok,XS,10x10x5,0.24,Nie,Štandard,Dobierka,494.06,985.97,,2026-05-11,Čaká na doručenie
+182,KE00018228,Veronika Kováč,"Gemerská 57, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,M,35x29x23,1.41,Áno,Štandard,Dobierka,402.2,1177.35,Nezalomovať,2026-05-13,Čaká na doručenie
+183,KE00018381,Jakub Katona,"Varšavská 94/24, Košice - Dargovských hrdinov",Dargovských hrdinov,Knihy,L,51x41x31,5.71,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-13,Čaká na doručenie
+184,KE00018488,Matúš Szűcs,"Ovocná 45, Košice - Barca",Barca,Nábytok,M,25x21x17,3.78,Nie,Štandard,Platba vopred,,1619.53,,2026-05-16,Čaká na doručenie
+185,KE00018518,Adam Szabó,"Brnianska 128, Košice - Sever",Sever,Dokument,S,18x14x9,0.78,Nie,Overnight,Firemná faktura,,506.59,Nezalomovať,2026-05-11,Čaká na doručenie
+186,KE00018693,Zuzana Papp,"Lipová 28/4, Košice - Barca",Barca,Potraviny,XXL,116x77x67,16.65,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+187,KE00018788,Martin Tkáč,"Šoltésovej 116, Košice - Sever",Sever,Dokument,XS,9x9x4,0.48,Nie,Štandard,Dobierka,42.13,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+188,KE00018883,Helena Fodor,"Perešská 111/11, Košice - Pereš",Pereš,Elektronika,S,16x12x8,0.8,Áno,Štandard,Firemná faktura,,108.77,Volať vopred,2026-05-14,Čaká na doručenie
+189,KE00018949,Ján Fodor,"Potočná 40, Košice - Krásna",Krásna,Nábytok,XS,9x9x4,0.36,Áno,Štandard,Dobierka,320.9,,Horná strana nahor,2026-05-17,Čaká na doručenie
+190,KE00019099,Lukáš Sándor,"Remeselnícka 126/17, Košice - Poľov",Poľov,Potraviny,XL,76x57x47,13.02,Nie,Štandard,Dobierka,235.2,132.66,,2026-05-15,Čaká na doručenie
+191,KE00019114,Patrik Szőke,"Moskovská trieda 89/27, Košice - Dargovských hrdinov",Dargovských hrdinov,Náhradný diel,S,20x15x10,1.71,Nie,Štandard,Firemná faktura,,795.66,Horná strana nahor,2026-05-15,Čaká na doručenie
+192,KE00019235,Natália Hudák,"Pustovnícka 133/44, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,XS,11x11x5,0.28,Áno,Ekonomický,Platba vopred,,1369.42,Skladovať v chlade,2026-05-18,Čaká na doručenie
+193,KE00019328,Lukáš Farkas,"Poludníková 82/5, Košice - Nad jazerom",Nad jazerom,Oblečenie,XL,76x57x47,11.81,Nie,Štandard,Dobierka,351.7,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+194,KE00019498,Tereza Balogh,"Moskovská trieda 145/19, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,L,45x36x27,10.17,Áno,Expres,Dobierka,76.21,1759.13,Nezalomovať,2026-05-12,Čaká na doručenie
+195,KE00019587,Peter Fekete,"Trieda SNP 122/24, Košice - Sever",Sever,Dokument,M,27x23x18,4.29,Nie,Ekonomický,Firemná faktura,,,Volať vopred,2026-05-13,Čaká na doručenie
+196,KE00019682,Andrea Bogdán,"Toryská 114, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,L,55x44x33,13.14,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+197,KE00019786,Michal Polák,"Rooseveltova 50/13, Košice - Staré Mesto",Staré Mesto,Elektronika,XS,9x9x4,0.47,Áno,Štandard,Firemná faktura,,751.21,,2026-05-17,Čaká na doručenie
+198,KE00019893,Eva Kováčik,"Viničná 122/23, Košice - Myslava",Myslava,Oblečenie,M,32x27x21,3.6,Áno,Štandard,Platba vopred,,421.39,,2026-05-15,Čaká na doručenie
+199,KE00019954,Ondrej Kováč,"Rybná 6/50, Košice - Lorinčík",Lorinčík,Nábytok,L,58x46x34,10.06,Nie,Overnight,Firemná faktura,,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+200,KE00020045,Ondrej Bíró,"Záhradná 56, Košice - Myslava",Myslava,Náhradný diel,XL,76x57x47,5.76,Nie,Ekonomický,Firemná faktura,,137.04,,2026-05-14,Čaká na doručenie
+201,KE00020147,Ladislav Blaho,"Priemyselná 67/42, Košice - Šaca",Šaca,Balík,S,20x15x10,0.63,Nie,Overnight,Firemná faktura,,999.77,,2026-05-16,Čaká na doručenie
+202,KE00020294,Martin Szőke,"Záhradná 104, Košice - Kavečany",Kavečany,Knihy,XXL,143x95x83,42.64,Nie,Expres,Firemná faktura,,348.27,,2026-05-13,Čaká na doručenie
+203,KE00020363,Vladimír Bogdán,"Moldavská 76, Košice - Krásna",Krásna,Krehký tovar,M,32x27x21,3.02,Áno,Ekonomický,Platba vopred,,1744.15,Krehké - opatrne,2026-05-15,Čaká na doručenie
+204,KE00020427,Rastislav Olah,"Priemyselná 67/30, Košice - Šaca",Šaca,Nábytok,XS,11x11x5,0.33,Nie,Štandard,Firemná faktura,,1709.94,Skladovať v chlade,2026-05-14,Čaká na doručenie
+205,KE00020583,Miroslav Molnár,"Volgogradská 105/30, Košice - Juh",Juh,Knihy,XXL,104x69x61,13.23,Nie,Expres,Platba vopred,,1549.35,Volať vopred,2026-05-11,Čaká na doručenie
+206,KE00020634,Petra Fábián,"Bajkalská 23, Košice - Západ",Západ,Potraviny,L,48x38x28,14.51,Nie,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+207,KE00020786,Stanislav Szűcs,"Štúrova 2/16, Košice - Staré Mesto",Staré Mesto,Náhradný diel,M,27x23x18,0.96,Nie,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-14,Čaká na doručenie
+208,KE00020825,Jana Sipos,"Mníšska 112/9, Košice - Vyšné Opátske",Vyšné Opátske,Potraviny,M,33x27x22,1.24,Nie,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+209,KE00020999,Andrej Fehér,"Barčianska 97/17, Košice - Barca",Barca,Dokument,XL,65x49x40,29.86,Áno,Expres,Firemná faktura,,512.95,Skladovať v chlade,2026-05-11,Čaká na doručenie
+210,KE00021073,Dušan Baláž,"Jazerná 3, Košice - Nad jazerom",Nad jazerom,Krehký tovar,XXL,120x80x70,34.91,Áno,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+211,KE00021124,Eva Török,"Letná 68/13, Košice - Juh",Juh,Liek,L,45x36x27,1.55,Nie,Ekonomický,Platba vopred,,,Nezalomovať,2026-05-18,Čaká na doručenie
+212,KE00021296,Matúš Vincze,"Nová 24/5, Košice - Pereš",Pereš,Liek,XS,11x11x5,0.36,Nie,Ekonomický,Platba vopred,,588.23,,2026-05-16,Čaká na doručenie
+213,KE00021333,Patrik Varga,"Továrenská 30, Košice - Šaca",Šaca,Krehký tovar,XS,11x11x5,0.37,Áno,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+214,KE00021485,Zuzana Szűcs,"Sofijská 103/18, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,L,55x44x33,10.08,Áno,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+215,KE00021511,Zuzana Rácz,"Priečna 113, Košice - Pereš",Pereš,Krehký tovar,M,31x26x20,4.38,Áno,Štandard,Firemná faktura,,1313.4,Nezalomovať,2026-05-11,Čaká na doručenie
+216,KE00021688,Dušan Fekete,"Pustovnícka 145, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,XL,80x60x50,21.92,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+217,KE00021783,Martina Kováčik,"Partizánska 41/31, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,XS,11x11x5,0.23,Áno,Ekonomický,Dobierka,323.44,923.6,,2026-05-12,Čaká na doručenie
+218,KE00021853,Rastislav Sipos,"Myslavská 128, Košice - Myslava",Myslava,Potraviny,XXL,127x84x74,14.11,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+219,KE00021947,Alžbeta Rácz,"Barčianska 58/22, Košice - Barca",Barca,Knihy,XL,83x62x51,22.35,Nie,Expres,Platba vopred,,1270.99,Krehké - opatrne,2026-05-18,Čaká na doručenie
+220,KE00022034,Dávid Sipos,"Brestová 96/3, Košice - Krásna",Krásna,Potraviny,S,22x16x11,1.54,Nie,Štandard,Dobierka,465.46,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+221,KE00022184,Igor Hegedűs,"Herlianska 107, Košice - Šaca",Šaca,Liek,XL,67x50x42,27.08,Nie,Expres,Dobierka,251.92,,,2026-05-18,Čaká na doručenie
+222,KE00022247,Matúš Šimko,"Priečna 46/12, Košice - Pereš",Pereš,Knihy,XS,9x9x4,0.34,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+223,KE00022397,Filip Bogdán,"Viničná 36, Košice - Myslava",Myslava,Knihy,XL,73x55x45,21.94,Nie,Expres,Platba vopred,,,,2026-05-15,Čaká na doručenie
+224,KE00022458,Igor Molnár,"Ovocná 46/45, Košice - Barca",Barca,Liek,XXL,101x67x59,24.09,Nie,Štandard,Firemná faktura,,221.88,,2026-05-12,Čaká na doručenie
+225,KE00022588,Patrik Kováčik,"Ďumbierska 15, Košice - Nad jazerom",Nad jazerom,Balík,M,32x26x21,1.16,Nie,Expres,Platba vopred,,,,2026-05-13,Čaká na doručenie
+226,KE00022635,Lenka Szűcs,"Moldavská 144, Košice - Krásna",Krásna,Potraviny,M,32x26x21,0.71,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-18,Čaká na doručenie
+227,KE00022743,Adam Király,"Viničná 95/35, Košice - Myslava",Myslava,Oblečenie,S,22x16x11,1.94,Nie,Štandard,Dobierka,481.43,565.43,Skladovať v chlade,2026-05-17,Čaká na doručenie
+228,KE00022855,Jana Mészáros,"Zupkova 150/1, Košice - Nad jazerom",Nad jazerom,Knihy,XXL,140x93x82,11.6,Nie,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+229,KE00022989,Richard Bíró,"Meteorová 135, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,XS,11x11x5,0.16,Áno,Štandard,Dobierka,110.61,444.71,Krehké - opatrne,2026-05-13,Čaká na doručenie
+230,KE00023059,Ján Lukáč,"Svätá 144/42, Košice - Vyšné Opátske",Vyšné Opátske,Nábytok,XXL,112x75x65,19.61,Nie,Ekonomický,Dobierka,443.4,,,2026-05-12,Čaká na doručenie
+231,KE00023178,Ivana Rácz,"Horná 73, Košice - Kavečany",Kavečany,Liek,M,30x25x20,2.79,Nie,Štandard,Dobierka,259.38,,Doručiť osobne,2026-05-17,Čaká na doručenie
+232,KE00023213,Igor Rácz,"Krásnohorská 17, Košice - Krásna",Krásna,Dokument,S,22x17x11,0.96,Nie,Štandard,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+233,KE00023325,Michal Novák,"Záhradná 10, Košice - Myslava",Myslava,Elektronika,M,30x25x20,3.09,Áno,Ekonomický,Firemná faktura,,785.11,Skladovať v chlade,2026-05-12,Čaká na doručenie
+234,KE00023470,Martin Szűcs,"Krásnohorská 17/38, Košice - Krásna",Krásna,Oblečenie,XS,9x9x4,0.3,Nie,Expres,Dobierka,383.81,1324.84,Skladovať v chlade,2026-05-11,Čaká na doručenie
+235,KE00023578,Monika Fehér,"Tatranskápre 57, Košice - Západ",Západ,Knihy,M,35x29x23,1.15,Áno,Ekonomický,Platba vopred,,1197.34,Nezalomovať,2026-05-17,Čaká na doručenie
+236,KE00023616,Adam Vincze,"Krásnohorská 79, Košice - Krásna",Krásna,Náhradný diel,M,26x22x17,4.58,Nie,Štandard,Firemná faktura,,1601.32,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+237,KE00023734,Dušan Szabó,"Potočná 141, Košice - Krásna",Krásna,Liek,M,25x20x16,3.77,Nie,Ekonomický,Platba vopred,,,Volať vopred,2026-05-17,Čaká na doručenie
+238,KE00023865,Dušan Krajčí,"Továrenská 116, Košice - Šaca",Šaca,Knihy,XXL,124x82x72,32.62,Nie,Overnight,Dobierka,160.04,,,2026-05-15,Čaká na doručenie
+239,KE00023990,Veronika Mészáros,"Lesná 35/22, Košice - Kavečany",Kavečany,Náhradný diel,L,47x37x28,5.28,Nie,Štandard,Dobierka,143.9,1469.75,,2026-05-16,Čaká na doručenie
+240,KE00024085,Peter Szőke,"Janigova 5/41, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,XL,76x57x48,18.93,Nie,Štandard,Firemná faktura,,1783.96,Krehké - opatrne,2026-05-16,Čaká na doručenie
+241,KE00024155,Monika Kiss,"Bačíkova 119/6, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,XL,64x48x40,9.45,Nie,Expres,Dobierka,83.82,,,2026-05-16,Čaká na doručenie
+242,KE00024276,Pavel Kiss,"Gemerská 125, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,S,16x12x8,0.57,Nie,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+243,KE00024372,Zuzana Sándor,"Lesná 149/12, Košice - Kavečany",Kavečany,Dokument,L,47x37x28,10.15,Nie,Štandard,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+244,KE00024424,Lucia Kováčik,"Priečna 2/9, Košice - Pereš",Pereš,Elektronika,S,16x12x8,1.36,Áno,Štandard,Dobierka,303.0,1624.23,,2026-05-17,Čaká na doručenie
+245,KE00024561,Dávid Sándor,"Okružná 123, Košice - Pereš",Pereš,Nábytok,L,40x32x24,1.6,Nie,Štandard,Platba vopred,,368.27,Doručiť osobne,2026-05-18,Čaká na doručenie
+246,KE00024653,Lucia Király,"Orlia 73/14, Košice - Staré Mesto",Staré Mesto,Potraviny,L,57x45x34,3.39,Nie,Expres,Platba vopred,,,Doručiť osobne,2026-05-14,Čaká na doručenie
+247,KE00024778,Zuzana Šimko,"Slnečná 18, Košice - Myslava",Myslava,Náhradný diel,XS,8x8x4,0.31,Nie,Expres,Platba vopred,,,,2026-05-11,Čaká na doručenie
+248,KE00024858,Vladimír Király,"Opátska 24, Košice - Vyšné Opátske",Vyšné Opátske,Potraviny,XL,90x67x56,27.22,Nie,Štandard,Dobierka,267.26,,,2026-05-15,Čaká na doručenie
+249,KE00024910,Vladimír Oravec,"Borová 148, Košice - Barca",Barca,Dokument,L,55x44x33,13.74,Nie,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+250,KE00025097,Boris Takáč,"Opátska 134, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,XXL,134x89x78,26.35,Nie,Štandard,Dobierka,428.21,558.37,,2026-05-12,Čaká na doručenie
+251,KE00025130,Veronika Novák,"Hájna 106/36, Košice - Poľov",Poľov,Oblečenie,M,30x25x20,2.68,Nie,Štandard,Platba vopred,,1568.39,,2026-05-17,Čaká na doručenie
+252,KE00025265,Jana Máté,"Jegorova 131, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,XL,86x64x53,22.08,Áno,Štandard,Platba vopred,,,Horná strana nahor,2026-05-16,Čaká na doručenie
+253,KE00025311,Lukáš Király,"Janigova 68, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,XS,10x10x5,0.47,Nie,Expres,Platba vopred,,,,2026-05-16,Čaká na doručenie
+254,KE00025461,Helena Lukács,"Kyjevská 74, Košice - Juh",Juh,Balík,XL,86x64x53,19.61,Nie,Štandard,Platba vopred,,1342.63,,2026-05-14,Čaká na doručenie
+255,KE00025583,Lukáš Máté,"Kyjevská 4/5, Košice - Juh",Juh,Nábytok,M,32x27x21,3.02,Nie,Štandard,Dobierka,305.15,,Horná strana nahor,2026-05-15,Čaká na doručenie
+256,KE00025641,Marek Máté,"Alžbetina 45, Košice - Staré Mesto",Staré Mesto,Dokument,XS,10x10x5,0.24,Nie,Overnight,Firemná faktura,,,Skladovať v chlade,2026-05-11,Čaká na doručenie
+257,KE00025799,Veronika Lukáč,"Továrenská 118/2, Košice - Šaca",Šaca,Elektronika,M,24x20x16,3.35,Áno,Expres,Dobierka,161.29,,,2026-05-13,Čaká na doručenie
+258,KE00025840,Ondrej Bogdán,"Čermeľská 74, Košice - Kavečany",Kavečany,Liek,M,24x20x16,4.69,Nie,Štandard,Platba vopred,,,Horná strana nahor,2026-05-15,Čaká na doručenie
+259,KE00025973,Milan Gál,"Považská 53, Košice - Sever",Sever,Dokument,M,25x21x17,0.98,Nie,Expres,Platba vopred,,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+260,KE00026032,Radoslav Halász,"Záhradná 47/33, Košice - Kavečany",Kavečany,Náhradný diel,S,22x16x11,0.43,Nie,Expres,Firemná faktura,,,,2026-05-12,Čaká na doručenie
+261,KE00026188,Filip Kováč,"Myslavská 133, Košice - Myslava",Myslava,Dokument,XS,10x10x5,0.25,Nie,Štandard,Dobierka,276.54,,Volať vopred,2026-05-15,Čaká na doručenie
+262,KE00026240,Juraj Pintér,"Priemyselná 48, Košice - Šaca",Šaca,Potraviny,XXL,132x88x77,24.6,Nie,Štandard,Dobierka,290.07,547.2,,2026-05-15,Čaká na doručenie
+263,KE00026316,Adam Hudák,"Potočná 98, Košice - Krásna",Krásna,Liek,L,56x44x33,3.47,Nie,Štandard,Firemná faktura,,1718.42,Volať vopred,2026-05-11,Čaká na doručenie
+264,KE00026454,Pavel Olah,"Poľovská 42, Košice - Poľov",Poľov,Oblečenie,XXL,100x67x58,39.78,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-13,Čaká na doručenie
+265,KE00026553,Eva Molnár,"Kyjevská 45/19, Košice - Juh",Juh,Liek,XXL,120x80x70,40.99,Nie,Overnight,Dobierka,317.7,1617.36,,2026-05-16,Čaká na doručenie
+266,KE00026667,Tomáš Nagy,"Rybná 147, Košice - Lorinčík",Lorinčík,Oblečenie,S,18x14x9,0.76,Nie,Expres,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+267,KE00026777,Matúš Polák,"Údolná 48/9, Košice - Lorinčík",Lorinčík,Dokument,XXL,108x72x63,39.76,Nie,Štandard,Dobierka,468.71,1544.16,,2026-05-11,Čaká na doručenie
+268,KE00026870,Boris Farkas,"Janigova 68/6, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Liek,M,26x22x17,3.82,Nie,Expres,Platba vopred,,1831.39,,2026-05-18,Čaká na doručenie
+269,KE00026949,Filip Fehér,"Slnečná 70/9, Košice - Myslava",Myslava,Nábytok,S,20x15x10,1.02,Nie,Štandard,Firemná faktura,,188.21,,2026-05-11,Čaká na doručenie
+270,KE00027047,Ján Kováč,"Javorová 67, Košice - Barca",Barca,Knihy,XL,90x67x56,25.89,Nie,Štandard,Firemná faktura,,866.57,Volať vopred,2026-05-11,Čaká na doručenie
+271,KE00027178,Andrea Máté,"Trieda SNP 141, Košice - Sever",Sever,Potraviny,L,47x38x28,3.29,Nie,Overnight,Dobierka,314.53,,Volať vopred,2026-05-14,Čaká na doručenie
+272,KE00027246,Vladimír Tkáč,"Záhradná 49/12, Košice - Kavečany",Kavečany,Oblečenie,XS,10x10x5,0.35,Nie,Expres,Platba vopred,,1944.94,,2026-05-18,Čaká na doručenie
+273,KE00027328,Lukáš Hudák,"Čermeľská 113/15, Košice - Kavečany",Kavečany,Oblečenie,XS,9x9x4,0.24,Nie,Expres,Platba vopred,,,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+274,KE00027441,Veronika Novák,"Fábryho 101, Košice - Sídlisko KVP",Sídlisko KVP,Potraviny,S,23x17x11,0.65,Nie,Overnight,Platba vopred,,,,2026-05-12,Čaká na doručenie
+275,KE00027535,Ivana Katona,"Gemerská 118/7, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,S,19x14x9,1.43,Nie,Ekonomický,Platba vopred,,,Horná strana nahor,2026-05-14,Čaká na doručenie
+276,KE00027657,Igor Fodor,"Barčianska 56/16, Košice - Barca",Barca,Nábytok,M,24x20x16,4.07,Nie,Štandard,Dobierka,25.79,,,2026-05-11,Čaká na doručenie
+277,KE00027792,Ondrej Gál,"Toryská 41, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,M,35x29x23,4.99,Nie,Štandard,Platba vopred,,1963.53,Horná strana nahor,2026-05-16,Čaká na doručenie
+278,KE00027869,Zuzana Balogh,"Javorová 50, Košice - Barca",Barca,Liek,XXL,102x68x59,45.95,Nie,Expres,Firemná faktura,,701.85,,2026-05-15,Čaká na doručenie
+279,KE00027989,Ivana Hudák,"Horná 142, Košice - Kavečany",Kavečany,Knihy,L,45x36x27,4.69,Nie,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+280,KE00028018,Zuzana Blaho,"Bernoláková 17/35, Košice - Sever",Sever,Krehký tovar,XL,85x64x53,23.67,Áno,Expres,Firemná faktura,,,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+281,KE00028111,Marek Sipos,"Hemerkova 46/13, Košice - Sídlisko KVP",Sídlisko KVP,Potraviny,S,16x12x8,1.23,Nie,Expres,Firemná faktura,,1438.51,Krehké - opatrne,2026-05-18,Čaká na doručenie
+282,KE00028237,Igor Tóth,"Minská 21, Košice - Juh",Juh,Potraviny,M,30x25x20,4.72,Nie,Overnight,Dobierka,310.38,614.77,,2026-05-18,Čaká na doručenie
+283,KE00028395,Zuzana Blaho,"Opátska 26/35, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,S,20x15x10,0.65,Áno,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+284,KE00028465,Monika Lukács,"Lorinčícka 43/36, Košice - Lorinčík",Lorinčík,Nábytok,M,31x26x21,2.9,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+285,KE00028510,Zuzana Rácz,"Robotnícka 62/14, Košice - Šaca",Šaca,Liek,XL,93x70x58,9.86,Nie,Štandard,Firemná faktura,,1781.75,,2026-05-18,Čaká na doručenie
+286,KE00028639,Andrej Szűcs,"Bačíkova 55/2, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,M,35x29x23,2.8,Nie,Ekonomický,Dobierka,181.05,1168.49,Volať vopred,2026-05-16,Čaká na doručenie
+287,KE00028783,Juraj Vincze,"Lesná 24/37, Košice - Kavečany",Kavečany,Krehký tovar,XS,10x10x5,0.42,Áno,Štandard,Platba vopred,,,Nezalomovať,2026-05-14,Čaká na doručenie
+288,KE00028879,Eva Fodor,"Poľovská 15/22, Košice - Poľov",Poľov,Elektronika,L,58x46x35,2.69,Áno,Expres,Platba vopred,,91.95,Nezalomovať,2026-05-12,Čaká na doručenie
+289,KE00028916,Michal Hegedűs,"Rovníková 129/10, Košice - Nad jazerom",Nad jazerom,Nábytok,XXL,143x95x83,48.84,Áno,Štandard,Firemná faktura,,956.95,Doručiť osobne,2026-05-16,Čaká na doručenie
+290,KE00029097,Lenka Fodor,"Potočná 68, Košice - Krásna",Krásna,Náhradný diel,XXL,102x68x59,15.39,Nie,Štandard,Platba vopred,,865.83,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+291,KE00029135,Eva Blaho,"Janigova 106, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Oblečenie,M,28x23x18,3.45,Nie,Štandard,Firemná faktura,,1638.16,Horná strana nahor,2026-05-16,Čaká na doručenie
+292,KE00029236,Michal Polák,"Ovocná 22, Košice - Barca",Barca,Oblečenie,XL,93x70x58,26.46,Nie,Štandard,Dobierka,227.78,1080.63,Krehké - opatrne,2026-05-18,Čaká na doručenie
+293,KE00029344,Matúš Hudák,"Brestová 67/40, Košice - Krásna",Krásna,Nábytok,XXL,129x86x75,10.74,Nie,Ekonomický,Dobierka,34.75,,,2026-05-15,Čaká na doručenie
+294,KE00029422,Dušan Fedor,"Šrobárova 3, Košice - Sídlisko KVP",Sídlisko KVP,Dokument,XXL,136x91x79,36.4,Nie,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+295,KE00029590,Róbert Lukács,"Továrenská 137, Košice - Šaca",Šaca,Balík,L,51x40x30,10.97,Nie,Štandard,Firemná faktura,,710.31,Nezalomovať,2026-05-16,Čaká na doručenie
+296,KE00029676,Michal Fábián,"Bačíkova 129, Košice - Košická Nová Ves",Košická Nová Ves,Balík,M,34x28x23,4.51,Nie,Ekonomický,Dobierka,174.18,1462.48,,2026-05-12,Čaká na doručenie
+297,KE00029777,Ladislav Király,"Čínska 62/28, Košice - Sever",Sever,Krehký tovar,M,29x24x19,1.09,Áno,Štandard,Platba vopred,,,Volať vopred,2026-05-16,Čaká na doručenie
+298,KE00029848,Dávid Molnár,"Šírková 38/37, Košice - Nad jazerom",Nad jazerom,Dokument,XS,10x10x5,0.48,Nie,Štandard,Dobierka,19.59,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+299,KE00029927,Vladimír Novák,"Záhradná 39/7, Košice - Myslava",Myslava,Oblečenie,XS,11x11x5,0.34,Nie,Expres,Platba vopred,,1561.85,Krehké - opatrne,2026-05-18,Čaká na doručenie
+300,KE00030035,Richard Farkas,"Pustovnícka 121/24, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,L,49x39x29,3.29,Áno,Štandard,Platba vopred,,1345.96,Skladovať v chlade,2026-05-14,Čaká na doručenie
+301,KE00030183,Natália Sipos,"Hviezdna 46/29, Košice - Juh",Juh,Elektronika,XXL,111x74x65,28.3,Áno,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+302,KE00030248,Anna Varga,"Brestová 10/29, Košice - Krásna",Krásna,Balík,S,20x15x10,0.91,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-15,Čaká na doručenie
+303,KE00030367,Natália Tóth,"Poľná 43, Košice - Košická Nová Ves",Košická Nová Ves,Liek,XXL,120x80x70,15.69,Nie,Štandard,Dobierka,294.8,,Skladovať v chlade,2026-05-16,Čaká na doručenie
+304,KE00030459,Róbert Mészáros,"Rooseveltova 117/46, Košice - Staré Mesto",Staré Mesto,Krehký tovar,XS,9x9x4,0.38,Áno,Expres,Dobierka,61.51,1052.4,,2026-05-11,Čaká na doručenie
+305,KE00030567,Zuzana Varga,"Pustovnícka 41, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,S,23x17x11,1.22,Áno,Štandard,Dobierka,385.73,1463.02,Skladovať v chlade,2026-05-18,Čaká na doručenie
+306,KE00030668,Ján Gál,"Bačíkova 31/13, Košice - Košická Nová Ves",Košická Nová Ves,Liek,M,24x20x16,2.74,Áno,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+307,KE00030795,Milan Máté,"Kamenná 21/1, Košice - Lorinčík",Lorinčík,Elektronika,M,31x26x20,3.01,Áno,Štandard,Dobierka,328.37,,Doručiť osobne,2026-05-18,Čaká na doručenie
+308,KE00030851,Andrea Novák,"Záhradnícka 23, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,S,21x16x10,1.3,Nie,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-18,Čaká na doručenie
+309,KE00030990,Tomáš Tkáč,"Javorová 18/36, Košice - Barca",Barca,Oblečenie,L,42x34x25,10.72,Nie,Štandard,Dobierka,108.48,,Nevystavovať vlhku,2026-05-18,Čaká na doručenie
+310,KE00031088,Jakub Tkáč,"Opátska 124/39, Košice - Vyšné Opátske",Vyšné Opátske,Náhradný diel,L,52x41x31,5.43,Nie,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-11,Čaká na doručenie
+311,KE00031137,Peter Mészáros,"Považská 50, Košice - Sever",Sever,Elektronika,XXL,134x89x78,39.5,Áno,Expres,Firemná faktura,,1614.03,Krehké - opatrne,2026-05-18,Čaká na doručenie
+312,KE00031296,Tomáš Krajčí,"Štúrova 52/17, Košice - Staré Mesto",Staré Mesto,Balík,M,30x25x20,1.96,Nie,Štandard,Platba vopred,,682.49,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+313,KE00031350,Miroslav Fábián,"Okružná 10/31, Košice - Pereš",Pereš,Knihy,L,57x46x34,8.52,Nie,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+314,KE00031449,Ondrej Fekete,"Brestová 5, Košice - Krásna",Krásna,Balík,M,24x20x16,1.17,Nie,Štandard,Platba vopred,,,Doručiť osobne,2026-05-12,Čaká na doručenie
+315,KE00031574,Martina Polák,"Herlianska 70, Košice - Šaca",Šaca,Elektronika,M,29x24x19,4.78,Áno,Štandard,Dobierka,190.24,194.28,,2026-05-18,Čaká na doručenie
+316,KE00031676,Róbert Fekete,"Zlatá 124/10, Košice - Staré Mesto",Staré Mesto,Knihy,L,54x43x32,8.33,Nie,Štandard,Platba vopred,,781.3,,2026-05-15,Čaká na doručenie
+317,KE00031778,Helena Nagy,"Cottbuská 80/44, Košice - Dargovských hrdinov",Dargovských hrdinov,Náhradný diel,M,29x24x19,0.71,Nie,Expres,Dobierka,380.45,580.27,Krehké - opatrne,2026-05-15,Čaká na doručenie
+318,KE00031883,Dávid Fedor,"Továrenská 31, Košice - Šaca",Šaca,Náhradný diel,XS,8x8x4,0.35,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+319,KE00031935,Jana Fehér,"Šoltésovej 19, Košice - Sever",Sever,Balík,L,41x32x24,1.41,Áno,Štandard,Platba vopred,,671.34,,2026-05-11,Čaká na doručenie
+320,KE00032095,Filip Mészáros,"Krásnohorská 120/6, Košice - Krásna",Krásna,Liek,XS,9x9x4,0.37,Nie,Štandard,Dobierka,448.37,1402.23,Krehké - opatrne,2026-05-14,Čaká na doručenie
+321,KE00032123,Tomáš Olah,"Priemyselná 117, Košice - Šaca",Šaca,Krehký tovar,XS,9x9x4,0.28,Áno,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+322,KE00032282,Anna Halász,"Robotnícka 19/35, Košice - Šaca",Šaca,Náhradný diel,XL,77x57x48,19.76,Nie,Štandard,Dobierka,108.08,,,2026-05-12,Čaká na doručenie
+323,KE00032386,Dušan Szabó,"Robotnícka 61, Košice - Šaca",Šaca,Liek,XXL,140x93x82,32.97,Nie,Štandard,Platba vopred,,817.53,Doručiť osobne,2026-05-11,Čaká na doručenie
+324,KE00032459,Dušan Tóth,"Sofijská 84, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,XS,8x8x4,0.16,Nie,Ekonomický,Dobierka,77.63,,Horná strana nahor,2026-05-16,Čaká na doručenie
+325,KE00032557,Ladislav Jakab,"Viničná 53/21, Košice - Myslava",Myslava,Potraviny,XXL,110x73x64,47.73,Nie,Expres,Platba vopred,,595.43,,2026-05-12,Čaká na doručenie
+326,KE00032681,Rastislav Tkáč,"Krásnohorská 1/23, Košice - Krásna",Krásna,Potraviny,XS,8x8x4,0.38,Nie,Expres,Firemná faktura,,286.75,,2026-05-15,Čaká na doručenie
+327,KE00032768,Dušan Šimko,"Poľná 107, Košice - Poľov",Poľov,Krehký tovar,S,16x12x8,1.37,Áno,Expres,Firemná faktura,,1613.82,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+328,KE00032883,Petra Máté,"Rybná 47, Košice - Lorinčík",Lorinčík,Potraviny,L,47x38x28,4.16,Nie,Expres,Platba vopred,,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+329,KE00032921,Katarína Lukáč,"Barčianska 10/46, Košice - Barca",Barca,Krehký tovar,XL,79x59x49,21.64,Áno,Expres,Firemná faktura,,1780.93,,2026-05-11,Čaká na doručenie
+330,KE00033047,Barbora Krajčí,"Vietnamská 20/35, Košice - Sever",Sever,Balík,XL,65x49x41,12.28,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+331,KE00033126,Adam Krajčí,"Bačíkova 10/39, Košice - Košická Nová Ves",Košická Nová Ves,Liek,XXL,133x89x77,20.42,Nie,Štandard,Firemná faktura,,,Volať vopred,2026-05-18,Čaká na doručenie
+332,KE00033240,Natália Fedor,"Opátska 72, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,M,34x28x22,0.56,Nie,Expres,Firemná faktura,,1567.23,,2026-05-13,Čaká na doručenie
+333,KE00033354,Lukáš Hudák,"Nová 136/22, Košice - Pereš",Pereš,Liek,XL,93x70x58,7.16,Nie,Expres,Firemná faktura,,,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+334,KE00033411,Anna Halász,"Fábryho 30, Košice - Sídlisko KVP",Sídlisko KVP,Náhradný diel,L,46x36x27,11.45,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+335,KE00033560,Ondrej Varga,"Poľná 98/34, Košice - Košická Nová Ves",Košická Nová Ves,Potraviny,XS,11x11x5,0.35,Nie,Expres,Dobierka,138.81,,Volať vopred,2026-05-17,Čaká na doručenie
+336,KE00033613,Filip Novák,"Viničná 50/44, Košice - Myslava",Myslava,Dokument,M,30x25x20,3.53,Áno,Štandard,Dobierka,225.74,394.23,,2026-05-15,Čaká na doručenie
+337,KE00033794,Rastislav Török,"Ťahanovská 56/41, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,XS,8x8x4,0.34,Nie,Expres,Platba vopred,,596.19,,2026-05-17,Čaká na doručenie
+338,KE00033872,Dušan Rácz,"Astrová 71/45, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Oblečenie,M,27x22x18,4.01,Nie,Expres,Platba vopred,,886.74,,2026-05-14,Čaká na doručenie
+339,KE00033973,Miroslav Fehér,"Leningradská 46/7, Košice - Juh",Juh,Liek,L,44x35x26,10.01,Nie,Expres,Dobierka,287.82,,,2026-05-14,Čaká na doručenie
+340,KE00034098,Miroslav Szűcs,"Ďumbierska 10/18, Košice - Nad jazerom",Nad jazerom,Náhradný diel,M,34x29x23,3.09,Nie,Expres,Firemná faktura,,775.0,,2026-05-17,Čaká na doručenie
+341,KE00034159,Jana Hegedűs,"Perešská 146/23, Košice - Pereš",Pereš,Dokument,M,28x24x19,3.35,Nie,Štandard,Firemná faktura,,1113.41,,2026-05-14,Čaká na doručenie
+342,KE00034292,Filip Balogh,"Galaktická 100/41, Košice - Juh",Juh,Elektronika,L,41x33x25,9.86,Áno,Štandard,Dobierka,361.27,1587.55,Horná strana nahor,2026-05-15,Čaká na doručenie
+343,KE00034319,Peter Varga,"Poľná 137/29, Košice - Košická Nová Ves",Košická Nová Ves,Balík,M,24x20x16,4.05,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+344,KE00034423,Natália Varga,"Hemerkova 126/31, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,S,21x16x10,0.43,Áno,Expres,Platba vopred,,1186.17,,2026-05-11,Čaká na doručenie
+345,KE00034537,Róbert Fodor,"Bukureštská 57, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,M,33x28x22,4.92,Nie,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+346,KE00034690,Rastislav Fedor,"Vstupný areál 45, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,S,22x16x11,0.5,Nie,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+347,KE00034767,Ján Kováč,"Hájna 5/6, Košice - Poľov",Poľov,Nábytok,S,23x17x11,1.47,Nie,Overnight,Firemná faktura,,549.19,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+348,KE00034879,Helena Novák,"Údolná 45/3, Košice - Lorinčík",Lorinčík,Oblečenie,XXL,119x79x69,48.01,Áno,Štandard,Dobierka,63.17,1524.65,,2026-05-17,Čaká na doručenie
+349,KE00034988,Juraj Fedor,"Kláštorná 119/43, Košice - Vyšné Opátske",Vyšné Opátske,Liek,XS,8x8x4,0.42,Nie,Štandard,Platba vopred,,510.25,Volať vopred,2026-05-13,Čaká na doručenie
+350,KE00035051,Richard Kováčik,"Myslavská 27/35, Košice - Myslava",Myslava,Elektronika,XS,9x9x4,0.15,Áno,Expres,Firemná faktura,,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+351,KE00035132,Milan Bogdán,"Brnianska 84, Košice - Sever",Sever,Elektronika,L,57x45x34,6.26,Áno,Štandard,Platba vopred,,1222.77,Doručiť osobne,2026-05-12,Čaká na doručenie
+352,KE00035268,Róbert Fábián,"Poľná 35, Košice - Poľov",Poľov,Krehký tovar,M,35x29x23,1.41,Áno,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+353,KE00035372,Tibor Király,"Údolná 88, Košice - Lorinčík",Lorinčík,Nábytok,S,22x16x11,1.35,Nie,Ekonomický,Platba vopred,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+354,KE00035415,Matúš Fodor,"Minská 119, Košice - Juh",Juh,Potraviny,XXL,137x91x80,19.91,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+355,KE00035521,Monika Olah,"Priečna 9, Košice - Pereš",Pereš,Elektronika,XXL,135x90x78,28.1,Áno,Štandard,Firemná faktura,,485.73,Doručiť osobne,2026-05-15,Čaká na doručenie
+356,KE00035690,Anna Jakab,"Vodná 79, Košice - Staré Mesto",Staré Mesto,Liek,XXL,124x82x72,49.06,Nie,Expres,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+357,KE00035796,Petra Csonka,"Juhoslovanská 86/19, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Nábytok,M,32x26x21,3.26,Nie,Expres,Dobierka,441.02,,,2026-05-18,Čaká na doručenie
+358,KE00035893,Anna Gál,"Barčianska 29, Košice - Barca",Barca,Náhradný diel,XS,9x9x4,0.17,Nie,Expres,Platba vopred,,,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+359,KE00035996,Stanislav Molnár,"Priečna 54/49, Košice - Pereš",Pereš,Potraviny,M,34x28x23,2.77,Áno,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-17,Čaká na doručenie
+360,KE00036073,Filip Szabó,"Hornohorská 116/44, Košice - Krásna",Krásna,Dokument,S,23x17x11,1.02,Nie,Štandard,Platba vopred,,1397.19,Doručiť osobne,2026-05-17,Čaká na doručenie
+361,KE00036176,Tibor Pintér,"Jazerná 134/2, Košice - Nad jazerom",Nad jazerom,Knihy,XXL,121x81x71,15.28,Nie,Štandard,Dobierka,98.59,,,2026-05-18,Čaká na doručenie
+362,KE00036246,Boris Molnár,"Továrenská 149, Košice - Šaca",Šaca,Náhradný diel,L,51x41x31,10.76,Nie,Štandard,Dobierka,395.73,973.64,,2026-05-16,Čaká na doručenie
+363,KE00036383,Dávid Gál,"Hemerkova 91, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,S,21x16x10,0.71,Áno,Overnight,Platba vopred,,1987.61,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+364,KE00036473,Juraj Máté,"Dĺžková 67, Košice - Nad jazerom",Nad jazerom,Knihy,XXL,97x65x56,22.68,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-17,Čaká na doručenie
+365,KE00036571,Adam Fehér,"Dĺžková 82, Košice - Nad jazerom",Nad jazerom,Liek,XL,74x55x46,22.05,Nie,Overnight,Platba vopred,,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+366,KE00036667,Peter Halász,"Hemerkova 142, Košice - Sídlisko KVP",Sídlisko KVP,Dokument,XL,90x68x56,15.04,Nie,Štandard,Dobierka,265.58,1081.44,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+367,KE00036767,Mária Király,"Galvaniho 101, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Knihy,XL,80x60x50,4.51,Nie,Štandard,Firemná faktura,,709.2,Nezalomovať,2026-05-13,Čaká na doručenie
+368,KE00036877,Adam Pintér,"Krásnohorská 56/29, Košice - Krásna",Krásna,Potraviny,L,45x36x27,12.28,Nie,Expres,Platba vopred,,1976.88,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+369,KE00036948,Andrea Fábián,"Herlianska 97, Košice - Šaca",Šaca,Nábytok,M,28x24x19,3.0,Nie,Expres,Dobierka,193.98,,Nezalomovať,2026-05-11,Čaká na doručenie
+370,KE00037018,Peter Kováč,"Poľná 144/15, Košice - Košická Nová Ves",Košická Nová Ves,Liek,S,18x13x9,1.92,Nie,Štandard,Dobierka,93.79,561.66,Nezalomovať,2026-05-15,Čaká na doručenie
+371,KE00037127,Igor Hegedűs,"Borová 124/17, Košice - Barca",Barca,Knihy,L,59x47x35,12.46,Nie,Štandard,Platba vopred,,1757.85,Doručiť osobne,2026-05-18,Čaká na doručenie
+372,KE00037297,Andrea Fábián,"Ovocná 14, Košice - Barca",Barca,Dokument,M,24x20x16,1.81,Nie,Štandard,Dobierka,51.78,639.26,,2026-05-16,Čaká na doručenie
+373,KE00037334,Barbora Balogh,"Záhradnícka 93, Košice - Košická Nová Ves",Košická Nová Ves,Knihy,S,16x12x8,1.13,Nie,Expres,Platba vopred,,450.02,Môže zanechať u suseda,2026-05-17,Čaká na doručenie
+374,KE00037486,Alžbeta Szűcs,"Brestová 135/46, Košice - Krásna",Krásna,Dokument,XS,9x9x4,0.47,Nie,Overnight,Firemná faktura,,,Doručiť osobne,2026-05-13,Čaká na doručenie
+375,KE00037524,Adam Lukáč,"Mníšska 45/2, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,S,17x12x8,1.45,Áno,Štandard,Dobierka,490.65,,,2026-05-12,Čaká na doručenie
+376,KE00037687,Róbert Baláž,"Ťahanovská 124/3, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,XS,11x11x5,0.31,Nie,Štandard,Dobierka,154.31,256.35,,2026-05-18,Čaká na doručenie
+377,KE00037711,Lukáš Hudák,"Letná 48/2, Košice - Juh",Juh,Knihy,XXL,141x94x82,47.95,Nie,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+378,KE00037866,Patrik Fehér,"Kláštorná 50/11, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,XS,11x11x5,0.14,Áno,Ekonomický,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+379,KE00037920,Juraj Lukács,"Arm. gen. Svobodu 91/28, Košice - Dargovských hrdinov",Dargovských hrdinov,Knihy,S,19x14x9,1.57,Nie,Štandard,Dobierka,382.33,,,2026-05-14,Čaká na doručenie
+380,KE00038070,Anna Király,"Továrenská 30, Košice - Šaca",Šaca,Liek,XXL,110x73x64,49.05,Nie,Štandard,Firemná faktura,,1683.71,,2026-05-15,Čaká na doručenie
+381,KE00038135,Ondrej Baláž,"Ovocná 4/32, Košice - Barca",Barca,Dokument,L,48x39x29,10.22,Nie,Štandard,Platba vopred,,406.18,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+382,KE00038223,Martina Fedor,"Poľovská 60/47, Košice - Poľov",Poľov,Potraviny,XXL,132x88x77,33.75,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-14,Čaká na doručenie
+383,KE00038319,Igor Šimko,"Rumunská 126, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,XS,8x8x4,0.12,Áno,Štandard,Dobierka,304.27,1250.23,Doručiť osobne,2026-05-13,Čaká na doručenie
+384,KE00038458,Dušan Sipos,"Svätá 120, Košice - Vyšné Opátske",Vyšné Opátske,Náhradný diel,L,50x40x30,8.59,Nie,Štandard,Dobierka,218.05,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+385,KE00038579,Alžbeta Katona,"Tichá 10, Košice - Myslava",Myslava,Potraviny,M,34x28x23,1.24,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+386,KE00038654,Michal Halász,"Okružná 144/33, Košice - Pereš",Pereš,Nábytok,M,29x24x19,4.87,Nie,Expres,Dobierka,35.4,,Doručiť osobne,2026-05-18,Čaká na doručenie
+387,KE00038712,Petra Balogh,"Zlatá 88, Košice - Staré Mesto",Staré Mesto,Elektronika,M,28x24x19,0.75,Áno,Štandard,Platba vopred,,681.81,,2026-05-17,Čaká na doručenie
+388,KE00038898,Petra Jakab,"Hornohorská 10, Košice - Krásna",Krásna,Liek,XL,92x69x58,10.2,Nie,Štandard,Firemná faktura,,981.83,,2026-05-13,Čaká na doručenie
+389,KE00038983,Dušan Fekete,"Volgogradská 128/49, Košice - Juh",Juh,Potraviny,S,20x15x10,0.85,Nie,Štandard,Platba vopred,,601.67,Volať vopred,2026-05-15,Čaká na doručenie
+390,KE00039050,Marek Szőke,"Hájna 24/38, Košice - Poľov",Poľov,Náhradný diel,M,27x22x18,3.05,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+391,KE00039178,Lenka Mészáros,"Leningradská 103, Košice - Juh",Juh,Balík,XXL,132x88x77,17.22,Nie,Expres,Dobierka,252.11,,Volať vopred,2026-05-11,Čaká na doručenie
+392,KE00039246,Anna Hudák,"Rybná 16/24, Košice - Lorinčík",Lorinčík,Oblečenie,S,17x12x8,1.43,Nie,Overnight,Platba vopred,,,,2026-05-15,Čaká na doručenie
+393,KE00039345,Rastislav Hudák,"Opatovská cesta 61, Košice - Západ",Západ,Oblečenie,S,16x12x8,1.63,Nie,Štandard,Platba vopred,,67.99,Doručiť osobne,2026-05-15,Čaká na doručenie
+394,KE00039427,Peter Tóth,"Moldavská 11/32, Košice - Krásna",Krásna,Dokument,XS,9x9x4,0.22,Nie,Ekonomický,Platba vopred,,,,2026-05-12,Čaká na doručenie
+395,KE00039559,Ivana Katona,"Brnianska 147/8, Košice - Sever",Sever,Oblečenie,XL,94x70x58,28.15,Áno,Štandard,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+396,KE00039697,Richard Takáč,"Čínska 56, Košice - Sever",Sever,Nábytok,M,29x24x19,1.64,Nie,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+397,KE00039749,Jakub Kiss,"Považská 38, Košice - Sever",Sever,Nábytok,M,24x20x16,4.85,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-15,Čaká na doručenie
+398,KE00039892,Zuzana Kováč,"Barčianska 137/29, Košice - Barca",Barca,Oblečenie,L,58x46x35,13.85,Nie,Štandard,Dobierka,109.14,,Horná strana nahor,2026-05-16,Čaká na doručenie
+399,KE00039980,Martina Olah,"Lorinčícka 71/50, Košice - Lorinčík",Lorinčík,Potraviny,XXL,115x77x67,43.65,Nie,Overnight,Firemná faktura,,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+400,KE00040093,Boris Novák,"Továrenská 8/42, Košice - Šaca",Šaca,Balík,XXL,117x78x68,35.64,Nie,Štandard,Platba vopred,,1429.99,Doručiť osobne,2026-05-17,Čaká na doručenie
+401,KE00040183,Adam Šimko,"Šírková 82, Košice - Nad jazerom",Nad jazerom,Knihy,M,26x21x17,3.17,Nie,Expres,Platba vopred,,,Skladovať v chlade,2026-05-12,Čaká na doručenie
+402,KE00040243,Natália Fábián,"Trieda SNP 6/42, Košice - Sever",Sever,Elektronika,S,23x17x11,1.95,Áno,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+403,KE00040358,Kristína Lukáč,"Hronská 95, Košice - Nad jazerom",Nad jazerom,Liek,XS,10x10x5,0.27,Nie,Overnight,Dobierka,105.56,,Volať vopred,2026-05-14,Čaká na doručenie
+404,KE00040468,Matúš Hegedűs,"Šírková 53/19, Košice - Nad jazerom",Nad jazerom,Krehký tovar,S,19x14x9,0.94,Áno,Štandard,Platba vopred,,1371.69,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+405,KE00040555,Mária Szűcs,"Ťahanovská 121, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,L,53x42x32,10.99,Nie,Expres,Dobierka,34.08,,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+406,KE00040677,Ladislav Halász,"Partizánska 65/25, Košice - Sídlisko KVP",Sídlisko KVP,Náhradný diel,XXL,113x75x66,48.72,Nie,Štandard,Dobierka,248.96,641.46,Horná strana nahor,2026-05-13,Čaká na doručenie
+407,KE00040750,Martin Šimko,"Údolná 67, Košice - Lorinčík",Lorinčík,Knihy,L,57x45x34,12.69,Nie,Ekonomický,Firemná faktura,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+408,KE00040873,Igor Papp,"Nová 143/43, Košice - Pereš",Pereš,Krehký tovar,XS,8x8x4,0.12,Áno,Štandard,Dobierka,354.45,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+409,KE00040944,Martina Mészáros,"Šrobárova 92/36, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,L,42x33x25,11.08,Áno,Štandard,Dobierka,434.75,1022.39,,2026-05-16,Čaká na doručenie
+410,KE00041023,Andrea Szabó,"Južná trieda 135/12, Košice - Juh",Juh,Knihy,S,22x16x11,1.42,Nie,Štandard,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+411,KE00041182,Jakub Katona,"Sácka 8, Košice - Šaca",Šaca,Nábytok,L,49x39x29,14.37,Nie,Expres,Dobierka,313.07,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+412,KE00041259,Mária Tóth,"Jazerná 13/19, Košice - Nad jazerom",Nad jazerom,Potraviny,XXL,99x66x57,48.08,Nie,Štandard,Dobierka,386.58,424.36,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+413,KE00041370,Martina Fodor,"Poľná 40, Košice - Poľov",Poľov,Nábytok,XXL,134x89x78,22.4,Nie,Štandard,Platba vopred,,,Horná strana nahor,2026-05-11,Čaká na doručenie
+414,KE00041492,Petra Kiss,"Horná 109, Košice - Kavečany",Kavečany,Dokument,XL,69x52x43,20.03,Nie,Štandard,Platba vopred,,,Horná strana nahor,2026-05-16,Čaká na doručenie
+415,KE00041575,Lukáš Olah,"Opátska 75, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,M,25x21x17,1.08,Nie,Overnight,Dobierka,28.63,,Nezalomovať,2026-05-17,Čaká na doručenie
+416,KE00041648,Matúš Jakab,"Kamenná 25, Košice - Lorinčík",Lorinčík,Náhradný diel,M,28x23x18,3.14,Nie,Štandard,Platba vopred,,1754.74,Nezalomovať,2026-05-12,Čaká na doručenie
+417,KE00041765,Natália Oravec,"Robotnícka 117/29, Košice - Šaca",Šaca,Krehký tovar,M,35x29x23,4.42,Áno,Štandard,Dobierka,491.18,,,2026-05-14,Čaká na doručenie
+418,KE00041811,Ján Kováčik,"Krásnohorská 2, Košice - Krásna",Krásna,Nábytok,XXL,118x79x69,37.67,Nie,Expres,Firemná faktura,,258.93,,2026-05-12,Čaká na doručenie
+419,KE00041970,Peter Takáč,"Hviezdna 5/13, Košice - Juh",Juh,Potraviny,L,52x42x31,10.1,Nie,Overnight,Platba vopred,,,,2026-05-14,Čaká na doručenie
+420,KE00042065,Miroslav Bogdán,"Lorinčícka 30, Košice - Lorinčík",Lorinčík,Balík,XXL,117x78x68,29.4,Nie,Overnight,Dobierka,286.87,214.3,Nezalomovať,2026-05-12,Čaká na doručenie
+421,KE00042180,Tibor Varga,"Kamenná 149/36, Košice - Lorinčík",Lorinčík,Nábytok,L,47x38x28,8.19,Nie,Ekonomický,Platba vopred,,1157.04,,2026-05-18,Čaká na doručenie
+422,KE00042253,Martina Gál,"Slanecká 107/8, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,XXL,112x75x65,37.9,Nie,Štandard,Firemná faktura,,1819.05,,2026-05-15,Čaká na doručenie
+423,KE00042372,Andrea Hegedűs,"Viničná 76/25, Košice - Myslava",Myslava,Krehký tovar,XXL,131x87x76,41.84,Áno,Expres,Dobierka,375.88,321.07,Doručiť osobne,2026-05-11,Čaká na doručenie
+424,KE00042489,Juraj Máté,"Sofijská 127, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,XS,11x11x5,0.24,Nie,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+425,KE00042524,Pavel Fekete,"Brnianska 144, Košice - Sever",Sever,Náhradný diel,M,33x27x22,3.97,Nie,Štandard,Platba vopred,,,Horná strana nahor,2026-05-18,Čaká na doručenie
+426,KE00042652,Marek Kováčik,"Moskovská trieda 144, Košice - Dargovských hrdinov",Dargovských hrdinov,Knihy,XXL,101x67x59,18.22,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+427,KE00042741,Andrea Rácz,"Hronská 52, Košice - Nad jazerom",Nad jazerom,Knihy,XS,8x8x4,0.42,Nie,Štandard,Dobierka,359.02,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+428,KE00042818,Petra Pintér,"Magnetová 108/9, Košice - Nad jazerom",Nad jazerom,Náhradný diel,L,57x46x34,14.33,Nie,Expres,Dobierka,77.06,,,2026-05-18,Čaká na doručenie
+429,KE00042997,Andrej Kováčik,"Meteorová 81, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,L,41x32x24,11.63,Áno,Ekonomický,Dobierka,317.65,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+430,KE00043061,Radoslav Bíró,"Hornohorská 81/1, Košice - Krásna",Krásna,Liek,XL,93x70x58,21.91,Nie,Expres,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+431,KE00043112,Jana Farkas,"Galaktická 22, Košice - Juh",Juh,Náhradný diel,XXL,130x87x76,45.2,Nie,Ekonomický,Dobierka,278.13,,,2026-05-13,Čaká na doručenie
+432,KE00043225,Andrej Krajčí,"Orlia 139/16, Košice - Staré Mesto",Staré Mesto,Balík,XXL,116x77x67,30.21,Nie,Overnight,Platba vopred,,,,2026-05-18,Čaká na doručenie
+433,KE00043323,Jana Polák,"Záhradná 147/30, Košice - Myslava",Myslava,Náhradný diel,XXL,143x95x83,32.62,Nie,Overnight,Dobierka,335.13,1477.65,,2026-05-16,Čaká na doručenie
+434,KE00043461,Andrej Kiss,"Robotnícka 150, Košice - Šaca",Šaca,Potraviny,L,41x33x25,10.96,Áno,Štandard,Firemná faktura,,1356.88,Horná strana nahor,2026-05-15,Čaká na doručenie
+435,KE00043575,Martina Fábián,"Brestová 102/38, Košice - Krásna",Krásna,Liek,L,59x47x35,10.65,Nie,Expres,Dobierka,255.36,,,2026-05-11,Čaká na doručenie
+436,KE00043657,Martin Bogdán,"Opátska 55, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,S,23x17x11,0.86,Nie,Expres,Dobierka,288.02,749.22,,2026-05-18,Čaká na doručenie
+437,KE00043718,Miroslav Hudák,"Záhradnícka 125, Košice - Košická Nová Ves",Košická Nová Ves,Oblečenie,XL,77x58x48,28.29,Nie,Overnight,Firemná faktura,,,Nevystavovať vlhku,2026-05-18,Čaká na doručenie
+438,KE00043851,Lucia Fekete,"Jiskrova 124/37, Košice - Sídlisko KVP",Sídlisko KVP,Nábytok,L,49x39x29,11.08,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-11,Čaká na doručenie
+439,KE00043992,Monika Fekete,"Juhoslovanská 100, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Liek,XL,65x49x40,21.1,Nie,Expres,Platba vopred,,,,2026-05-14,Čaká na doručenie
+440,KE00044041,Kristína Csonka,"Krásnohorská 50/35, Košice - Krásna",Krásna,Liek,XS,11x11x5,0.31,Áno,Štandard,Platba vopred,,,Volať vopred,2026-05-18,Čaká na doručenie
+441,KE00044131,Barbora Varga,"Myslavská 137/26, Košice - Myslava",Myslava,Potraviny,L,57x45x34,1.33,Áno,Štandard,Firemná faktura,,207.67,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+442,KE00044251,Lukáš Hudák,"Bačíkova 47, Košice - Košická Nová Ves",Košická Nová Ves,Balík,M,35x29x23,3.55,Nie,Expres,Dobierka,33.96,831.52,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+443,KE00044362,Milan Csonka,"Záhradná 31, Košice - Kavečany",Kavečany,Náhradný diel,XL,82x62x51,16.31,Nie,Štandard,Dobierka,235.09,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+444,KE00044457,Ondrej Baláž,"Trieda SNP 69/38, Košice - Sever",Sever,Krehký tovar,S,22x16x11,1.37,Áno,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+445,KE00044597,Alžbeta Papp,"Moldavská 63/28, Košice - Krásna",Krásna,Nábytok,XS,8x8x4,0.29,Nie,Štandard,Dobierka,467.09,,Volať vopred,2026-05-11,Čaká na doručenie
+446,KE00044650,Tibor Varga,"Poľná 55/33, Košice - Poľov",Poľov,Oblečenie,S,21x16x10,1.21,Nie,Štandard,Firemná faktura,,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+447,KE00044796,Dušan Molnár,"Priemyselná 116, Košice - Šaca",Šaca,Knihy,M,26x22x17,4.82,Nie,Štandard,Platba vopred,,,Nezalomovať,2026-05-11,Čaká na doručenie
+448,KE00044858,Martina Csonka,"Uralská 143/46, Košice - Západ",Západ,Dokument,L,50x40x30,12.02,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+449,KE00044948,Ján Lukáč,"Javorová 46/45, Košice - Barca",Barca,Balík,L,47x37x28,3.7,Áno,Štandard,Dobierka,461.09,1230.75,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+450,KE00045031,Radoslav Sipos,"Zábrezová 127/3, Košice - Sever",Sever,Elektronika,XXL,129x86x75,18.36,Áno,Ekonomický,Platba vopred,,,,2026-05-14,Čaká na doručenie
+451,KE00045112,Kristína Novák,"Moldavská 145/39, Košice - Krásna",Krásna,Krehký tovar,XS,10x10x5,0.4,Áno,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+452,KE00045238,Ján Fodor,"Brestová 65/30, Košice - Krásna",Krásna,Knihy,XXL,128x85x74,36.0,Nie,Štandard,Dobierka,341.69,1520.45,Horná strana nahor,2026-05-11,Čaká na doručenie
+453,KE00045390,Ján Halász,"Fábryho 108/21, Košice - Sídlisko KVP",Sídlisko KVP,Balík,S,18x14x9,1.78,Nie,Ekonomický,Platba vopred,,628.5,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+454,KE00045419,Peter Szőke,"Cottbuská 123, Košice - Dargovských hrdinov",Dargovských hrdinov,Elektronika,XXL,140x93x82,43.62,Áno,Štandard,Dobierka,173.7,1590.28,,2026-05-18,Čaká na doručenie
+455,KE00045518,Michal Varga,"Myslavská 115/6, Košice - Myslava",Myslava,Dokument,L,46x37x27,12.87,Áno,Expres,Platba vopred,,,,2026-05-14,Čaká na doručenie
+456,KE00045653,Zuzana Halász,"Cottbuská 144, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,XS,10x10x5,0.26,Nie,Expres,Firemná faktura,,,,2026-05-12,Čaká na doručenie
+457,KE00045789,Róbert Baláž,"Vodná 133, Košice - Staré Mesto",Staré Mesto,Nábytok,XS,8x8x4,0.39,Nie,Expres,Firemná faktura,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+458,KE00045847,Martin Tóth,"Viničná 63, Košice - Myslava",Myslava,Knihy,S,18x13x9,0.98,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-11,Čaká na doručenie
+459,KE00045998,Miroslav Tóth,"Barčianska 133/44, Košice - Barca",Barca,Balík,S,20x15x10,1.7,Nie,Štandard,Dobierka,454.71,956.69,Krehké - opatrne,2026-05-17,Čaká na doručenie
+460,KE00046040,Jana Gál,"Slnečná 85/37, Košice - Myslava",Myslava,Liek,M,29x24x19,1.23,Nie,Overnight,Platba vopred,,1251.6,,2026-05-15,Čaká na doručenie
+461,KE00046135,Richard Kováč,"Stará 97, Košice - Pereš",Pereš,Náhradný diel,M,24x20x16,2.11,Nie,Štandard,Dobierka,294.91,,Nezalomovať,2026-05-13,Čaká na doručenie
+462,KE00046227,Pavel Vincze,"Galaktická 45, Košice - Juh",Juh,Krehký tovar,S,18x14x9,1.2,Áno,Štandard,Dobierka,134.59,,Nezalomovať,2026-05-17,Čaká na doručenie
+463,KE00046326,Anna Polák,"Poľovská 87/20, Košice - Poľov",Poľov,Náhradný diel,M,33x28x22,3.47,Nie,Ekonomický,Platba vopred,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+464,KE00046445,Katarína Molnár,"Letná 137, Košice - Juh",Juh,Balík,XL,77x58x48,20.18,Nie,Expres,Firemná faktura,,1262.62,Krehké - opatrne,2026-05-16,Čaká na doručenie
+465,KE00046551,Matúš Nagy,"Magnetová 150/14, Košice - Nad jazerom",Nad jazerom,Krehký tovar,L,55x44x33,9.61,Áno,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+466,KE00046658,Veronika Fedor,"Borová 124/32, Košice - Barca",Barca,Nábytok,XL,76x57x48,27.87,Nie,Expres,Firemná faktura,,855.8,Skladovať v chlade,2026-05-15,Čaká na doručenie
+467,KE00046773,Patrik Nagy,"Sibírska 66/9, Košice - Západ",Západ,Nábytok,M,29x24x19,2.08,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-11,Čaká na doručenie
+468,KE00046814,Lucia Gáborík,"Priemyselná 98, Košice - Šaca",Šaca,Dokument,M,31x26x21,2.12,Nie,Štandard,Platba vopred,,151.98,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+469,KE00046946,Jana Oravec,"Moldavská 86, Košice - Krásna",Krásna,Oblečenie,M,32x27x21,3.96,Nie,Štandard,Dobierka,428.22,,Nezalomovať,2026-05-14,Čaká na doručenie
+470,KE00047080,Boris Kováč,"Javorová 104/49, Košice - Barca",Barca,Krehký tovar,L,53x42x31,14.85,Áno,Overnight,Dobierka,363.05,1178.14,Horná strana nahor,2026-05-15,Čaká na doručenie
+471,KE00047155,Róbert Fodor,"Tichá 88/21, Košice - Myslava",Myslava,Náhradný diel,XXL,116x77x67,27.55,Nie,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-18,Čaká na doručenie
+472,KE00047287,Patrik Halász,"Sácka 108, Košice - Šaca",Šaca,Balík,XXL,121x81x71,23.04,Áno,Štandard,Dobierka,488.74,,,2026-05-13,Čaká na doručenie
+473,KE00047387,Tereza Farkas,"Remeselnícka 53/5, Košice - Poľov",Poľov,Liek,S,19x14x9,0.79,Nie,Expres,Dobierka,339.07,,Nezalomovať,2026-05-16,Čaká na doručenie
+474,KE00047478,Zuzana Tkáč,"Perešská 48, Košice - Pereš",Pereš,Dokument,S,17x13x8,1.39,Nie,Štandard,Dobierka,166.75,230.38,Skladovať v chlade,2026-05-12,Čaká na doručenie
+475,KE00047567,Juraj Šimko,"Kamenná 18, Košice - Lorinčík",Lorinčík,Liek,S,18x13x9,1.67,Nie,Štandard,Platba vopred,,1982.26,Volať vopred,2026-05-11,Čaká na doručenie
+476,KE00047632,Martina Mészáros,"Juhoslovanská 64/37, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Oblečenie,L,51x41x30,11.32,Nie,Expres,Firemná faktura,,,,2026-05-12,Čaká na doručenie
+477,KE00047778,Petra Mészáros,"Údolná 46/47, Košice - Lorinčík",Lorinčík,Nábytok,L,58x46x34,3.57,Nie,Štandard,Dobierka,443.34,,Volať vopred,2026-05-16,Čaká na doručenie
+478,KE00047869,Patrik Máté,"Novoveská 56/27, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,XS,11x11x5,0.13,Nie,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+479,KE00047941,Adam Halász,"Mlynská 119, Košice - Staré Mesto",Staré Mesto,Dokument,S,19x14x9,0.22,Nie,Expres,Firemná faktura,,1101.37,Horná strana nahor,2026-05-11,Čaká na doručenie
+480,KE00048032,Dávid Horváth,"Viničná 121/11, Košice - Myslava",Myslava,Náhradný diel,XL,67x50x42,10.94,Nie,Expres,Platba vopred,,,Doručiť osobne,2026-05-14,Čaká na doručenie
+481,KE00048140,Filip Tóth,"Južná trieda 137, Košice - Juh",Juh,Dokument,XXL,134x89x78,35.64,Nie,Štandard,Dobierka,7.31,506.9,,2026-05-12,Čaká na doručenie
+482,KE00048281,Ján Fekete,"Hviezdna 5, Košice - Juh",Juh,Dokument,S,21x16x10,0.31,Nie,Expres,Dobierka,87.69,661.01,,2026-05-12,Čaká na doručenie
+483,KE00048318,Petra Lukáč,"Letná 139, Košice - Juh",Juh,Krehký tovar,S,17x13x8,0.84,Áno,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+484,KE00048490,Juraj Pintér,"Horná 95, Košice - Kavečany",Kavečany,Dokument,M,33x27x22,2.75,Nie,Expres,Platba vopred,,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+485,KE00048511,Patrik Szűcs,"Hájna 86, Košice - Poľov",Poľov,Dokument,M,35x29x23,3.5,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+486,KE00048666,Adam Fodor,"Trieda SNP 32, Košice - Sever",Sever,Knihy,S,20x15x10,0.31,Nie,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+487,KE00048795,Patrik Varga,"Sácka 72, Košice - Šaca",Šaca,Oblečenie,XL,89x67x55,14.2,Nie,Expres,Firemná faktura,,,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+488,KE00048836,Lucia Fábián,"Zábrezová 98/12, Košice - Sever",Sever,Elektronika,XS,8x8x4,0.3,Áno,Štandard,Platba vopred,,1102.21,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+489,KE00048971,Anna Krajčí,"Poludníková 21, Košice - Sever",Sever,Krehký tovar,S,21x16x10,0.64,Áno,Expres,Firemná faktura,,,Volať vopred,2026-05-15,Čaká na doručenie
+490,KE00049048,Veronika Papp,"Meteorová 102, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,L,50x40x30,11.29,Áno,Overnight,Platba vopred,,,Skladovať v chlade,2026-05-12,Čaká na doručenie
+491,KE00049157,Zuzana Mészáros,"Moldavská 142/17, Košice - Krásna",Krásna,Nábytok,M,29x24x19,2.19,Nie,Štandard,Platba vopred,,1724.69,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+492,KE00049242,Katarína Farkas,"Okružná 107/48, Košice - Pereš",Pereš,Dokument,L,46x36x27,14.83,Áno,Štandard,Firemná faktura,,,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+493,KE00049328,Filip Tóth,"Borová 126/24, Košice - Barca",Barca,Elektronika,XXL,114x76x66,26.96,Áno,Štandard,Dobierka,407.5,,,2026-05-18,Čaká na doručenie
+494,KE00049420,Pavel Polák,"Horná 117/10, Košice - Kavečany",Kavečany,Krehký tovar,XL,82x61x51,20.89,Áno,Štandard,Firemná faktura,,,,2026-05-12,Čaká na doručenie
+495,KE00049554,Petra Oravec,"Kláštorná 109, Košice - Vyšné Opátske",Vyšné Opátske,Potraviny,XXL,110x73x64,48.71,Nie,Štandard,Platba vopred,,,,2026-05-17,Čaká na doručenie
+496,KE00049632,Filip Krajčí,"Poludníková 54/26, Košice - Nad jazerom",Nad jazerom,Balík,XS,11x11x5,0.43,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+497,KE00049790,Richard Lukács,"Ovocná 35, Košice - Barca",Barca,Krehký tovar,XS,9x9x4,0.43,Áno,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+498,KE00049895,Zuzana Lukáč,"Arm. gen. Svobodu 21, Košice - Dargovských hrdinov",Dargovských hrdinov,Elektronika,M,24x20x16,0.63,Áno,Štandard,Platba vopred,,1910.88,Nezalomovať,2026-05-18,Čaká na doručenie
+499,KE00049956,Zuzana Király,"Adlerova 55/1, Košice - Sídlisko KVP",Sídlisko KVP,Liek,XL,95x71x59,23.56,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-13,Čaká na doručenie
+500,KE00050097,Marek Kováč,"Remeselnícka 15/22, Košice - Poľov",Poľov,Krehký tovar,L,57x45x34,6.63,Áno,Štandard,Dobierka,267.66,,Krehké - opatrne,2026-05-15,Čaká na doručenie
+501,KE00050170,Igor Molnár,"Priečna 106/1, Košice - Pereš",Pereš,Knihy,XS,10x10x5,0.45,Nie,Expres,Platba vopred,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+502,KE00050271,Miroslav Bíró,"Sofijská 76/46, Košice - Dargovských hrdinov",Dargovských hrdinov,Balík,XL,89x66x55,22.35,Nie,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-16,Čaká na doručenie
+503,KE00050395,Patrik Katona,"Moldavská 63, Košice - Krásna",Krásna,Balík,XXL,100x66x58,27.4,Nie,Štandard,Firemná faktura,,957.84,,2026-05-15,Čaká na doručenie
+504,KE00050447,Lukáš Szűcs,"Arm. gen. Svobodu 137/32, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,M,34x28x22,4.69,Nie,Štandard,Firemná faktura,,525.6,,2026-05-12,Čaká na doručenie
+505,KE00050534,Barbora Blaho,"Janigova 23, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,XXL,141x94x82,32.91,Áno,Overnight,Platba vopred,,,Nezalomovať,2026-05-14,Čaká na doručenie
+506,KE00050628,Vladimír Bíró,"Remeselnícka 82/44, Košice - Poľov",Poľov,Potraviny,XXL,124x83x72,18.89,Nie,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-15,Čaká na doručenie
+507,KE00050736,Lenka Szűcs,"Bačíkova 9/20, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,XS,9x9x4,0.44,Nie,Štandard,Firemná faktura,,1657.49,,2026-05-18,Čaká na doručenie
+508,KE00050846,Monika Krajčí,"Trieda SNP 46/47, Košice - Sever",Sever,Balík,XXL,139x93x81,16.37,Nie,Štandard,Firemná faktura,,1456.24,Skladovať v chlade,2026-05-12,Čaká na doručenie
+509,KE00050935,Mária Csonka,"Kyjevská 101, Košice - Juh",Juh,Oblečenie,XL,91x68x57,4.46,Nie,Štandard,Dobierka,349.5,1610.67,Doručiť osobne,2026-05-14,Čaká na doručenie
+510,KE00051029,Miroslav Farkas,"Mäsiarska 148, Košice - Staré Mesto",Staré Mesto,Balík,L,53x42x32,3.36,Nie,Štandard,Dobierka,30.97,,,2026-05-13,Čaká na doručenie
+511,KE00051158,Monika Sipos,"Hájna 9, Košice - Poľov",Poľov,Potraviny,M,32x26x21,4.8,Nie,Expres,Platba vopred,,,,2026-05-11,Čaká na doručenie
+512,KE00051285,Rastislav Nagy,"Záhradná 95, Košice - Kavečany",Kavečany,Náhradný diel,XS,9x9x4,0.37,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+513,KE00051384,Petra Krajčí,"Uralská 124/45, Košice - Západ",Západ,Náhradný diel,XL,68x51x42,11.78,Nie,Štandard,Dobierka,280.25,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+514,KE00051420,Richard Király,"Krásnohorská 54/8, Košice - Krásna",Krásna,Knihy,XXL,104x69x61,32.19,Nie,Štandard,Dobierka,84.8,,,2026-05-14,Čaká na doručenie
+515,KE00051598,Tereza Kováčik,"Varšavská 77, Košice - Dargovských hrdinov",Dargovských hrdinov,Elektronika,L,59x47x35,10.21,Áno,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-11,Čaká na doručenie
+516,KE00051689,Juraj Szűcs,"Robotnícka 91/33, Košice - Šaca",Šaca,Balík,XS,10x10x5,0.12,Nie,Štandard,Platba vopred,,265.7,,2026-05-15,Čaká na doručenie
+517,KE00051734,Zuzana Sándor,"Lorinčícka 141, Košice - Lorinčík",Lorinčík,Oblečenie,S,19x14x9,0.35,Nie,Expres,Dobierka,105.86,,,2026-05-14,Čaká na doručenie
+518,KE00051852,Miroslav Molnár,"Borová 131/27, Košice - Barca",Barca,Elektronika,L,47x38x28,14.5,Áno,Štandard,Dobierka,59.45,187.06,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+519,KE00051946,Marek Farkas,"Čermeľská 58, Košice - Kavečany",Kavečany,Dokument,S,19x14x9,0.39,Nie,Štandard,Firemná faktura,,1148.59,,2026-05-17,Čaká na doručenie
+520,KE00052029,Mária Csonka,"Hornohorská 26/11, Košice - Krásna",Krásna,Náhradný diel,L,43x34x26,12.29,Nie,Štandard,Platba vopred,,,Nezalomovať,2026-05-14,Čaká na doručenie
+521,KE00052169,Michal Vincze,"Zupkova 97/18, Košice - Nad jazerom",Nad jazerom,Elektronika,XXL,142x95x83,38.3,Áno,Expres,Firemná faktura,,,Horná strana nahor,2026-05-16,Čaká na doručenie
+522,KE00052246,Jakub Gáborík,"Mníšska 71/34, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,M,31x26x21,0.89,Nie,Štandard,Dobierka,44.34,124.25,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+523,KE00052354,Ondrej Lukács,"Potočná 3/28, Košice - Krásna",Krásna,Náhradný diel,XXL,102x68x59,29.91,Nie,Expres,Platba vopred,,,,2026-05-12,Čaká na doručenie
+524,KE00052453,Ondrej Csonka,"Poludníková 11/11, Košice - Sever",Sever,Knihy,XL,92x69x58,7.72,Nie,Overnight,Firemná faktura,,1939.76,Skladovať v chlade,2026-05-11,Čaká na doručenie
+525,KE00052517,Veronika Tkáč,"Poludníková 31, Košice - Sever",Sever,Nábytok,M,26x22x17,3.82,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+526,KE00052629,Eva Baláž,"Barčianska 118, Košice - Barca",Barca,Potraviny,XS,9x9x4,0.39,Nie,Štandard,Platba vopred,,979.95,Skladovať v chlade,2026-05-16,Čaká na doručenie
+527,KE00052710,Ladislav Kiss,"Čermeľská 121, Košice - Kavečany",Kavečany,Oblečenie,L,57x46x34,8.51,Nie,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-16,Čaká na doručenie
+528,KE00052873,Martin Šimko,"Ovocná 29, Košice - Barca",Barca,Balík,L,48x38x29,5.64,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+529,KE00052964,Zuzana Šimko,"Rovníková 103/48, Košice - Nad jazerom",Nad jazerom,Krehký tovar,XS,11x11x5,0.42,Áno,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+530,KE00053035,Martina Nagy,"Štefánikova 123, Košice - Staré Mesto",Staré Mesto,Náhradný diel,L,44x35x26,3.13,Nie,Štandard,Dobierka,135.45,,,2026-05-15,Čaká na doručenie
+531,KE00053158,Barbora Fábián,"Perešská 129/13, Košice - Pereš",Pereš,Potraviny,XXL,103x68x60,14.82,Nie,Štandard,Firemná faktura,,1730.06,,2026-05-18,Čaká na doručenie
+532,KE00053215,Stanislav Fekete,"Rybná 79/15, Košice - Lorinčík",Lorinčík,Balík,L,49x39x29,8.14,Nie,Štandard,Dobierka,178.76,104.64,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+533,KE00053385,Veronika Fedor,"Hlavná 83, Košice - Staré Mesto",Staré Mesto,Liek,XL,67x50x42,7.99,Nie,Štandard,Dobierka,11.76,1621.97,Krehké - opatrne,2026-05-16,Čaká na doručenie
+534,KE00053422,Radoslav Takáč,"Pustovnícka 96, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,XL,76x57x47,26.95,Áno,Expres,Platba vopred,,,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+535,KE00053525,Veronika Csonka,"Galvaniho 88, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,S,20x15x10,0.48,Áno,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-13,Čaká na doručenie
+536,KE00053673,Lenka Horváth,"Lorinčícka 124, Košice - Lorinčík",Lorinčík,Krehký tovar,S,20x15x10,1.45,Áno,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+537,KE00053774,Patrik Lukács,"Brestová 20, Košice - Krásna",Krásna,Nábytok,L,51x40x30,6.46,Nie,Štandard,Dobierka,112.81,,,2026-05-18,Čaká na doručenie
+538,KE00053816,Jakub Fedor,"Mníšska 78/19, Košice - Vyšné Opátske",Vyšné Opátske,Náhradný diel,XL,67x50x42,9.05,Áno,Štandard,Dobierka,442.38,,Volať vopred,2026-05-16,Čaká na doručenie
+539,KE00053990,Boris Balogh,"Zábrezová 137, Košice - Sever",Sever,Dokument,XXL,125x83x72,24.76,Nie,Ekonomický,Dobierka,71.14,,Krehké - opatrne,2026-05-14,Čaká na doručenie
+540,KE00054051,Radoslav Novák,"Biela 92, Košice - Staré Mesto",Staré Mesto,Nábytok,M,35x29x23,2.92,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+541,KE00054134,Monika Hudák,"Čermeľská 149/49, Košice - Kavečany",Kavečany,Knihy,L,44x35x26,11.17,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+542,KE00054227,Dávid Novák,"Nová 73, Košice - Pereš",Pereš,Krehký tovar,L,53x42x32,3.63,Áno,Štandard,Dobierka,455.02,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+543,KE00054323,Peter Lukáč,"Dominikánske námestie 26, Košice - Staré Mesto",Staré Mesto,Balík,XS,11x11x5,0.36,Nie,Štandard,Dobierka,469.61,,,2026-05-18,Čaká na doručenie
+544,KE00054423,Veronika Csonka,"Hornohorská 22, Košice - Krásna",Krásna,Oblečenie,XL,92x69x57,25.02,Nie,Štandard,Dobierka,347.56,,Nezalomovať,2026-05-17,Čaká na doručenie
+545,KE00054524,Miroslav Kováč,"Hornohorská 27/27, Košice - Krásna",Krásna,Krehký tovar,S,16x12x8,0.97,Áno,Štandard,Dobierka,461.24,,,2026-05-12,Čaká na doručenie
+546,KE00054695,Tibor Balogh,"Nová 29, Košice - Pereš",Pereš,Dokument,XS,10x10x5,0.15,Nie,Overnight,Dobierka,267.59,,,2026-05-16,Čaká na doručenie
+547,KE00054771,Marek Fedor,"Viničná 74, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,L,53x42x31,14.06,Nie,Expres,Platba vopred,,1445.47,Doručiť osobne,2026-05-13,Čaká na doručenie
+548,KE00054862,Matúš Fedor,"Janigova 148, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,S,16x12x8,1.99,Áno,Expres,Firemná faktura,,,Horná strana nahor,2026-05-12,Čaká na doručenie
+549,KE00054936,Alžbeta Sipos,"Sácka 63, Košice - Šaca",Šaca,Elektronika,XL,81x60x50,17.38,Áno,Štandard,Firemná faktura,,729.8,,2026-05-15,Čaká na doručenie
+550,KE00055027,Vladimír Lukáč,"Mäsiarska 143, Košice - Staré Mesto",Staré Mesto,Krehký tovar,XS,11x11x5,0.24,Áno,Štandard,Dobierka,427.39,456.93,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+551,KE00055163,Petra Kiss,"Arm. gen. Svobodu 97/45, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,XS,10x10x5,0.37,Nie,Štandard,Dobierka,77.71,34.83,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+552,KE00055274,Ivana Szűcs,"Zupkova 121/48, Košice - Nad jazerom",Nad jazerom,Liek,M,29x24x19,3.75,Nie,Expres,Dobierka,82.16,,,2026-05-18,Čaká na doručenie
+553,KE00055337,Anna Máté,"Lomonosovova 102/44, Košice - Západ",Západ,Náhradný diel,XXL,135x90x79,46.77,Nie,Štandard,Firemná faktura,,1902.64,,2026-05-17,Čaká na doručenie
+554,KE00055492,Richard Bogdán,"Hradná 15, Košice - Poľov",Poľov,Liek,XL,83x62x52,5.08,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-16,Čaká na doručenie
+555,KE00055534,Tomáš Kiss,"Údolná 70, Košice - Lorinčík",Lorinčík,Elektronika,XL,88x66x55,12.06,Áno,Štandard,Platba vopred,,1820.28,,2026-05-15,Čaká na doručenie
+556,KE00055634,Lukáš Jakab,"Moldavská 9, Košice - Krásna",Krásna,Liek,XL,65x49x40,29.64,Nie,Štandard,Platba vopred,,802.29,,2026-05-13,Čaká na doručenie
+557,KE00055714,Ondrej Baláž,"Továrenská 92/45, Košice - Šaca",Šaca,Dokument,M,28x24x19,3.84,Nie,Štandard,Dobierka,399.05,,,2026-05-11,Čaká na doručenie
+558,KE00055853,Igor Nagy,"Bačíkova 39/6, Košice - Košická Nová Ves",Košická Nová Ves,Krehký tovar,XXL,107x71x62,18.63,Áno,Expres,Dobierka,482.02,,Horná strana nahor,2026-05-13,Čaká na doručenie
+559,KE00055949,Jakub Rácz,"Záhradnícka 111, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,XXL,114x76x66,18.35,Nie,Expres,Firemná faktura,,1534.97,,2026-05-17,Čaká na doručenie
+560,KE00056066,Mária Kováčik,"Krásnohorská 128, Košice - Krásna",Krásna,Knihy,M,25x21x17,1.76,Áno,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-14,Čaká na doručenie
+561,KE00056174,Katarína Tkáč,"Hronská 146, Košice - Nad jazerom",Nad jazerom,Krehký tovar,L,48x38x28,9.68,Áno,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+562,KE00056269,Michal Bogdán,"Záhradná 11/42, Košice - Myslava",Myslava,Krehký tovar,S,21x16x10,1.21,Áno,Overnight,Dobierka,83.31,782.56,,2026-05-12,Čaká na doručenie
+563,KE00056399,Tereza Mészáros,"Meteorová 120, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,XS,8x8x4,0.39,Nie,Expres,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+564,KE00056412,Tereza Hudák,"Perešská 72, Košice - Pereš",Pereš,Nábytok,L,42x34x25,3.99,Nie,Štandard,Firemná faktura,,430.87,Horná strana nahor,2026-05-12,Čaká na doručenie
+565,KE00056564,Miroslav Szabó,"Zálesná 65/6, Košice - Lorinčík",Lorinčík,Liek,M,28x24x19,1.84,Nie,Overnight,Firemná faktura,,1790.96,,2026-05-16,Čaká na doručenie
+566,KE00056684,Andrea Olah,"Priemyselná 43, Košice - Šaca",Šaca,Potraviny,L,50x40x30,11.97,Nie,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+567,KE00056722,Anna Hudák,"Rovníková 82, Košice - Nad jazerom",Nad jazerom,Potraviny,L,57x45x34,2.59,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+568,KE00056849,Tereza Rácz,"Gemerská 49, Košice - Sídlisko KVP",Sídlisko KVP,Elektronika,S,20x15x10,0.59,Áno,Ekonomický,Platba vopred,,610.87,,2026-05-13,Čaká na doručenie
+569,KE00056979,Andrea Pintér,"Opátska 128/30, Košice - Vyšné Opátske",Vyšné Opátske,Náhradný diel,M,28x23x18,2.94,Nie,Ekonomický,Firemná faktura,,1193.83,Krehké - opatrne,2026-05-12,Čaká na doručenie
+570,KE00057089,Ondrej Fodor,"Kamenná 73/45, Košice - Lorinčík",Lorinčík,Dokument,XXL,109x73x63,34.82,Nie,Ekonomický,Dobierka,326.56,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+571,KE00057162,Dušan Tkáč,"Krásnohorská 114/3, Košice - Krásna",Krásna,Náhradný diel,L,44x35x26,11.88,Nie,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+572,KE00057276,Tibor Fedor,"Poľovská 96/33, Košice - Poľov",Poľov,Potraviny,XXL,108x72x63,43.54,Áno,Expres,Platba vopred,,755.07,Nezalomovať,2026-05-18,Čaká na doručenie
+573,KE00057376,Milan Máté,"Priemyselná 44/28, Košice - Šaca",Šaca,Balík,L,43x35x26,10.02,Nie,Overnight,Dobierka,319.96,,Skladovať v chlade,2026-05-16,Čaká na doručenie
+574,KE00057490,Vladimír Lukács,"Uralská 60, Košice - Západ",Západ,Oblečenie,XS,10x10x5,0.41,Nie,Overnight,Platba vopred,,,Nezalomovať,2026-05-17,Čaká na doručenie
+575,KE00057558,Kristína Farkas,"Ďumbierska 140/6, Košice - Nad jazerom",Nad jazerom,Liek,XS,10x10x5,0.15,Nie,Expres,Dobierka,328.0,1682.51,Volať vopred,2026-05-15,Čaká na doručenie
+576,KE00057656,Miroslav Fábián,"Kavečianska 71, Košice - Kavečany",Kavečany,Dokument,XS,10x10x5,0.33,Nie,Štandard,Dobierka,75.21,993.55,Doručiť osobne,2026-05-14,Čaká na doručenie
+577,KE00057732,Peter Pintér,"Leningradská 26, Košice - Juh",Juh,Elektronika,XS,9x9x4,0.35,Áno,Expres,Firemná faktura,,604.52,,2026-05-11,Čaká na doručenie
+578,KE00057824,Natália Király,"Adlerova 88/31, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,XL,64x48x40,17.09,Nie,Ekonomický,Dobierka,16.4,,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+579,KE00057965,Lukáš Vincze,"Južná trieda 84, Košice - Juh",Juh,Liek,XXL,141x94x82,20.7,Áno,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+580,KE00058064,Róbert Hegedűs,"Svätá 50, Košice - Vyšné Opátske",Vyšné Opátske,Nábytok,XXL,109x72x63,25.71,Nie,Expres,Dobierka,106.89,,Skladovať v chlade,2026-05-11,Čaká na doručenie
+581,KE00058192,Róbert Jakab,"Lesná 28/28, Košice - Kavečany",Kavečany,Dokument,M,28x23x18,3.35,Nie,Štandard,Firemná faktura,,,Volať vopred,2026-05-12,Čaká na doručenie
+582,KE00058252,Richard Molnár,"Mníšska 102, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,L,55x44x33,6.01,Nie,Štandard,Dobierka,160.65,,Krehké - opatrne,2026-05-18,Čaká na doručenie
+583,KE00058363,Alžbeta Szabó,"Minská 146/15, Košice - Juh",Juh,Elektronika,L,45x36x27,3.97,Áno,Štandard,Dobierka,305.91,,,2026-05-17,Čaká na doručenie
+584,KE00058483,Michal Sipos,"Zálesná 82, Košice - Lorinčík",Lorinčík,Dokument,L,40x32x24,4.84,Nie,Štandard,Firemná faktura,,45.49,,2026-05-15,Čaká na doručenie
+585,KE00058561,Monika Varga,"Orlia 119, Košice - Staré Mesto",Staré Mesto,Balík,XL,93x70x58,4.06,Áno,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-14,Čaká na doručenie
+586,KE00058698,Michal Halász,"Galvaniho 81, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Dokument,M,32x26x21,2.55,Nie,Overnight,Dobierka,115.89,652.49,Doručiť osobne,2026-05-18,Čaká na doručenie
+587,KE00058758,Matúš Kiss,"Údolná 44, Košice - Lorinčík",Lorinčík,Balík,XL,95x71x59,28.22,Nie,Štandard,Dobierka,473.84,1229.37,Volať vopred,2026-05-17,Čaká na doručenie
+588,KE00058845,Vladimír Molnár,"Čermeľská 36/8, Košice - Kavečany",Kavečany,Potraviny,S,22x16x11,1.8,Nie,Expres,Platba vopred,,,,2026-05-11,Čaká na doručenie
+589,KE00058917,Andrej Tkáč,"Továrenská 58, Košice - Šaca",Šaca,Elektronika,XXL,99x66x58,32.34,Áno,Expres,Platba vopred,,,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+590,KE00059026,Zuzana Blaho,"Južná trieda 56, Košice - Juh",Juh,Nábytok,L,42x33x25,3.92,Nie,Expres,Firemná faktura,,1013.98,,2026-05-11,Čaká na doručenie
+591,KE00059124,Lenka Blaho,"Bernoláková 99/40, Košice - Sever",Sever,Krehký tovar,L,43x35x26,4.89,Áno,Expres,Platba vopred,,,Horná strana nahor,2026-05-16,Čaká na doručenie
+592,KE00059252,Peter Olah,"Trieda SNP 118, Košice - Sever",Sever,Dokument,XXL,121x80x70,24.08,Áno,Ekonomický,Platba vopred,,,,2026-05-12,Čaká na doručenie
+593,KE00059392,Michal Sándor,"Šrobárova 70, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,L,54x43x32,6.92,Nie,Štandard,Dobierka,305.69,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+594,KE00059498,Martin Jakab,"Brnianska 57, Košice - Sever",Sever,Oblečenie,M,26x22x17,2.89,Nie,Štandard,Firemná faktura,,1649.9,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+595,KE00059540,Juraj Balogh,"Záhradná 53, Košice - Kavečany",Kavečany,Balík,XXL,109x73x64,33.85,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+596,KE00059610,Jana Mészáros,"Sibírska 18, Košice - Západ",Západ,Potraviny,S,23x17x11,1.4,Nie,Štandard,Dobierka,43.1,952.92,,2026-05-18,Čaká na doručenie
+597,KE00059767,Peter Jakab,"Nová 121, Košice - Pereš",Pereš,Náhradný diel,XXL,143x95x83,43.41,Nie,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+598,KE00059891,Martina Oravec,"Stará 140, Košice - Pereš",Pereš,Oblečenie,M,29x24x19,4.22,Nie,Expres,Firemná faktura,,,Volať vopred,2026-05-17,Čaká na doručenie
+599,KE00059996,Miroslav Balogh,"Rooseveltova 106/43, Košice - Staré Mesto",Staré Mesto,Potraviny,L,40x32x24,9.09,Nie,Štandard,Dobierka,477.63,,Volať vopred,2026-05-17,Čaká na doručenie
+600,KE00060082,Ondrej Balogh,"Potočná 135, Košice - Krásna",Krásna,Oblečenie,M,28x23x19,2.38,Áno,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+601,KE00060137,Ondrej Hudák,"Lipová 29/32, Košice - Barca",Barca,Oblečenie,L,53x42x32,8.32,Nie,Expres,Firemná faktura,,913.18,,2026-05-17,Čaká na doručenie
+602,KE00060228,Ladislav Kováč,"Viničná 32, Košice - Košická Nová Ves",Košická Nová Ves,Balík,L,47x37x28,12.68,Nie,Štandard,Dobierka,430.21,,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+603,KE00060396,Stanislav Varga,"Leningradská 150/19, Košice - Juh",Juh,Potraviny,L,58x46x35,4.48,Nie,Štandard,Dobierka,134.32,1132.18,,2026-05-14,Čaká na doručenie
+604,KE00060465,Pavel Šimko,"Robotnícka 36/13, Košice - Šaca",Šaca,Dokument,L,51x40x30,5.21,Nie,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+605,KE00060588,Mária Lukács,"Arm. gen. Svobodu 135, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XXL,130x86x75,28.74,Nie,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+606,KE00060693,Natália Fehér,"Bačíkova 149/9, Košice - Košická Nová Ves",Košická Nová Ves,Potraviny,XL,92x69x57,4.45,Nie,Štandard,Firemná faktura,,1661.49,Nevystavovať vlhku,2026-05-18,Čaká na doručenie
+607,KE00060773,Veronika Szűcs,"Bulharská 25/37, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,M,34x28x22,1.05,Nie,Expres,Dobierka,106.51,,,2026-05-16,Čaká na doručenie
+608,KE00060870,Ladislav Vincze,"Jazerná 40, Košice - Nad jazerom",Nad jazerom,Elektronika,XS,11x11x5,0.35,Áno,Štandard,Dobierka,303.88,416.54,,2026-05-17,Čaká na doručenie
+609,KE00060928,Michal Lukáč,"Biela 130, Košice - Staré Mesto",Staré Mesto,Elektronika,M,28x24x19,4.92,Áno,Overnight,Firemná faktura,,53.1,Skladovať v chlade,2026-05-17,Čaká na doručenie
+610,KE00061028,Róbert Olah,"Šoltésovej 131/35, Košice - Sever",Sever,Nábytok,L,45x36x27,10.35,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-11,Čaká na doručenie
+611,KE00061111,Zuzana Kováč,"Alžbetina 118, Košice - Staré Mesto",Staré Mesto,Nábytok,XL,73x55x46,20.42,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+612,KE00061227,Juraj Balogh,"Sibírska 129/33, Košice - Západ",Západ,Krehký tovar,XXL,121x80x70,30.52,Áno,Expres,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+613,KE00061354,Boris Olah,"Lesná 101, Košice - Kavečany",Kavečany,Krehký tovar,L,59x47x35,9.48,Áno,Štandard,Firemná faktura,,1910.84,,2026-05-16,Čaká na doručenie
+614,KE00061459,Matúš Kováčik,"Poľovská 12, Košice - Poľov",Poľov,Liek,S,16x12x8,0.39,Nie,Štandard,Platba vopred,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+615,KE00061535,Martin Bogdán,"Lorinčícka 16/8, Košice - Lorinčík",Lorinčík,Balík,XS,9x9x4,0.25,Nie,Ekonomický,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+616,KE00061610,Tibor Gáborík,"Galaktická 126, Košice - Juh",Juh,Náhradný diel,S,21x16x10,0.98,Nie,Overnight,Platba vopred,,,Nezalomovať,2026-05-15,Čaká na doručenie
+617,KE00061781,Jana Novák,"Javorová 146/5, Košice - Barca",Barca,Náhradný diel,XXL,131x87x76,46.44,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-13,Čaká na doručenie
+618,KE00061847,Zuzana Szabó,"Hronská 113, Košice - Nad jazerom",Nad jazerom,Oblečenie,XL,66x49x41,24.12,Nie,Štandard,Dobierka,272.57,,Môže zanechať u suseda,2026-05-18,Čaká na doručenie
+619,KE00061943,Dávid Tkáč,"Záhradná 92, Košice - Kavečany",Kavečany,Náhradný diel,XS,10x10x5,0.2,Nie,Ekonomický,Platba vopred,,,,2026-05-17,Čaká na doručenie
+620,KE00062082,Róbert Fekete,"Hlavná 87, Košice - Staré Mesto",Staré Mesto,Knihy,XS,8x8x4,0.32,Nie,Ekonomický,Platba vopred,,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+621,KE00062139,Adam Gál,"Pasteurova 19/39, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,XS,11x11x5,0.29,Áno,Štandard,Dobierka,22.62,960.41,,2026-05-15,Čaká na doručenie
+622,KE00062227,Róbert Fehér,"Orlia 15, Košice - Staré Mesto",Staré Mesto,Balík,XL,91x68x57,21.41,Áno,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+623,KE00062317,Eva Blaho,"Bukureštská 31/24, Košice - Dargovských hrdinov",Dargovských hrdinov,Elektronika,M,29x24x19,0.76,Áno,Štandard,Dobierka,209.47,1442.46,,2026-05-18,Čaká na doručenie
+624,KE00062479,Tibor Varga,"Ťahanovská 33, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Elektronika,M,28x23x18,3.45,Áno,Ekonomický,Dobierka,201.92,507.9,,2026-05-17,Čaká na doručenie
+625,KE00062589,Lucia Török,"Minská 92/15, Košice - Juh",Juh,Oblečenie,M,35x29x23,4.01,Nie,Overnight,Firemná faktura,,827.56,Nezalomovať,2026-05-17,Čaká na doručenie
+626,KE00062624,Vladimír Bíró,"Stará 21, Košice - Pereš",Pereš,Dokument,S,18x13x9,1.2,Nie,Štandard,Dobierka,489.07,,,2026-05-11,Čaká na doručenie
+627,KE00062794,Barbora Farkas,"Vodná 9, Košice - Staré Mesto",Staré Mesto,Oblečenie,M,33x28x22,0.88,Nie,Overnight,Dobierka,194.38,764.86,Nezalomovať,2026-05-11,Čaká na doručenie
+628,KE00062889,Tereza Csonka,"Rybná 14/3, Košice - Lorinčík",Lorinčík,Knihy,M,35x29x23,4.6,Nie,Ekonomický,Platba vopred,,,Krehké - opatrne,2026-05-18,Čaká na doručenie
+629,KE00062940,Zuzana Vincze,"Kamenná 15/36, Košice - Lorinčík",Lorinčík,Náhradný diel,XXL,109x73x64,49.64,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-16,Čaká na doručenie
+630,KE00063051,Lukáš Polák,"Ďumbierska 72/18, Košice - Nad jazerom",Nad jazerom,Balík,XL,73x55x45,18.42,Nie,Expres,Platba vopred,,,Volať vopred,2026-05-17,Čaká na doručenie
+631,KE00063143,Lucia Kováč,"Čermeľská 114, Košice - Kavečany",Kavečany,Náhradný diel,L,40x32x24,6.02,Áno,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+632,KE00063239,Igor Novák,"Lesná 127, Košice - Kavečany",Kavečany,Elektronika,S,22x17x11,1.38,Áno,Štandard,Dobierka,343.8,1111.28,,2026-05-11,Čaká na doručenie
+633,KE00063397,Eva Fehér,"Fábryho 66, Košice - Sídlisko KVP",Sídlisko KVP,Dokument,XXL,98x65x57,19.39,Nie,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-15,Čaká na doručenie
+634,KE00063429,Peter Molnár,"Lorinčícka 110/10, Košice - Lorinčík",Lorinčík,Potraviny,XL,89x66x55,12.04,Nie,Overnight,Firemná faktura,,588.84,Doručiť osobne,2026-05-18,Čaká na doručenie
+635,KE00063520,Jakub Rácz,"Mlynská 55/33, Košice - Staré Mesto",Staré Mesto,Knihy,XXL,120x80x70,33.26,Nie,Ekonomický,Platba vopred,,,,2026-05-12,Čaká na doručenie
+636,KE00063641,Igor Máté,"Toryská 145/37, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,XXL,116x77x67,39.32,Nie,Expres,Firemná faktura,,1154.74,Volať vopred,2026-05-13,Čaká na doručenie
+637,KE00063739,Mária Bogdán,"Sácka 93, Košice - Šaca",Šaca,Potraviny,XS,10x10x5,0.28,Nie,Štandard,Firemná faktura,,1574.75,,2026-05-11,Čaká na doručenie
+638,KE00063835,Ondrej Szőke,"Magnetová 63/27, Košice - Nad jazerom",Nad jazerom,Oblečenie,XXL,102x68x59,20.41,Nie,Štandard,Platba vopred,,,,2026-05-11,Čaká na doručenie
+639,KE00063977,Andrea Oravec,"Bajkalská 4, Košice - Západ",Západ,Dokument,XL,86x65x54,15.69,Áno,Štandard,Platba vopred,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+640,KE00064067,Filip Máté,"Remeselnícka 91, Košice - Poľov",Poľov,Knihy,S,21x16x10,0.41,Nie,Štandard,Platba vopred,,,,2026-05-17,Čaká na doručenie
+641,KE00064158,Veronika Szűcs,"Kamenná 112, Košice - Lorinčík",Lorinčík,Nábytok,S,21x16x10,1.5,Nie,Ekonomický,Dobierka,448.32,,,2026-05-13,Čaká na doručenie
+642,KE00064228,Radoslav Rácz,"Továrenská 46/38, Košice - Šaca",Šaca,Balík,XS,8x8x4,0.3,Nie,Štandard,Firemná faktura,,1517.03,Krehké - opatrne,2026-05-14,Čaká na doručenie
+643,KE00064339,Natália Molnár,"Gemerská 111/37, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,XS,9x9x4,0.17,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+644,KE00064464,Lenka Csonka,"Čermeľská 25, Košice - Kavečany",Kavečany,Náhradný diel,S,16x12x8,1.82,Nie,Štandard,Platba vopred,,1896.28,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+645,KE00064538,Rastislav Török,"Slnečná 33/19, Košice - Myslava",Myslava,Potraviny,XXL,140x93x81,14.8,Áno,Štandard,Dobierka,142.83,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+646,KE00064694,Anna Fábián,"Meteorová 41/18, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Knihy,XXL,120x80x70,41.08,Áno,Overnight,Dobierka,354.03,,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+647,KE00064737,Zuzana Gáborík,"Partizánska 63, Košice - Sídlisko KVP",Sídlisko KVP,Liek,XXL,105x70x61,28.8,Nie,Overnight,Dobierka,103.29,,,2026-05-17,Čaká na doručenie
+648,KE00064847,Natália Takáč,"Štefánikova 18, Košice - Staré Mesto",Staré Mesto,Oblečenie,XXL,104x69x60,26.73,Nie,Expres,Dobierka,177.61,,Volať vopred,2026-05-16,Čaká na doručenie
+649,KE00064994,Veronika Tkáč,"Okružná 101/35, Košice - Pereš",Pereš,Oblečenie,XS,8x8x4,0.49,Nie,Štandard,Dobierka,215.31,,Horná strana nahor,2026-05-16,Čaká na doručenie
+650,KE00065043,Veronika Sipos,"Bulharská 102/50, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,XL,77x57x48,9.34,Nie,Štandard,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+651,KE00065188,Monika Oravec,"Továrenská 101/28, Košice - Šaca",Šaca,Knihy,XS,9x9x4,0.39,Áno,Expres,Platba vopred,,1254.32,,2026-05-16,Čaká na doručenie
+652,KE00065278,Matúš Horváth,"Sácka 139, Košice - Šaca",Šaca,Knihy,L,41x33x25,10.87,Nie,Expres,Platba vopred,,322.42,,2026-05-13,Čaká na doručenie
+653,KE00065330,Jana Pintér,"Hájna 75/24, Košice - Poľov",Poľov,Balík,S,20x15x10,0.65,Áno,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+654,KE00065463,Andrej Szűcs,"Záhradnícka 7, Košice - Košická Nová Ves",Košická Nová Ves,Potraviny,S,16x12x8,1.55,Nie,Expres,Firemná faktura,,1447.0,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+655,KE00065522,Marek Bogdán,"Hlavná 139/10, Košice - Staré Mesto",Staré Mesto,Nábytok,XL,89x67x55,8.25,Nie,Overnight,Platba vopred,,,Volať vopred,2026-05-14,Čaká na doručenie
+656,KE00065657,Petra Nagy,"Horná 121, Košice - Kavečany",Kavečany,Liek,S,23x17x11,1.21,Nie,Štandard,Firemná faktura,,,Horná strana nahor,2026-05-18,Čaká na doručenie
+657,KE00065772,Peter Halász,"Krásnohorská 116, Košice - Krásna",Krásna,Dokument,S,19x14x9,1.06,Nie,Expres,Platba vopred,,1731.01,,2026-05-17,Čaká na doručenie
+658,KE00065862,Veronika Bíró,"Brnianska 37, Košice - Sever",Sever,Balík,XXL,136x90x79,40.42,Nie,Expres,Firemná faktura,,1134.97,Nezalomovať,2026-05-16,Čaká na doručenie
+659,KE00065958,Tereza Sipos,"Alžbetina 54/32, Košice - Staré Mesto",Staré Mesto,Liek,M,35x29x23,1.56,Nie,Expres,Platba vopred,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+660,KE00066047,Dávid Blaho,"Ďumbierska 42/8, Košice - Nad jazerom",Nad jazerom,Potraviny,L,57x45x34,2.59,Nie,Štandard,Platba vopred,,243.99,Skladovať v chlade,2026-05-12,Čaká na doručenie
+661,KE00066152,Kristína Sándor,"Horná 83/24, Košice - Kavečany",Kavečany,Elektronika,S,17x12x8,1.14,Áno,Overnight,Firemná faktura,,,Horná strana nahor,2026-05-14,Čaká na doručenie
+662,KE00066230,Ján Molnár,"Zupkova 135/31, Košice - Nad jazerom",Nad jazerom,Balík,L,43x34x26,7.59,Nie,Štandard,Firemná faktura,,942.7,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+663,KE00066394,Igor Kováč,"Meteorová 144/23, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,S,18x13x9,1.68,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+664,KE00066437,Juraj Fedor,"Hviezdna 40, Košice - Juh",Juh,Náhradný diel,S,18x13x9,0.38,Nie,Štandard,Firemná faktura,,1568.9,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+665,KE00066558,Ján Molnár,"Idanská 37, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,XS,11x11x5,0.12,Nie,Overnight,Firemná faktura,,,Môže zanechať u suseda,2026-05-17,Čaká na doručenie
+666,KE00066666,Ivana Molnár,"Remeselnícka 91, Košice - Poľov",Poľov,Elektronika,XL,66x49x41,19.35,Áno,Ekonomický,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+667,KE00066711,Boris Balogh,"Stará 31/28, Košice - Pereš",Pereš,Liek,S,16x12x8,0.86,Nie,Expres,Platba vopred,,1497.78,Krehké - opatrne,2026-05-12,Čaká na doručenie
+668,KE00066842,Barbora Krajčí,"Minská 93/1, Košice - Juh",Juh,Oblečenie,M,25x20x16,2.16,Áno,Štandard,Dobierka,325.37,1394.04,Skladovať v chlade,2026-05-11,Čaká na doručenie
+669,KE00066926,Veronika Király,"Kavečianska 147/46, Košice - Kavečany",Kavečany,Náhradný diel,XXL,117x78x68,16.95,Áno,Overnight,Dobierka,447.66,,,2026-05-16,Čaká na doručenie
+670,KE00067050,Igor Török,"Juhoslovanská 31, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Oblečenie,XS,9x9x4,0.44,Nie,Ekonomický,Platba vopred,,,,2026-05-13,Čaká na doručenie
+671,KE00067198,Dušan Halász,"Sibírska 133, Košice - Západ",Západ,Dokument,L,56x45x34,10.37,Nie,Štandard,Dobierka,136.98,1220.97,Horná strana nahor,2026-05-16,Čaká na doručenie
+672,KE00067250,Ladislav Fedor,"Svätá 45/1, Košice - Vyšné Opátske",Vyšné Opátske,Nábytok,XL,75x56x47,12.22,Áno,Overnight,Platba vopred,,181.97,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+673,KE00067332,Igor Kiss,"Zlatá 44/14, Košice - Staré Mesto",Staré Mesto,Elektronika,L,41x33x24,11.14,Áno,Štandard,Platba vopred,,1414.77,Volať vopred,2026-05-16,Čaká na doručenie
+674,KE00067476,Stanislav Blaho,"Čermeľská 145, Košice - Kavečany",Kavečany,Oblečenie,M,34x28x23,1.3,Nie,Štandard,Dobierka,180.8,,Krehké - opatrne,2026-05-13,Čaká na doručenie
+675,KE00067580,Zuzana Hudák,"Viničná 10/38, Košice - Myslava",Myslava,Potraviny,XL,82x61x51,29.83,Nie,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+676,KE00067614,Juraj Mészáros,"Kavečianska 132/17, Košice - Kavečany",Kavečany,Krehký tovar,M,24x20x16,1.02,Áno,Štandard,Firemná faktura,,1180.9,,2026-05-13,Čaká na doručenie
+677,KE00067768,Dávid Pintér,"Herlianska 92/1, Košice - Šaca",Šaca,Dokument,L,46x37x28,10.07,Nie,Štandard,Dobierka,275.66,,Horná strana nahor,2026-05-18,Čaká na doručenie
+678,KE00067844,Matúš Kiss,"Kamenná 122/17, Košice - Lorinčík",Lorinčík,Oblečenie,XL,74x56x46,21.32,Nie,Štandard,Dobierka,467.7,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+679,KE00067921,Dávid Krajčí,"Hradná 8, Košice - Poľov",Poľov,Elektronika,XL,94x71x59,28.46,Áno,Ekonomický,Platba vopred,,1920.23,,2026-05-16,Čaká na doručenie
+680,KE00068097,Dávid Mészáros,"Bačíkova 89, Košice - Košická Nová Ves",Košická Nová Ves,Krehký tovar,XS,10x10x5,0.18,Áno,Štandard,Dobierka,121.91,497.02,Skladovať v chlade,2026-05-15,Čaká na doručenie
+681,KE00068159,Eva Baláž,"Hornohorská 2, Košice - Krásna",Krásna,Elektronika,L,50x40x30,6.52,Áno,Ekonomický,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+682,KE00068256,Mária Tkáč,"Rovníková 35, Košice - Nad jazerom",Nad jazerom,Potraviny,XXL,131x87x76,26.98,Nie,Štandard,Platba vopred,,477.96,,2026-05-15,Čaká na doručenie
+683,KE00068371,Monika Szabó,"Robotnícka 1/49, Košice - Šaca",Šaca,Balík,XXL,107x71x62,30.0,Nie,Štandard,Platba vopred,,779.76,Doručiť osobne,2026-05-12,Čaká na doručenie
+684,KE00068459,Monika Hegedűs,"Fábryho 108, Košice - Sídlisko KVP",Sídlisko KVP,Dokument,XL,90x68x56,15.55,Nie,Štandard,Firemná faktura,,1153.62,Doručiť osobne,2026-05-18,Čaká na doručenie
+685,KE00068556,Monika Fodor,"Myslavská 125/43, Košice - Myslava",Myslava,Dokument,XS,9x9x4,0.2,Nie,Expres,Firemná faktura,,1074.7,,2026-05-11,Čaká na doručenie
+686,KE00068615,Ondrej Nagy,"Arm. gen. Svobodu 109/25, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,S,16x12x8,1.91,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-12,Čaká na doručenie
+687,KE00068748,Helena Hegedűs,"Bukureštská 118, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,M,27x22x18,2.02,Áno,Expres,Dobierka,150.15,,Nezalomovať,2026-05-12,Čaká na doručenie
+688,KE00068898,Martin Fehér,"Vstupný areál 29, Košice - Sídlisko KVP",Sídlisko KVP,Náhradný diel,XXL,115x76x67,17.01,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-14,Čaká na doručenie
+689,KE00068933,Tomáš Molnár,"Poludníková 146, Košice - Sever",Sever,Dokument,M,24x20x16,3.24,Nie,Štandard,Dobierka,464.08,,Skladovať v chlade,2026-05-14,Čaká na doručenie
+690,KE00069045,Kristína Oravec,"Kavečianska 111/13, Košice - Kavečany",Kavečany,Elektronika,M,31x26x20,2.93,Áno,Expres,Dobierka,288.8,,,2026-05-15,Čaká na doručenie
+691,KE00069191,Monika Novák,"Opatovská cesta 129/39, Košice - Západ",Západ,Elektronika,XXL,109x73x63,10.2,Áno,Štandard,Platba vopred,,,Volať vopred,2026-05-14,Čaká na doručenie
+692,KE00069211,Jakub Molnár,"Herlianska 57, Košice - Šaca",Šaca,Nábytok,S,16x12x8,0.72,Nie,Overnight,Firemná faktura,,,Horná strana nahor,2026-05-12,Čaká na doručenie
+693,KE00069354,Lucia Hudák,"Priemyselná 82, Košice - Šaca",Šaca,Náhradný diel,L,57x45x34,7.99,Nie,Expres,Dobierka,20.97,,,2026-05-17,Čaká na doručenie
+694,KE00069412,Tibor Csonka,"Toryská 136, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,M,29x24x19,2.6,Áno,Expres,Dobierka,179.06,,Skladovať v chlade,2026-05-12,Čaká na doručenie
+695,KE00069561,Tereza Šimko,"Viničná 126/25, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,L,52x41x31,12.9,Nie,Štandard,Dobierka,148.23,,,2026-05-16,Čaká na doručenie
+696,KE00069667,Helena Fedor,"Potočná 91/27, Košice - Krásna",Krásna,Knihy,M,33x27x22,3.34,Nie,Štandard,Dobierka,204.96,,Volať vopred,2026-05-11,Čaká na doručenie
+697,KE00069788,Tereza Fekete,"Jenisejská 103, Košice - Západ",Západ,Dokument,L,53x42x31,10.57,Nie,Štandard,Firemná faktura,,456.14,,2026-05-15,Čaká na doručenie
+698,KE00069868,Mária Gál,"Opátska 147/2, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,S,17x12x8,1.33,Áno,Ekonomický,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+699,KE00069992,Jakub Blaho,"Ovocná 45, Košice - Barca",Barca,Balík,M,25x21x17,0.79,Nie,Štandard,Dobierka,303.61,928.2,,2026-05-15,Čaká na doručenie
+700,KE00070078,Matúš Szabó,"Bulharská 41, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XS,10x10x5,0.37,Nie,Overnight,Platba vopred,,,Volať vopred,2026-05-12,Čaká na doručenie
+701,KE00070143,Matúš Tóth,"Varšavská 7, Košice - Dargovských hrdinov",Dargovských hrdinov,Balík,M,33x28x22,4.23,Nie,Štandard,Firemná faktura,,300.51,,2026-05-12,Čaká na doručenie
+702,KE00070266,Jana Hudák,"Arm. gen. Svobodu 94, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,S,22x16x11,0.58,Nie,Štandard,Firemná faktura,,597.63,,2026-05-15,Čaká na doručenie
+703,KE00070370,Martin Csonka,"Továrenská 67/39, Košice - Šaca",Šaca,Elektronika,S,17x12x8,0.72,Áno,Overnight,Firemná faktura,,1271.45,,2026-05-14,Čaká na doručenie
+704,KE00070476,Vladimír Hudák,"Záhradná 40/45, Košice - Myslava",Myslava,Elektronika,XL,73x55x45,13.37,Áno,Štandard,Dobierka,154.96,1022.1,Volať vopred,2026-05-18,Čaká na doručenie
+705,KE00070518,Miroslav Szőke,"Remeselnícka 44/42, Košice - Poľov",Poľov,Liek,XL,74x55x46,13.11,Nie,Expres,Firemná faktura,,,Nezalomovať,2026-05-12,Čaká na doručenie
+706,KE00070661,Miroslav Fedor,"Sácka 80, Košice - Šaca",Šaca,Elektronika,XL,88x66x55,24.31,Áno,Štandard,Platba vopred,,1331.85,,2026-05-15,Čaká na doručenie
+707,KE00070741,Alžbeta Fehér,"Bulharská 130, Košice - Dargovských hrdinov",Dargovských hrdinov,Balík,XXL,121x81x71,13.18,Nie,Štandard,Dobierka,399.65,,,2026-05-16,Čaká na doručenie
+708,KE00070884,Helena Fedor,"Vietnamská 46, Košice - Sever",Sever,Dokument,XL,72x54x45,23.06,Nie,Ekonomický,Platba vopred,,,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+709,KE00070924,Mária Fábián,"Okružná 26/4, Košice - Pereš",Pereš,Dokument,XS,8x8x4,0.15,Áno,Štandard,Firemná faktura,,865.21,,2026-05-14,Čaká na doručenie
+710,KE00071053,Patrik Pintér,"Viničná 117/17, Košice - Myslava",Myslava,Knihy,XL,72x54x45,20.04,Nie,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+711,KE00071166,Lucia Lukáč,"Horná 129, Košice - Kavečany",Kavečany,Náhradný diel,S,19x14x9,0.77,Nie,Štandard,Dobierka,218.85,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+712,KE00071231,Marek Csonka,"Robotnícka 47, Košice - Šaca",Šaca,Knihy,S,17x13x8,1.1,Nie,Expres,Platba vopred,,1535.13,Krehké - opatrne,2026-05-16,Čaká na doručenie
+713,KE00071350,Boris Király,"Jenisejská 84/31, Košice - Západ",Západ,Oblečenie,L,55x44x33,4.77,Nie,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-14,Čaká na doručenie
+714,KE00071442,Andrea Kováč,"Záhradná 109/49, Košice - Myslava",Myslava,Krehký tovar,L,41x32x24,6.72,Áno,Ekonomický,Platba vopred,,,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+715,KE00071571,Zuzana Molnár,"Záhradnícka 7, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,XL,81x61x51,8.39,Áno,Expres,Firemná faktura,,657.71,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+716,KE00071619,Martina Polák,"Perešská 100/46, Košice - Pereš",Pereš,Balík,M,35x29x23,3.14,Nie,Štandard,Dobierka,187.88,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+717,KE00071718,Ladislav Jakab,"Továrenská 39/38, Košice - Šaca",Šaca,Knihy,S,20x15x10,0.99,Nie,Štandard,Dobierka,267.86,1546.48,,2026-05-14,Čaká na doručenie
+718,KE00071860,Richard Molnár,"Priemyselná 115/14, Košice - Šaca",Šaca,Elektronika,L,44x35x26,6.07,Áno,Expres,Firemná faktura,,827.45,Doručiť osobne,2026-05-18,Čaká na doručenie
+719,KE00071921,Lenka Kiss,"Perešská 136, Košice - Pereš",Pereš,Náhradný diel,XS,10x10x5,0.5,Nie,Overnight,Firemná faktura,,160.35,,2026-05-13,Čaká na doručenie
+720,KE00072029,Lenka Nagy,"Krásnohorská 137, Košice - Krásna",Krásna,Elektronika,XL,93x70x58,19.47,Áno,Expres,Firemná faktura,,,Horná strana nahor,2026-05-14,Čaká na doručenie
+721,KE00072143,Anna Bíró,"Herlianska 47/22, Košice - Šaca",Šaca,Balík,XXL,131x87x76,47.94,Nie,Štandard,Firemná faktura,,860.03,Nezalomovať,2026-05-18,Čaká na doručenie
+722,KE00072215,Dušan Blaho,"Bernoláková 137, Košice - Sever",Sever,Nábytok,XL,93x70x58,27.12,Nie,Štandard,Dobierka,94.89,,,2026-05-18,Čaká na doručenie
+723,KE00072366,Mária Gáborík,"Magnetová 90/21, Košice - Nad jazerom",Nad jazerom,Potraviny,XXL,106x70x61,22.12,Nie,Ekonomický,Firemná faktura,,,Doručiť osobne,2026-05-18,Čaká na doručenie
+724,KE00072484,Adam Bogdán,"Sofijská 7, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,S,19x14x9,1.0,Nie,Štandard,Platba vopred,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+725,KE00072568,Martina Bogdán,"Opátska 42/8, Košice - Vyšné Opátske",Vyšné Opátske,Potraviny,XL,75x56x47,29.87,Nie,Štandard,Firemná faktura,,,Volať vopred,2026-05-11,Čaká na doručenie
+726,KE00072692,Marek Balogh,"Hlavná 98/26, Košice - Staré Mesto",Staré Mesto,Potraviny,M,35x29x23,4.26,Nie,Ekonomický,Dobierka,352.1,1928.83,Horná strana nahor,2026-05-12,Čaká na doručenie
+727,KE00072730,Kristína Kováč,"Herlianska 37/12, Košice - Šaca",Šaca,Liek,S,20x15x10,0.45,Áno,Expres,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+728,KE00072813,Adam Katona,"Údolná 45/10, Košice - Lorinčík",Lorinčík,Krehký tovar,S,18x14x9,1.86,Áno,Štandard,Dobierka,204.81,648.93,,2026-05-13,Čaká na doručenie
+729,KE00072924,Miroslav Pintér,"Herlianska 121, Košice - Šaca",Šaca,Náhradný diel,XS,10x10x5,0.41,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+730,KE00073022,Lucia Šimko,"Okružná 107/35, Košice - Pereš",Pereš,Liek,XL,89x67x56,3.02,Nie,Štandard,Dobierka,329.91,,,2026-05-13,Čaká na doručenie
+731,KE00073148,Stanislav Lukács,"Okružná 147, Košice - Pereš",Pereš,Dokument,S,22x16x11,0.46,Nie,Expres,Dobierka,309.43,1462.76,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+732,KE00073228,Patrik Šimko,"Továrenská 134/18, Košice - Šaca",Šaca,Nábytok,M,29x24x19,3.48,Nie,Expres,Firemná faktura,,372.52,,2026-05-18,Čaká na doručenie
+733,KE00073393,Ján Jakab,"Gemerská 42, Košice - Sídlisko KVP",Sídlisko KVP,Nábytok,L,49x39x29,5.81,Nie,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+734,KE00073479,Pavel Fekete,"Mníšska 87/12, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,L,55x44x33,7.39,Nie,Expres,Platba vopred,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+735,KE00073575,Rastislav Máté,"Hronská 59/8, Košice - Nad jazerom",Nad jazerom,Oblečenie,XXL,110x73x64,44.93,Nie,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+736,KE00073677,Matúš Bogdán,"Moldavská cesta 57/13, Košice - Juh",Juh,Nábytok,M,30x25x20,4.01,Nie,Overnight,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+737,KE00073761,Dávid Fábián,"Sibírska 41, Košice - Západ",Západ,Krehký tovar,XXL,137x91x80,19.05,Áno,Štandard,Firemná faktura,,1938.6,Volať vopred,2026-05-15,Čaká na doručenie
+738,KE00073828,Anna Molnár,"Poľná 134/31, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,S,21x16x10,0.74,Nie,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+739,KE00073996,Dávid Sándor,"Nová 63, Košice - Pereš",Pereš,Knihy,L,47x38x28,3.71,Nie,Štandard,Dobierka,446.86,,,2026-05-17,Čaká na doručenie
+740,KE00074079,Radoslav Csonka,"Jazerná 114, Košice - Nad jazerom",Nad jazerom,Oblečenie,M,24x20x16,1.03,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-11,Čaká na doručenie
+741,KE00074121,Matúš Fekete,"Viničná 19/49, Košice - Myslava",Myslava,Oblečenie,M,35x29x23,0.68,Nie,Štandard,Firemná faktura,,,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+742,KE00074272,Andrea Tóth,"Ovocná 127/28, Košice - Barca",Barca,Oblečenie,XXL,101x67x58,40.8,Nie,Ekonomický,Firemná faktura,,1429.06,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+743,KE00074392,Radoslav Baláž,"Vietnamská 57/43, Košice - Sever",Sever,Nábytok,XXL,119x79x69,34.27,Nie,Štandard,Firemná faktura,,1678.03,,2026-05-18,Čaká na doručenie
+744,KE00074414,Katarína Szőke,"Moskovská trieda 31/16, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XXL,130x86x75,34.15,Áno,Expres,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+745,KE00074555,Richard Horváth,"Remeselnícka 7, Košice - Poľov",Poľov,Potraviny,XXL,141x94x82,13.95,Nie,Overnight,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+746,KE00074673,Anna Szűcs,"Považská 115/21, Košice - Sever",Sever,Elektronika,XXL,108x72x63,41.75,Áno,Štandard,Firemná faktura,,1632.78,,2026-05-12,Čaká na doručenie
+747,KE00074754,Stanislav Molnár,"Meteorová 91/48, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,M,25x21x16,3.75,Nie,Štandard,Dobierka,194.43,,,2026-05-14,Čaká na doručenie
+748,KE00074835,Mária Horváth,"Továrenská 93/11, Košice - Šaca",Šaca,Náhradný diel,XS,8x8x4,0.22,Nie,Expres,Platba vopred,,,,2026-05-12,Čaká na doručenie
+749,KE00074966,Jakub Fekete,"Janigova 104/10, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Potraviny,XL,75x56x47,6.59,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+750,KE00075012,Radoslav Horváth,"Gemerská 141, Košice - Sídlisko KVP",Sídlisko KVP,Elektronika,L,44x35x26,10.73,Áno,Štandard,Dobierka,325.71,494.92,Doručiť osobne,2026-05-15,Čaká na doručenie
+751,KE00075140,Róbert Pintér,"Okružná 107/37, Košice - Pereš",Pereš,Nábytok,S,22x17x11,1.25,Nie,Overnight,Firemná faktura,,1801.11,Skladovať v chlade,2026-05-14,Čaká na doručenie
+752,KE00075287,Filip Šimko,"Robotnícka 92, Košice - Šaca",Šaca,Elektronika,M,34x28x22,4.94,Áno,Expres,Platba vopred,,1616.43,,2026-05-11,Čaká na doručenie
+753,KE00075393,Anna Fedor,"Bernoláková 142/15, Košice - Sever",Sever,Liek,XL,90x68x56,15.43,Nie,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+754,KE00075427,Tomáš Hegedűs,"Pasteurova 123/10, Košice - Sídlisko KVP",Sídlisko KVP,Nábytok,M,24x20x16,3.73,Nie,Štandard,Dobierka,300.88,,,2026-05-12,Čaká na doručenie
+755,KE00075585,Filip Hegedűs,"Hájna 116, Košice - Poľov",Poľov,Náhradný diel,M,27x23x18,3.06,Nie,Ekonomický,Firemná faktura,,1511.39,,2026-05-18,Čaká na doručenie
+756,KE00075683,Dávid Vincze,"Moskovská trieda 17/47, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,S,17x13x8,1.28,Áno,Overnight,Dobierka,464.77,1892.83,Krehké - opatrne,2026-05-17,Čaká na doručenie
+757,KE00075791,Jana Novák,"Remeselnícka 98/9, Košice - Poľov",Poľov,Potraviny,XS,9x9x4,0.17,Nie,Overnight,Dobierka,203.71,,Krehké - opatrne,2026-05-15,Čaká na doručenie
+758,KE00075882,Pavel Horváth,"Meteorová 116/34, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Knihy,XL,65x49x41,18.04,Áno,Štandard,Platba vopred,,65.03,Krehké - opatrne,2026-05-18,Čaká na doručenie
+759,KE00075932,Natália Sipos,"Barčianska 45, Košice - Barca",Barca,Dokument,S,20x15x10,1.96,Nie,Overnight,Platba vopred,,,,2026-05-11,Čaká na doručenie
+760,KE00076088,Martin Fehér,"Kláštorná 114, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,XS,11x11x5,0.22,Nie,Štandard,Platba vopred,,318.95,Horná strana nahor,2026-05-17,Čaká na doručenie
+761,KE00076171,Rastislav Katona,"Továrenská 141/29, Košice - Šaca",Šaca,Krehký tovar,XL,66x49x41,9.65,Áno,Štandard,Platba vopred,,1834.05,Nezalomovať,2026-05-12,Čaká na doručenie
+762,KE00076265,Ivana Jakab,"Varšavská 24/21, Košice - Dargovských hrdinov",Dargovských hrdinov,Náhradný diel,XL,86x64x54,17.09,Nie,Expres,Dobierka,382.94,,,2026-05-14,Čaká na doručenie
+763,KE00076349,Marek Molnár,"Poľovská 126, Košice - Poľov",Poľov,Liek,XL,79x59x49,13.5,Nie,Ekonomický,Platba vopred,,,Môže zanechať u suseda,2026-05-18,Čaká na doručenie
+764,KE00076437,Peter Tóth,"Moldavská 81/35, Košice - Krásna",Krásna,Náhradný diel,M,28x23x19,2.08,Nie,Štandard,Platba vopred,,,,2026-05-13,Čaká na doručenie
+765,KE00076594,Mária Szabó,"Bukureštská 48/46, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,XXL,105x70x61,18.27,Nie,Štandard,Dobierka,346.25,,Nezalomovať,2026-05-14,Čaká na doručenie
+766,KE00076644,Monika Varga,"Sácka 100/24, Košice - Šaca",Šaca,Oblečenie,S,17x12x8,0.64,Nie,Overnight,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+767,KE00076772,Radoslav Blaho,"Lorinčícka 107/25, Košice - Lorinčík",Lorinčík,Potraviny,L,45x36x27,1.15,Nie,Štandard,Dobierka,346.3,326.26,,2026-05-17,Čaká na doručenie
+768,KE00076835,Adam Oravec,"Idanská 138, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Oblečenie,XXL,130x86x76,37.8,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+769,KE00076966,Ivana Varga,"Galvaniho 128, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Balík,L,49x39x29,2.56,Nie,Overnight,Platba vopred,,,Skladovať v chlade,2026-05-15,Čaká na doručenie
+770,KE00077060,Andrej Blaho,"Dĺžková 11/33, Košice - Nad jazerom",Nad jazerom,Balík,S,21x16x10,0.28,Nie,Ekonomický,Platba vopred,,1291.83,Horná strana nahor,2026-05-13,Čaká na doručenie
+771,KE00077150,Richard Fábián,"Hájna 75/15, Košice - Poľov",Poľov,Balík,S,18x14x9,1.5,Áno,Overnight,Dobierka,266.64,,Doručiť osobne,2026-05-16,Čaká na doručenie
+772,KE00077259,Tereza Horváth,"Adlerova 17, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,XL,87x65x54,22.55,Nie,Štandard,Dobierka,120.66,,Nezalomovať,2026-05-12,Čaká na doručenie
+773,KE00077391,Peter Sándor,"Jegorova 10/5, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,L,58x46x35,10.03,Nie,Expres,Platba vopred,,1960.46,,2026-05-11,Čaká na doručenie
+774,KE00077462,Katarína Gáborík,"Tichá 40, Košice - Myslava",Myslava,Potraviny,S,18x13x9,1.52,Nie,Ekonomický,Platba vopred,,94.68,,2026-05-12,Čaká na doručenie
+775,KE00077577,Igor Balogh,"Moldavská 103, Košice - Krásna",Krásna,Potraviny,S,23x17x11,0.96,Nie,Štandard,Firemná faktura,,803.78,Krehké - opatrne,2026-05-13,Čaká na doručenie
+776,KE00077693,Róbert Vincze,"Letná 56/37, Košice - Juh",Juh,Liek,XXL,133x89x77,24.54,Nie,Štandard,Firemná faktura,,226.21,Skladovať v chlade,2026-05-15,Čaká na doručenie
+777,KE00077797,Juraj Fekete,"Záhradná 106, Košice - Myslava",Myslava,Náhradný diel,XL,92x69x57,20.81,Nie,Štandard,Dobierka,107.19,,Volať vopred,2026-05-16,Čaká na doručenie
+778,KE00077816,Miroslav Pintér,"Šírková 148/13, Košice - Nad jazerom",Nad jazerom,Krehký tovar,M,29x24x19,4.41,Áno,Expres,Platba vopred,,52.72,,2026-05-17,Čaká na doručenie
+779,KE00077947,Róbert Bogdán,"Herlianska 81/23, Košice - Šaca",Šaca,Dokument,S,23x17x11,0.75,Nie,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+780,KE00078028,Miroslav Kováčik,"Novoveská 144, Košice - Košická Nová Ves",Košická Nová Ves,Potraviny,L,42x33x25,13.74,Nie,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+781,KE00078195,Zuzana Olah,"Myslavská 11, Košice - Myslava",Myslava,Nábytok,L,49x39x29,11.74,Nie,Expres,Platba vopred,,,Nezalomovať,2026-05-11,Čaká na doručenie
+782,KE00078220,Richard Šimko,"Lipová 22/5, Košice - Barca",Barca,Krehký tovar,XL,73x55x46,13.63,Áno,Štandard,Platba vopred,,,Volať vopred,2026-05-13,Čaká na doručenie
+783,KE00078349,Barbora Pintér,"Borová 127, Košice - Barca",Barca,Náhradný diel,S,18x14x9,0.65,Nie,Štandard,Firemná faktura,,485.22,Doručiť osobne,2026-05-13,Čaká na doručenie
+784,KE00078458,Radoslav Bogdán,"Záhradná 111, Košice - Kavečany",Kavečany,Náhradný diel,XXL,117x78x68,13.21,Nie,Štandard,Platba vopred,,1810.02,Volať vopred,2026-05-18,Čaká na doručenie
+785,KE00078520,Katarína Lukács,"Poľovská 70/22, Košice - Poľov",Poľov,Knihy,L,48x38x28,5.79,Nie,Expres,Firemná faktura,,,Horná strana nahor,2026-05-17,Čaká na doručenie
+786,KE00078689,Vladimír Csonka,"Robotnícka 30, Košice - Šaca",Šaca,Dokument,XS,8x8x4,0.17,Nie,Štandard,Platba vopred,,1615.9,,2026-05-18,Čaká na doručenie
+787,KE00078721,Igor Fekete,"Idanská 150/30, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,XXL,101x67x58,14.88,Áno,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-16,Čaká na doručenie
+788,KE00078885,Jakub Nagy,"Štefánikova 60, Košice - Staré Mesto",Staré Mesto,Liek,L,46x37x27,8.41,Nie,Overnight,Platba vopred,,,Volať vopred,2026-05-11,Čaká na doručenie
+789,KE00078939,Richard Blaho,"Šrobárova 48/6, Košice - Sídlisko KVP",Sídlisko KVP,Elektronika,M,25x21x17,2.94,Áno,Expres,Platba vopred,,,Doručiť osobne,2026-05-15,Čaká na doručenie
+790,KE00079073,Igor Tkáč,"Uralská 76/33, Košice - Západ",Západ,Elektronika,S,19x14x9,1.68,Áno,Štandard,Firemná faktura,,132.62,,2026-05-14,Čaká na doručenie
+791,KE00079167,Patrik Török,"Barčianska 111, Košice - Barca",Barca,Dokument,L,40x32x24,11.42,Nie,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+792,KE00079261,Patrik Sipos,"Javorová 95, Košice - Barca",Barca,Elektronika,M,30x25x20,3.85,Áno,Štandard,Dobierka,179.68,1594.54,Horná strana nahor,2026-05-11,Čaká na doručenie
+793,KE00079394,Adam Csonka,"Tichá 116, Košice - Myslava",Myslava,Krehký tovar,L,48x38x29,1.34,Áno,Expres,Platba vopred,,1584.84,Krehké - opatrne,2026-05-12,Čaká na doručenie
+794,KE00079473,Peter Halász,"Jenisejská 48, Košice - Západ",Západ,Balík,L,42x34x25,5.72,Nie,Štandard,Firemná faktura,,,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+795,KE00079549,Dušan Tóth,"Kamenná 41, Košice - Lorinčík",Lorinčík,Knihy,M,35x29x23,0.8,Nie,Expres,Dobierka,261.79,986.11,,2026-05-11,Čaká na doručenie
+796,KE00079663,Natália Lukáč,"Sibírska 80/28, Košice - Západ",Západ,Knihy,XL,68x51x42,10.61,Nie,Overnight,Firemná faktura,,,Nezalomovať,2026-05-17,Čaká na doručenie
+797,KE00079772,Igor Olah,"Zábrezová 84/21, Košice - Sever",Sever,Knihy,M,30x25x20,3.1,Nie,Expres,Platba vopred,,,,2026-05-15,Čaká na doručenie
+798,KE00079845,Zuzana Csonka,"Perešská 81/7, Košice - Pereš",Pereš,Liek,S,20x15x10,0.35,Nie,Štandard,Firemná faktura,,394.43,Horná strana nahor,2026-05-17,Čaká na doručenie
+799,KE00079935,Stanislav Fábián,"Rovníková 16, Košice - Nad jazerom",Nad jazerom,Liek,XS,9x9x4,0.43,Nie,Štandard,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+800,KE00080063,Róbert Bíró,"Hviezdna 76/48, Košice - Juh",Juh,Potraviny,XL,73x54x45,24.35,Nie,Expres,Dobierka,106.1,1291.54,Nezalomovať,2026-05-14,Čaká na doručenie
+801,KE00080112,Lucia Fábián,"Meteorová 120/10, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Knihy,L,51x40x30,9.31,Nie,Štandard,Dobierka,354.62,265.79,Volať vopred,2026-05-11,Čaká na doručenie
+802,KE00080282,Miroslav Molnár,"Cottbuská 84/24, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XXL,114x76x66,11.02,Nie,Expres,Platba vopred,,,Krehké - opatrne,2026-05-14,Čaká na doručenie
+803,KE00080318,Vladimír Sipos,"Prešovská 15/46, Košice - Sídlisko KVP",Sídlisko KVP,Dokument,XS,11x11x5,0.16,Nie,Štandard,Dobierka,378.56,693.71,Krehké - opatrne,2026-05-13,Čaká na doručenie
+804,KE00080481,Andrea Sándor,"Okružná 140, Košice - Pereš",Pereš,Dokument,L,53x43x32,8.67,Nie,Overnight,Dobierka,456.16,1293.07,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+805,KE00080573,Martin Gáborík,"Hlavná 58, Košice - Staré Mesto",Staré Mesto,Krehký tovar,S,23x17x11,1.92,Áno,Štandard,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+806,KE00080690,Róbert Szőke,"Štúrova 107/3, Košice - Staré Mesto",Staré Mesto,Balík,XS,8x8x4,0.33,Áno,Štandard,Platba vopred,,24.63,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+807,KE00080793,Zuzana Kováčik,"Záhradnícka 143, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,S,22x16x11,0.66,Áno,Štandard,Dobierka,63.99,1210.7,Horná strana nahor,2026-05-14,Čaká na doručenie
+808,KE00080856,Martin Farkas,"Svätá 53, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,XS,10x10x5,0.45,Áno,Expres,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+809,KE00080987,Juraj Lukács,"Myslavská 59/17, Košice - Myslava",Myslava,Krehký tovar,XS,9x9x4,0.19,Áno,Overnight,Dobierka,473.66,1968.62,,2026-05-12,Čaká na doručenie
+810,KE00081030,Dušan Polák,"Bajkalská 123/19, Košice - Západ",Západ,Balík,XS,10x10x5,0.45,Nie,Expres,Platba vopred,,1140.54,Horná strana nahor,2026-05-14,Čaká na doručenie
+811,KE00081136,Róbert Fodor,"Cottbuská 95, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XXL,138x92x80,13.04,Nie,Expres,Dobierka,64.44,,Volať vopred,2026-05-16,Čaká na doručenie
+812,KE00081237,Rastislav Nagy,"Cottbuská 122, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,XXL,107x71x62,44.79,Nie,Expres,Dobierka,283.8,,,2026-05-17,Čaká na doručenie
+813,KE00081344,Martina Fodor,"Juhoslovanská 97, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Nábytok,L,48x38x28,14.62,Nie,Overnight,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+814,KE00081416,Milan Szűcs,"Štúrova 70/13, Košice - Staré Mesto",Staré Mesto,Balík,L,56x44x33,14.94,Nie,Overnight,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+815,KE00081569,Veronika Fehér,"Záhradnícka 23/30, Košice - Košická Nová Ves",Košická Nová Ves,Náhradný diel,S,18x14x9,1.82,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+816,KE00081697,Martina Hegedűs,"Lipová 38/49, Košice - Barca",Barca,Dokument,XL,77x57x48,28.96,Nie,Expres,Firemná faktura,,,Horná strana nahor,2026-05-11,Čaká na doručenie
+817,KE00081724,Miroslav Király,"Lomonosovova 88/41, Košice - Západ",Západ,Krehký tovar,M,30x25x20,4.24,Áno,Overnight,Platba vopred,,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+818,KE00081857,Ján Oravec,"Pustovnícka 11/37, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,XL,85x63x53,7.45,Áno,Expres,Firemná faktura,,,Krehké - opatrne,2026-05-17,Čaká na doručenie
+819,KE00081974,Stanislav Jakab,"Potočná 134/26, Košice - Krásna",Krásna,Dokument,M,32x27x21,3.6,Nie,Štandard,Dobierka,348.5,1589.25,,2026-05-15,Čaká na doručenie
+820,KE00082097,Ladislav Polák,"Bukureštská 37/45, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,L,46x36x27,3.93,Nie,Ekonomický,Dobierka,151.41,,Doručiť osobne,2026-05-15,Čaká na doručenie
+821,KE00082115,Rastislav Fodor,"Janigova 65, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Nábytok,M,31x26x21,0.55,Nie,Štandard,Dobierka,217.12,,,2026-05-11,Čaká na doručenie
+822,KE00082221,Peter Oravec,"Perešská 128, Košice - Pereš",Pereš,Náhradný diel,XXL,118x79x69,41.91,Nie,Expres,Firemná faktura,,1925.91,Nezalomovať,2026-05-11,Čaká na doručenie
+823,KE00082367,Milan Vincze,"Stará 140, Košice - Pereš",Pereš,Potraviny,XXL,126x84x73,13.76,Nie,Expres,Platba vopred,,,Volať vopred,2026-05-13,Čaká na doručenie
+824,KE00082499,Vladimír Szőke,"Leningradská 25, Košice - Juh",Juh,Liek,XXL,133x88x77,47.42,Nie,Štandard,Dobierka,284.7,,Volať vopred,2026-05-18,Čaká na doručenie
+825,KE00082593,Dávid Varga,"Svätá 45/19, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,M,31x26x20,2.42,Áno,Ekonomický,Dobierka,243.66,1491.62,Nezalomovať,2026-05-15,Čaká na doručenie
+826,KE00082687,Stanislav Fekete,"Uralská 12, Košice - Západ",Západ,Liek,XXL,124x82x72,29.73,Nie,Overnight,Dobierka,86.39,,,2026-05-16,Čaká na doručenie
+827,KE00082718,Filip Fodor,"Vodná 128, Košice - Staré Mesto",Staré Mesto,Knihy,XS,10x10x5,0.46,Nie,Expres,Firemná faktura,,,,2026-05-12,Čaká na doručenie
+828,KE00082879,Eva Olah,"Janigova 68/43, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Krehký tovar,L,50x40x30,4.41,Áno,Štandard,Dobierka,287.36,,Horná strana nahor,2026-05-15,Čaká na doručenie
+829,KE00082924,Dušan Novák,"Borová 68, Košice - Barca",Barca,Elektronika,XL,77x57x48,18.11,Áno,Štandard,Firemná faktura,,1578.29,Krehké - opatrne,2026-05-18,Čaká na doručenie
+830,KE00083079,Vladimír Molnár,"Mníšska 150/20, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,S,22x17x11,1.64,Áno,Expres,Platba vopred,,1270.46,Doručiť osobne,2026-05-17,Čaká na doručenie
+831,KE00083165,Patrik Szabó,"Idanská 33/10, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Nábytok,L,50x40x30,14.82,Nie,Štandard,Firemná faktura,,128.75,,2026-05-15,Čaká na doručenie
+832,KE00083291,Dušan Vincze,"Pasteurova 102, Košice - Sídlisko KVP",Sídlisko KVP,Elektronika,M,28x23x19,3.23,Áno,Expres,Dobierka,309.37,,,2026-05-12,Čaká na doručenie
+833,KE00083353,Andrej Szabó,"Bodrocká 134, Košice - Západ",Západ,Náhradný diel,L,51x41x31,6.84,Nie,Štandard,Dobierka,322.49,934.37,Volať vopred,2026-05-13,Čaká na doručenie
+834,KE00083453,Lenka Sipos,"Viničná 84/31, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,L,55x44x33,12.75,Nie,Expres,Platba vopred,,984.45,Krehké - opatrne,2026-05-11,Čaká na doručenie
+835,KE00083545,Radoslav Fedor,"Brestová 17, Košice - Krásna",Krásna,Knihy,M,31x25x20,1.53,Nie,Ekonomický,Firemná faktura,,1355.44,,2026-05-15,Čaká na doručenie
+836,KE00083676,Andrej Gál,"Horná 109/13, Košice - Kavečany",Kavečany,Elektronika,S,22x16x11,1.44,Áno,Expres,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+837,KE00083725,Helena Fábián,"Gorkého 75/14, Košice - Západ",Západ,Liek,M,26x21x17,3.41,Nie,Štandard,Firemná faktura,,153.38,Doručiť osobne,2026-05-13,Čaká na doručenie
+838,KE00083872,Róbert Oravec,"Hradná 101, Košice - Poľov",Poľov,Nábytok,L,49x39x29,14.87,Nie,Overnight,Firemná faktura,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+839,KE00083964,Rastislav Šimko,"Bukureštská 112, Košice - Dargovských hrdinov",Dargovských hrdinov,Balík,S,16x12x8,1.57,Áno,Štandard,Dobierka,269.94,1488.62,,2026-05-16,Čaká na doručenie
+840,KE00084084,Rastislav Fekete,"Južná trieda 146, Košice - Juh",Juh,Elektronika,XL,87x65x54,10.67,Áno,Štandard,Firemná faktura,,55.68,,2026-05-13,Čaká na doručenie
+841,KE00084138,Juraj Fehér,"Sácka 44/25, Košice - Šaca",Šaca,Nábytok,XL,64x48x40,7.33,Nie,Expres,Dobierka,245.7,,Môže zanechať u suseda,2026-05-17,Čaká na doručenie
+842,KE00084266,Radoslav Baláž,"Vietnamská 43/15, Košice - Sever",Sever,Nábytok,XS,8x8x4,0.22,Nie,Overnight,Platba vopred,,1427.73,,2026-05-17,Čaká na doručenie
+843,KE00084319,Patrik Fedor,"Šírková 98, Košice - Nad jazerom",Nad jazerom,Náhradný diel,S,23x17x11,1.08,Áno,Štandard,Firemná faktura,,297.59,,2026-05-11,Čaká na doručenie
+844,KE00084467,Mária Balogh,"Hájna 104, Košice - Poľov",Poľov,Elektronika,L,45x36x27,11.01,Áno,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+845,KE00084584,Zuzana Horváth,"Štefánikova 147, Košice - Staré Mesto",Staré Mesto,Potraviny,L,48x38x29,7.23,Nie,Štandard,Dobierka,186.46,446.08,Horná strana nahor,2026-05-14,Čaká na doručenie
+846,KE00084642,Zuzana Kiss,"Pustovnícka 136/3, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,XS,11x11x5,0.14,Áno,Štandard,Platba vopred,,,Nevystavovať vlhku,2026-05-14,Čaká na doručenie
+847,KE00084764,Petra Fedor,"Viničná 76, Košice - Myslava",Myslava,Náhradný diel,S,17x13x8,0.76,Nie,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+848,KE00084833,Helena Török,"Bodrocká 5/13, Košice - Západ",Západ,Krehký tovar,XS,8x8x4,0.14,Áno,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-16,Čaká na doručenie
+849,KE00084969,Radoslav Lukács,"Trieda SNP 84/50, Košice - Sever",Sever,Potraviny,XS,10x10x5,0.46,Áno,Štandard,Dobierka,70.48,,,2026-05-13,Čaká na doručenie
+850,KE00085061,Milan Kováčik,"Vietnamská 45/46, Košice - Sever",Sever,Potraviny,XXL,125x83x72,11.69,Nie,Štandard,Firemná faktura,,,,2026-05-12,Čaká na doručenie
+851,KE00085157,Helena Jakab,"Svätá 134, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,XXL,136x90x79,26.21,Nie,Štandard,Firemná faktura,,156.1,,2026-05-16,Čaká na doručenie
+852,KE00085260,Ladislav Kiss,"Novoveská 106, Košice - Košická Nová Ves",Košická Nová Ves,Balík,XS,9x9x4,0.18,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+853,KE00085322,Pavel Sipos,"Šoltésovej 5/29, Košice - Sever",Sever,Elektronika,L,49x39x29,7.51,Áno,Štandard,Platba vopred,,,Doručiť osobne,2026-05-15,Čaká na doručenie
+854,KE00085474,Zuzana Sándor,"Záhradnícka 14, Košice - Košická Nová Ves",Košická Nová Ves,Náhradný diel,L,41x33x24,5.12,Áno,Štandard,Firemná faktura,,627.58,Krehké - opatrne,2026-05-17,Čaká na doručenie
+855,KE00085576,Jakub Máté,"Lomonosovova 26, Košice - Západ",Západ,Náhradný diel,M,24x20x16,2.79,Nie,Štandard,Firemná faktura,,742.26,,2026-05-13,Čaká na doručenie
+856,KE00085691,Lenka Varga,"Bukureštská 125, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,XXL,133x88x77,39.15,Nie,Štandard,Dobierka,413.23,,,2026-05-13,Čaká na doručenie
+857,KE00085729,Lukáš Gál,"Čermeľská 37/13, Košice - Kavečany",Kavečany,Balík,L,45x36x27,4.08,Nie,Štandard,Dobierka,286.8,,,2026-05-12,Čaká na doručenie
+858,KE00085853,Juraj Kováč,"Rybná 146, Košice - Lorinčík",Lorinčík,Liek,XS,8x8x4,0.11,Nie,Expres,Platba vopred,,924.62,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+859,KE00085952,Adam Fekete,"Javorová 67/36, Košice - Barca",Barca,Nábytok,XXL,127x85x74,31.07,Nie,Štandard,Platba vopred,,971.96,,2026-05-15,Čaká na doručenie
+860,KE00086022,Michal Szőke,"Mníšska 128/26, Košice - Vyšné Opátske",Vyšné Opátske,Krehký tovar,M,33x28x22,1.66,Áno,Štandard,Platba vopred,,,Horná strana nahor,2026-05-15,Čaká na doručenie
+861,KE00086165,Monika Pintér,"Brestová 93, Košice - Krásna",Krásna,Krehký tovar,XL,74x55x46,5.19,Áno,Expres,Platba vopred,,,Nezalomovať,2026-05-13,Čaká na doručenie
+862,KE00086253,Katarína Lukáč,"Šírková 122/22, Košice - Nad jazerom",Nad jazerom,Liek,M,26x22x17,4.46,Nie,Ekonomický,Dobierka,217.9,1611.01,Volať vopred,2026-05-15,Čaká na doručenie
+863,KE00086314,Lukáš Nagy,"Sibírska 97/7, Košice - Západ",Západ,Liek,XXL,96x64x56,31.61,Nie,Overnight,Platba vopred,,,Nezalomovať,2026-05-18,Čaká na doručenie
+864,KE00086431,Eva Katona,"Poludníková 94/45, Košice - Nad jazerom",Nad jazerom,Oblečenie,XL,66x50x41,7.46,Áno,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+865,KE00086575,Tibor Gál,"Remeselnícka 28, Košice - Poľov",Poľov,Krehký tovar,XL,66x49x41,19.54,Áno,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+866,KE00086640,Monika Fekete,"Bukureštská 58/3, Košice - Dargovských hrdinov",Dargovských hrdinov,Liek,XXL,103x69x60,28.91,Nie,Štandard,Dobierka,354.3,,Skladovať v chlade,2026-05-12,Čaká na doručenie
+867,KE00086740,Miroslav Török,"Záhradnícka 54, Košice - Košická Nová Ves",Košická Nová Ves,Dokument,S,16x12x8,0.31,Nie,Štandard,Dobierka,362.77,646.7,,2026-05-14,Čaká na doručenie
+868,KE00086814,Boris Katona,"Okružná 105, Košice - Pereš",Pereš,Elektronika,XXL,122x81x71,33.51,Áno,Overnight,Firemná faktura,,141.45,Skladovať v chlade,2026-05-16,Čaká na doručenie
+869,KE00086942,Dušan Halász,"Záhradná 48/30, Košice - Kavečany",Kavečany,Knihy,XXL,137x91x80,27.98,Nie,Expres,Platba vopred,,,,2026-05-18,Čaká na doručenie
+870,KE00087053,Miroslav Varga,"Lorinčícka 125/22, Košice - Lorinčík",Lorinčík,Oblečenie,S,17x13x8,1.29,Nie,Ekonomický,Platba vopred,,1233.61,,2026-05-13,Čaká na doručenie
+871,KE00087115,Róbert Takáč,"Mlynská 124/33, Košice - Staré Mesto",Staré Mesto,Náhradný diel,S,18x13x9,1.39,Nie,Štandard,Platba vopred,,,,2026-05-12,Čaká na doručenie
+872,KE00087250,Patrik Mészáros,"Slnečná 141, Košice - Myslava",Myslava,Nábytok,XS,9x9x4,0.11,Nie,Expres,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+873,KE00087319,Boris Varga,"Vietnamská 68, Košice - Sever",Sever,Potraviny,S,21x16x10,1.24,Nie,Štandard,Dobierka,476.24,865.72,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+874,KE00087481,Lenka Vincze,"Horná 140/2, Košice - Kavečany",Kavečany,Balík,XXL,133x89x78,40.76,Nie,Štandard,Firemná faktura,,1978.66,,2026-05-17,Čaká na doručenie
+875,KE00087530,Ondrej Fodor,"Sácka 140/1, Košice - Šaca",Šaca,Liek,XS,9x9x4,0.2,Nie,Štandard,Firemná faktura,,521.61,,2026-05-16,Čaká na doručenie
+876,KE00087644,Patrik Tkáč,"Údolná 42, Košice - Lorinčík",Lorinčík,Dokument,M,35x29x23,3.61,Nie,Štandard,Dobierka,468.87,,Nevystavovať vlhku,2026-05-15,Čaká na doručenie
+877,KE00087779,Lenka Rácz,"Gorkého 116, Košice - Západ",Západ,Nábytok,XL,78x59x49,6.3,Áno,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-16,Čaká na doručenie
+878,KE00087865,Miroslav Fekete,"Kavečianska 23/11, Košice - Kavečany",Kavečany,Elektronika,S,20x15x10,1.44,Áno,Štandard,Firemná faktura,,,Krehké - opatrne,2026-05-18,Čaká na doručenie
+879,KE00087915,Róbert Gál,"Varšavská 104, Košice - Dargovských hrdinov",Dargovských hrdinov,Dokument,XXL,119x79x69,33.45,Nie,Ekonomický,Firemná faktura,,744.05,Skladovať v chlade,2026-05-11,Čaká na doručenie
+880,KE00088086,Eva Horváth,"Šrobárova 49, Košice - Sídlisko KVP",Sídlisko KVP,Potraviny,XXL,140x93x82,35.95,Áno,Expres,Firemná faktura,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+881,KE00088147,Martina Máté,"Pustovnícka 30/31, Košice - Vyšné Opátske",Vyšné Opátske,Nábytok,XL,87x65x54,12.2,Nie,Overnight,Platba vopred,,,,2026-05-14,Čaká na doručenie
+882,KE00088212,Vladimír Szűcs,"Adlerova 15/43, Košice - Sídlisko KVP",Sídlisko KVP,Oblečenie,M,33x28x22,5.0,Nie,Štandard,Dobierka,267.83,606.64,Horná strana nahor,2026-05-17,Čaká na doručenie
+883,KE00088384,Lukáš Šimko,"Alžbetina 84, Košice - Staré Mesto",Staré Mesto,Knihy,XL,83x62x52,25.99,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+884,KE00088415,Patrik Máté,"Toryská 13, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,XL,93x69x58,5.15,Nie,Ekonomický,Firemná faktura,,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+885,KE00088581,Adam Tóth,"Poľná 24/18, Košice - Košická Nová Ves",Košická Nová Ves,Nábytok,S,16x12x8,1.91,Nie,Štandard,Dobierka,405.7,326.03,,2026-05-12,Čaká na doručenie
+886,KE00088644,Boris Jakab,"Brnianska 86, Košice - Sever",Sever,Balík,XXL,137x91x80,35.23,Nie,Štandard,Dobierka,370.24,1050.72,Skladovať v chlade,2026-05-15,Čaká na doručenie
+887,KE00088725,Petra Takáč,"Minská 141, Košice - Juh",Juh,Náhradný diel,XL,85x64x53,8.2,Nie,Štandard,Firemná faktura,,1713.72,Volať vopred,2026-05-14,Čaká na doručenie
+888,KE00088839,Rastislav Halász,"Zálesná 128, Košice - Lorinčík",Lorinčík,Krehký tovar,XL,70x52x43,9.83,Áno,Štandard,Platba vopred,,,Doručiť osobne,2026-05-15,Čaká na doručenie
+889,KE00088925,Juraj Fedor,"Trieda SNP 19/9, Košice - Sever",Sever,Dokument,XS,10x10x5,0.36,Áno,Overnight,Dobierka,107.14,,Doručiť osobne,2026-05-16,Čaká na doručenie
+890,KE00089065,Ivana Hegedűs,"Lipová 106, Košice - Barca",Barca,Krehký tovar,M,29x24x19,1.41,Áno,Štandard,Platba vopred,,,Horná strana nahor,2026-05-11,Čaká na doručenie
+891,KE00089170,Dávid Tóth,"Fábryho 1, Košice - Sídlisko KVP",Sídlisko KVP,Elektronika,XS,10x10x5,0.31,Áno,Štandard,Platba vopred,,1540.42,Volať vopred,2026-05-14,Čaká na doručenie
+892,KE00089292,Boris Gáborík,"Opátska 117, Košice - Vyšné Opátske",Vyšné Opátske,Liek,L,44x35x26,13.09,Nie,Ekonomický,Firemná faktura,,,Nezalomovať,2026-05-16,Čaká na doručenie
+893,KE00089323,Lenka Sándor,"Okružná 57/36, Košice - Pereš",Pereš,Náhradný diel,S,16x12x8,1.5,Áno,Štandard,Firemná faktura,,1914.74,Nezalomovať,2026-05-12,Čaká na doručenie
+894,KE00089480,Dušan Máté,"Považská 65/49, Košice - Sever",Sever,Krehký tovar,XL,82x61x51,27.96,Áno,Expres,Platba vopred,,1382.38,Nezalomovať,2026-05-16,Čaká na doručenie
+895,KE00089541,Róbert Novák,"Rybná 88, Košice - Lorinčík",Lorinčík,Potraviny,XS,10x10x5,0.39,Nie,Štandard,Firemná faktura,,1252.99,Nevystavovať vlhku,2026-05-13,Čaká na doručenie
+896,KE00089636,Patrik Polák,"Herlianska 87, Košice - Šaca",Šaca,Náhradný diel,XL,74x56x46,9.14,Áno,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-15,Čaká na doručenie
+897,KE00089792,Marek Hegedűs,"Tichá 137/5, Košice - Myslava",Myslava,Elektronika,XL,78x58x48,6.66,Áno,Štandard,Dobierka,131.95,,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+898,KE00089899,Milan Gál,"Viničná 24, Košice - Myslava",Myslava,Nábytok,XS,8x8x4,0.2,Nie,Štandard,Platba vopred,,342.41,,2026-05-11,Čaká na doručenie
+899,KE00089913,Andrea Fekete,"Orlia 126/14, Košice - Staré Mesto",Staré Mesto,Nábytok,XS,8x8x4,0.33,Nie,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+900,KE00090014,Dávid Gáborík,"Cottbuská 71, Košice - Dargovských hrdinov",Dargovských hrdinov,Elektronika,XXL,98x65x57,17.18,Áno,Štandard,Dobierka,35.33,,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+901,KE00090163,Ladislav Hegedűs,"Jegorova 94/49, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,L,43x34x25,1.89,Áno,Štandard,Dobierka,190.4,,,2026-05-16,Čaká na doručenie
+902,KE00090286,Miroslav Pintér,"Moskovská trieda 41, Košice - Dargovských hrdinov",Dargovských hrdinov,Krehký tovar,XS,9x9x4,0.38,Áno,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-11,Čaká na doručenie
+903,KE00090369,Richard Gál,"Brestová 56/28, Košice - Krásna",Krásna,Elektronika,L,45x36x27,4.64,Áno,Ekonomický,Platba vopred,,1547.39,Skladovať v chlade,2026-05-15,Čaká na doručenie
+904,KE00090426,Adam Szűcs,"Janigova 33/15, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Liek,XL,94x70x58,6.06,Nie,Štandard,Platba vopred,,1752.84,,2026-05-18,Čaká na doručenie
+905,KE00090536,Tomáš Polák,"Trieda SNP 131/35, Košice - Sever",Sever,Náhradný diel,XL,81x61x51,12.16,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+906,KE00090613,Lucia Szabó,"Jazerná 23/40, Košice - Nad jazerom",Nad jazerom,Knihy,L,54x43x32,8.65,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-18,Čaká na doručenie
+907,KE00090787,Dávid Csonka,"Biela 8, Košice - Staré Mesto",Staré Mesto,Dokument,XXL,134x89x78,33.43,Nie,Expres,Firemná faktura,,,Nezalomovať,2026-05-13,Čaká na doručenie
+908,KE00090819,Zuzana Hegedűs,"Rybárska brána 39/21, Košice - Staré Mesto",Staré Mesto,Oblečenie,XS,11x11x5,0.3,Nie,Expres,Dobierka,407.32,,Volať vopred,2026-05-11,Čaká na doručenie
+909,KE00090921,Mária Farkas,"Zupkova 74/3, Košice - Nad jazerom",Nad jazerom,Balík,L,40x32x24,7.09,Áno,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+910,KE00091083,Zuzana Jakab,"Borová 71/26, Košice - Barca",Barca,Oblečenie,XS,8x8x4,0.16,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-13,Čaká na doručenie
+911,KE00091116,Veronika Tóth,"Poľovská 142/41, Košice - Poľov",Poľov,Nábytok,L,44x35x26,6.74,Nie,Štandard,Platba vopred,,542.94,Doručiť osobne,2026-05-16,Čaká na doručenie
+912,KE00091258,Alžbeta Bíró,"Sofijská 65/8, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,XXL,96x64x56,35.02,Nie,Ekonomický,Firemná faktura,,,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+913,KE00091363,Milan Hudák,"Kyjevská 17, Košice - Juh",Juh,Nábytok,XXL,99x66x57,37.87,Nie,Expres,Firemná faktura,,493.01,Volať vopred,2026-05-12,Čaká na doručenie
+914,KE00091433,Marek Krajčí,"Rovníková 136, Košice - Nad jazerom",Nad jazerom,Potraviny,M,24x20x16,4.43,Nie,Štandard,Firemná faktura,,1748.2,,2026-05-13,Čaká na doručenie
+915,KE00091577,Ondrej Novák,"Hájna 95, Košice - Poľov",Poľov,Balík,M,26x21x17,4.39,Nie,Expres,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+916,KE00091647,Milan Máté,"Opátska 58/24, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,XXL,120x80x70,17.14,Nie,Štandard,Platba vopred,,1281.77,Nezalomovať,2026-05-13,Čaká na doručenie
+917,KE00091777,Patrik Balogh,"Zábrezová 56, Košice - Sever",Sever,Knihy,S,22x16x11,0.66,Nie,Overnight,Platba vopred,,1203.71,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+918,KE00091819,Róbert Polák,"Myslavská 140, Košice - Myslava",Myslava,Liek,XL,66x50x41,21.33,Nie,Štandard,Platba vopred,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+919,KE00091985,Zuzana Baláž,"Galvaniho 128/21, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,L,59x47x35,13.02,Nie,Expres,Dobierka,456.2,1623.27,,2026-05-15,Čaká na doručenie
+920,KE00092010,Vladimír Király,"Bulharská 107, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XL,93x70x58,9.6,Nie,Štandard,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+921,KE00092153,Vladimír Tóth,"Leningradská 95/23, Košice - Juh",Juh,Dokument,XS,9x9x4,0.13,Nie,Overnight,Platba vopred,,1064.48,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+922,KE00092214,Róbert Kováčik,"Dominikánske námestie 36/27, Košice - Staré Mesto",Staré Mesto,Nábytok,XXL,103x69x60,18.62,Áno,Štandard,Firemná faktura,,517.74,Skladovať v chlade,2026-05-13,Čaká na doručenie
+923,KE00092324,Martin Kiss,"Bačíkova 134/48, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,XXL,97x64x56,41.68,Áno,Štandard,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+924,KE00092422,Michal Bíró,"Šírková 5/13, Košice - Nad jazerom",Nad jazerom,Nábytok,S,18x14x9,0.92,Nie,Štandard,Dobierka,81.23,1492.87,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+925,KE00092547,Michal Fodor,"Bodrocká 66/23, Košice - Západ",Západ,Dokument,XL,81x61x51,14.78,Nie,Štandard,Platba vopred,,,,2026-05-15,Čaká na doručenie
+926,KE00092688,Alžbeta Kováč,"Adlerova 62, Košice - Sídlisko KVP",Sídlisko KVP,Knihy,XL,95x71x59,24.07,Nie,Štandard,Platba vopred,,1293.82,Nezalomovať,2026-05-12,Čaká na doručenie
+927,KE00092767,Filip Szűcs,"Cottbuská 27/29, Košice - Dargovských hrdinov",Dargovských hrdinov,Knihy,XS,10x10x5,0.12,Nie,Ekonomický,Dobierka,148.23,,Nezalomovať,2026-05-16,Čaká na doručenie
+928,KE00092847,Helena Török,"Horná 43, Košice - Kavečany",Kavečany,Nábytok,XL,83x62x52,19.9,Nie,Štandard,Firemná faktura,,,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+929,KE00092938,Kristína Polák,"Magnetová 94/41, Košice - Nad jazerom",Nad jazerom,Balík,S,18x13x9,0.39,Nie,Expres,Platba vopred,,1679.98,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+930,KE00093037,Alžbeta Tóth,"Bačíkova 111, Košice - Košická Nová Ves",Košická Nová Ves,Náhradný diel,L,52x41x31,1.32,Nie,Štandard,Dobierka,383.08,,,2026-05-18,Čaká na doručenie
+931,KE00093162,Mária Katona,"Viničná 59/15, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,XXL,124x83x72,24.47,Áno,Overnight,Platba vopred,,695.92,,2026-05-14,Čaká na doručenie
+932,KE00093219,Peter Máté,"Arm. gen. Svobodu 145/22, Košice - Dargovských hrdinov",Dargovských hrdinov,Náhradný diel,S,19x14x9,1.57,Nie,Expres,Dobierka,392.88,819.78,,2026-05-12,Čaká na doručenie
+933,KE00093344,Petra Baláž,"Južná trieda 144, Košice - Juh",Juh,Elektronika,XXL,135x90x79,45.29,Áno,Overnight,Firemná faktura,,,Volať vopred,2026-05-17,Čaká na doručenie
+934,KE00093465,Andrej Krajčí,"Hradná 39, Košice - Poľov",Poľov,Balík,XL,72x54x45,27.27,Nie,Overnight,Platba vopred,,,,2026-05-18,Čaká na doručenie
+935,KE00093592,Patrik Farkas,"Remeselnícka 17/8, Košice - Poľov",Poľov,Elektronika,XL,70x52x44,5.19,Áno,Overnight,Platba vopred,,121.41,Nevystavovať vlhku,2026-05-18,Čaká na doručenie
+936,KE00093638,Adam Molnár,"Kavečianska 76/5, Košice - Kavečany",Kavečany,Náhradný diel,XS,9x9x4,0.41,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-16,Čaká na doručenie
+937,KE00093721,Lucia Király,"Lesná 5/29, Košice - Kavečany",Kavečany,Liek,M,28x23x19,0.76,Nie,Overnight,Firemná faktura,,48.73,,2026-05-16,Čaká na doručenie
+938,KE00093826,Kristína Szűcs,"Okružná 99/11, Košice - Pereš",Pereš,Balík,XL,66x49x41,24.0,Nie,Štandard,Platba vopred,,471.91,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+939,KE00093938,Monika Baláž,"Priemyselná 44, Košice - Šaca",Šaca,Balík,L,50x40x30,2.11,Nie,Štandard,Platba vopred,,765.86,,2026-05-17,Čaká na doručenie
+940,KE00094031,Vladimír Mészáros,"Údolná 132/21, Košice - Lorinčík",Lorinčík,Potraviny,L,50x40x30,14.67,Nie,Štandard,Dobierka,335.6,107.88,Volať vopred,2026-05-14,Čaká na doručenie
+941,KE00094169,Lenka Varga,"Herlianska 37/19, Košice - Šaca",Šaca,Balík,XS,9x9x4,0.21,Nie,Štandard,Dobierka,55.3,292.13,,2026-05-11,Čaká na doručenie
+942,KE00094253,Ján Kováčik,"Priečna 44/5, Košice - Pereš",Pereš,Nábytok,XXL,100x66x58,29.66,Nie,Štandard,Firemná faktura,,,Doručiť osobne,2026-05-12,Čaká na doručenie
+943,KE00094367,Petra Gáborík,"Priečna 113, Košice - Pereš",Pereš,Náhradný diel,XL,71x53x44,6.1,Nie,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-13,Čaká na doručenie
+944,KE00094458,Monika Hegedűs,"Vodná 140/28, Košice - Staré Mesto",Staré Mesto,Potraviny,XS,9x9x4,0.38,Nie,Overnight,Platba vopred,,,Krehké - opatrne,2026-05-18,Čaká na doručenie
+945,KE00094523,Richard Gáborík,"Moldavská 22/11, Košice - Krásna",Krásna,Dokument,XXL,112x75x65,36.96,Nie,Ekonomický,Platba vopred,,,,2026-05-13,Čaká na doručenie
+946,KE00094687,Tomáš Bíró,"Záhradná 146, Košice - Kavečany",Kavečany,Nábytok,XXL,132x88x77,16.97,Nie,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-14,Čaká na doručenie
+947,KE00094753,Vladimír Varga,"Hornohorská 140/11, Košice - Krásna",Krásna,Elektronika,M,33x27x22,4.78,Áno,Expres,Firemná faktura,,1766.16,,2026-05-14,Čaká na doručenie
+948,KE00094859,Eva Papp,"Pustovnícka 17/19, Košice - Vyšné Opátske",Vyšné Opátske,Balík,XXL,122x81x71,28.32,Nie,Expres,Platba vopred,,,,2026-05-15,Čaká na doručenie
+949,KE00094959,Richard Horváth,"Nová 139/43, Košice - Pereš",Pereš,Dokument,XL,78x58x49,13.27,Áno,Ekonomický,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+950,KE00095097,Martina Török,"Moldavská 148/33, Košice - Krásna",Krásna,Náhradný diel,S,22x17x11,0.43,Nie,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+951,KE00095157,Dušan Kiss,"Bernoláková 14/2, Košice - Sever",Sever,Liek,L,47x38x28,9.67,Áno,Štandard,Dobierka,143.4,,,2026-05-16,Čaká na doručenie
+952,KE00095234,Anna Szőke,"Lesná 47/26, Košice - Kavečany",Kavečany,Nábytok,L,43x35x26,5.94,Nie,Štandard,Platba vopred,,1734.08,,2026-05-14,Čaká na doručenie
+953,KE00095331,Dávid Oravec,"Brestová 27, Košice - Krásna",Krásna,Krehký tovar,XS,10x10x5,0.47,Áno,Štandard,Firemná faktura,,1937.57,Krehké - opatrne,2026-05-16,Čaká na doručenie
+954,KE00095472,Jana Bíró,"Hradná 57/15, Košice - Poľov",Poľov,Elektronika,XL,89x66x55,12.99,Áno,Overnight,Platba vopred,,1903.74,Krehké - opatrne,2026-05-12,Čaká na doručenie
+955,KE00095583,Mária Horváth,"Mníšska 99/36, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,XL,74x55x46,16.17,Nie,Overnight,Dobierka,315.92,,,2026-05-17,Čaká na doručenie
+956,KE00095668,Michal Blaho,"Janigova 124/11, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Elektronika,XL,90x67x56,12.01,Áno,Štandard,Dobierka,420.09,657.24,Skladovať v chlade,2026-05-15,Čaká na doručenie
+957,KE00095715,Juraj Vincze,"Bulharská 84, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,S,18x14x9,1.79,Nie,Štandard,Platba vopred,,,Horná strana nahor,2026-05-12,Čaká na doručenie
+958,KE00095826,Filip Sándor,"Dominikánske námestie 69/10, Košice - Staré Mesto",Staré Mesto,Dokument,XS,9x9x4,0.41,Nie,Štandard,Platba vopred,,1467.68,,2026-05-11,Čaká na doručenie
+959,KE00095984,Milan Lukács,"Perešská 70, Košice - Pereš",Pereš,Potraviny,XL,81x61x51,23.71,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-12,Čaká na doručenie
+960,KE00096050,Ladislav Kováčik,"Svätá 116/18, Košice - Vyšné Opátske",Vyšné Opátske,Knihy,S,19x14x9,0.81,Nie,Ekonomický,Dobierka,317.93,,Krehké - opatrne,2026-05-12,Čaká na doručenie
+961,KE00096185,Natália Lukáč,"Bačíkova 129, Košice - Košická Nová Ves",Košická Nová Ves,Knihy,XS,11x11x5,0.27,Nie,Štandard,Dobierka,24.5,1281.94,,2026-05-16,Čaká na doručenie
+962,KE00096276,Rastislav Molnár,"Brnianska 61, Košice - Sever",Sever,Knihy,M,24x20x16,0.53,Nie,Štandard,Firemná faktura,,613.49,,2026-05-16,Čaká na doručenie
+963,KE00096310,Natália Török,"Pustovnícka 99, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,L,42x34x25,14.48,Áno,Štandard,Firemná faktura,,,,2026-05-14,Čaká na doručenie
+964,KE00096426,Dávid Kiss,"Rovníková 132/46, Košice - Nad jazerom",Nad jazerom,Náhradný diel,M,26x22x17,4.81,Nie,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-16,Čaká na doručenie
+965,KE00096570,Lukáš Tóth,"Moldavská cesta 2/40, Košice - Juh",Juh,Náhradný diel,L,54x43x32,13.4,Nie,Štandard,Dobierka,360.18,338.47,Krehké - opatrne,2026-05-11,Čaká na doručenie
+966,KE00096695,Richard Balogh,"Hradná 23/12, Košice - Poľov",Poľov,Knihy,L,49x39x29,4.64,Nie,Štandard,Dobierka,81.6,189.57,Krehké - opatrne,2026-05-18,Čaká na doručenie
+967,KE00096737,Marek Halász,"Tichá 142, Košice - Myslava",Myslava,Liek,XS,10x10x5,0.17,Nie,Ekonomický,Dobierka,231.3,,Môže zanechať u suseda,2026-05-15,Čaká na doručenie
+968,KE00096828,Miroslav Jakab,"Lomonosovova 84, Košice - Západ",Západ,Potraviny,XL,93x69x58,8.78,Nie,Overnight,Firemná faktura,,1110.74,,2026-05-17,Čaká na doručenie
+969,KE00096941,Milan Jakab,"Šoltésovej 84/45, Košice - Sever",Sever,Oblečenie,XL,70x52x44,18.01,Nie,Štandard,Firemná faktura,,792.23,Môže zanechať u suseda,2026-05-11,Čaká na doručenie
+970,KE00097066,Pavel Jakab,"Dominikánske námestie 86, Košice - Staré Mesto",Staré Mesto,Krehký tovar,L,52x41x31,11.15,Áno,Overnight,Firemná faktura,,,Doručiť osobne,2026-05-18,Čaká na doručenie
+971,KE00097122,Dušan Király,"Idanská 15, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Dokument,L,55x44x33,13.75,Nie,Štandard,Platba vopred,,1626.52,Doručiť osobne,2026-05-15,Čaká na doručenie
+972,KE00097298,Michal Máté,"Rovníková 102/47, Košice - Nad jazerom",Nad jazerom,Oblečenie,S,17x13x8,1.79,Nie,Expres,Firemná faktura,,,Krehké - opatrne,2026-05-11,Čaká na doručenie
+973,KE00097383,Igor Fehér,"Borová 92, Košice - Barca",Barca,Balík,L,58x46x35,12.18,Nie,Štandard,Firemná faktura,,,,2026-05-17,Čaká na doručenie
+974,KE00097493,Dávid Takáč,"Herlianska 118, Košice - Šaca",Šaca,Dokument,XXL,123x82x71,47.14,Nie,Štandard,Firemná faktura,,961.16,Nevystavovať vlhku,2026-05-18,Čaká na doručenie
+975,KE00097525,Ján Jakab,"Kláštorná 15/13, Košice - Vyšné Opátske",Vyšné Opátske,Nábytok,L,59x47x35,2.16,Nie,Štandard,Dobierka,201.92,422.42,,2026-05-16,Čaká na doručenie
+976,KE00097667,Michal Lukáč,"Tichá 120/9, Košice - Myslava",Myslava,Dokument,XL,88x66x55,21.18,Nie,Štandard,Dobierka,94.45,,,2026-05-17,Čaká na doručenie
+977,KE00097795,Róbert Gál,"Rovníková 136/16, Košice - Nad jazerom",Nad jazerom,Nábytok,XXL,131x87x76,11.48,Nie,Štandard,Dobierka,11.64,,Horná strana nahor,2026-05-16,Čaká na doručenie
+978,KE00097827,Tibor Novák,"Viničná 27, Košice - Košická Nová Ves",Košická Nová Ves,Náhradný diel,XS,8x8x4,0.11,Nie,Expres,Dobierka,171.89,,,2026-05-18,Čaká na doručenie
+979,KE00097995,Barbora Blaho,"Poludníková 97, Košice - Nad jazerom",Nad jazerom,Knihy,XXL,136x91x79,49.78,Nie,Expres,Dobierka,372.35,,,2026-05-18,Čaká na doručenie
+980,KE00098026,Peter Rácz,"Ovocná 150, Košice - Barca",Barca,Krehký tovar,XS,8x8x4,0.28,Áno,Štandard,Firemná faktura,,620.82,,2026-05-13,Čaká na doručenie
+981,KE00098117,Andrej Hudák,"Južná trieda 67/48, Košice - Juh",Juh,Balík,XS,8x8x4,0.29,Nie,Štandard,Dobierka,119.25,1202.14,Volať vopred,2026-05-11,Čaká na doručenie
+982,KE00098290,Barbora Horváth,"Myslavská 111, Košice - Myslava",Myslava,Oblečenie,L,44x35x26,2.77,Nie,Štandard,Dobierka,163.12,,,2026-05-16,Čaká na doručenie
+983,KE00098349,Michal Lukáč,"Komenského 74, Košice - Staré Mesto",Staré Mesto,Potraviny,XS,10x10x5,0.46,Nie,Ekonomický,Firemná faktura,,,Skladovať v chlade,2026-05-13,Čaká na doručenie
+984,KE00098424,Eva Kiss,"Meteorová 114/50, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Elektronika,M,29x24x19,1.28,Áno,Štandard,Platba vopred,,,Horná strana nahor,2026-05-14,Čaká na doručenie
+985,KE00098515,Rastislav Varga,"Prešovská 16/33, Košice - Sídlisko KVP",Sídlisko KVP,Potraviny,S,16x12x8,1.84,Nie,Štandard,Platba vopred,,,Doručiť osobne,2026-05-11,Čaká na doručenie
+986,KE00098667,Matúš Katona,"Krásnohorská 133, Košice - Krásna",Krásna,Balík,M,29x24x19,1.17,Nie,Overnight,Platba vopred,,94.48,Nevystavovať vlhku,2026-05-11,Čaká na doručenie
+987,KE00098712,Stanislav Fekete,"Jegorova 14, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,XS,11x11x5,0.43,Nie,Štandard,Dobierka,153.62,401.14,Doručiť osobne,2026-05-12,Čaká na doručenie
+988,KE00098835,Ondrej Balogh,"Údolná 90/34, Košice - Lorinčík",Lorinčík,Oblečenie,L,48x38x29,7.01,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+989,KE00098961,Monika Fodor,"Hájna 113/28, Košice - Poľov",Poľov,Náhradný diel,S,16x12x8,1.25,Nie,Štandard,Platba vopred,,,Nezalomovať,2026-05-18,Čaká na doručenie
+990,KE00099084,Jana Fábián,"Kamenná 26, Košice - Lorinčík",Lorinčík,Dokument,XL,64x48x40,4.83,Nie,Štandard,Platba vopred,,1313.66,Nezalomovať,2026-05-14,Čaká na doručenie
+991,KE00099187,Jakub Jakab,"Poludníková 142, Košice - Sever",Sever,Oblečenie,XXL,137x91x80,35.24,Nie,Štandard,Platba vopred,,518.49,,2026-05-13,Čaká na doručenie
+992,KE00099287,Martina Halász,"Opátska 77/39, Košice - Vyšné Opátske",Vyšné Opátske,Elektronika,XL,80x60x50,16.31,Áno,Expres,Dobierka,297.21,,,2026-05-17,Čaká na doručenie
+993,KE00099375,Zuzana Baláž,"Hornohorská 27, Košice - Krásna",Krásna,Balík,S,17x13x8,0.72,Nie,Štandard,Dobierka,416.3,1476.57,Skladovať v chlade,2026-05-13,Čaká na doručenie
+994,KE00099475,Lucia Kováč,"Viničná 146/40, Košice - Košická Nová Ves",Košická Nová Ves,Krehký tovar,XS,10x10x5,0.46,Áno,Overnight,Platba vopred,,,Môže zanechať u suseda,2026-05-18,Čaká na doručenie
+995,KE00099588,Andrea Tóth,"Slnečná 44, Košice - Myslava",Myslava,Oblečenie,S,21x15x10,1.39,Nie,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-15,Čaká na doručenie
+996,KE00099619,Barbora Papp,"Pustovnícka 130/50, Košice - Vyšné Opátske",Vyšné Opátske,Liek,S,23x17x11,0.35,Nie,Ekonomický,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+997,KE00099779,Vladimír Kováčik,"Potočná 67, Košice - Krásna",Krásna,Knihy,XS,9x9x4,0.45,Nie,Štandard,Dobierka,491.51,,Horná strana nahor,2026-05-13,Čaká na doručenie
+998,KE00099892,Martin Pintér,"Lomonosovova 7, Košice - Západ",Západ,Krehký tovar,L,46x37x27,10.33,Áno,Overnight,Platba vopred,,,,2026-05-14,Čaká na doručenie
+999,KE00099925,Barbora Fedor,"Idanská 131/44, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,S,20x15x10,0.96,Nie,Štandard,Firemná faktura,,715.74,Volať vopred,2026-05-18,Čaká na doručenie
+1000,KE00100055,Eva Fodor,"Kavečianska 149, Košice - Kavečany",Kavečany,Elektronika,XS,9x9x4,0.32,Áno,Štandard,Dobierka,447.41,,Krehké - opatrne,2026-05-15,Čaká na doručenie
+1001,KE00100188,Dušan Sándor,"Bukureštská 149/43, Košice - Dargovských hrdinov",Dargovských hrdinov,Nábytok,L,43x34x26,9.96,Nie,Ekonomický,Dobierka,306.86,537.01,,2026-05-12,Čaká na doručenie
+1002,KE00100245,Ladislav Hudák,"Lorinčícka 69, Košice - Lorinčík",Lorinčík,Knihy,XS,9x9x4,0.16,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+1003,KE00100377,Kristína Rácz,"Brestová 33, Košice - Krásna",Krásna,Náhradný diel,S,18x13x9,0.92,Áno,Štandard,Firemná faktura,,1975.17,Horná strana nahor,2026-05-12,Čaká na doručenie
+1004,KE00100462,Peter Gál,"Slnečná 148, Košice - Myslava",Myslava,Dokument,XS,8x8x4,0.13,Nie,Štandard,Firemná faktura,,,,2026-05-16,Čaká na doručenie
+1005,KE00100545,Andrea Kováč,"Jegorova 55, Košice - Dargovských hrdinov",Dargovských hrdinov,Oblečenie,M,26x21x17,1.62,Nie,Štandard,Platba vopred,,,Krehké - opatrne,2026-05-16,Čaká na doručenie
+1006,KE00100670,Natália Baláž,"Poľná 38, Košice - Košická Nová Ves",Košická Nová Ves,Elektronika,L,46x37x27,1.44,Áno,Expres,Dobierka,394.91,,Skladovať v chlade,2026-05-12,Čaká na doručenie
+1007,KE00100722,Pavel Király,"Perešská 133, Košice - Pereš",Pereš,Balík,XL,82x61x51,17.76,Nie,Štandard,Firemná faktura,,,,2026-05-11,Čaká na doručenie
+1008,KE00100866,Ivana Baláž,"Kavečianska 114, Košice - Kavečany",Kavečany,Potraviny,S,22x17x11,1.32,Nie,Expres,Platba vopred,,,,2026-05-12,Čaká na doručenie
+1009,KE00100971,Lukáš Molnár,"Viničná 98/45, Košice - Košická Nová Ves",Košická Nová Ves,Balík,M,31x25x20,4.91,Nie,Štandard,Platba vopred,,,,2026-05-18,Čaká na doručenie
+1010,KE00101092,Eva Lukáč,"Ovocná 98/3, Košice - Barca",Barca,Balík,XS,9x9x4,0.27,Nie,Štandard,Firemná faktura,,827.47,Skladovať v chlade,2026-05-15,Čaká na doručenie
+1011,KE00101142,Katarína Király,"Hronská 132/21, Košice - Nad jazerom",Nad jazerom,Balík,XS,9x9x4,0.1,Nie,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+1012,KE00101249,Ondrej Fedor,"Lomonosovova 76/25, Košice - Západ",Západ,Potraviny,XXL,137x91x80,34.54,Áno,Štandard,Firemná faktura,,,Nezalomovať,2026-05-16,Čaká na doručenie
+1013,KE00101357,Lucia Fekete,"Továrenská 94, Košice - Šaca",Šaca,Oblečenie,XL,92x69x57,18.42,Nie,Expres,Dobierka,255.68,1715.5,Skladovať v chlade,2026-05-18,Čaká na doručenie
+1014,KE00101496,Richard Rácz,"Záhradná 98/41, Košice - Kavečany",Kavečany,Dokument,L,46x37x28,5.05,Nie,Štandard,Platba vopred,,,Nezalomovať,2026-05-18,Čaká na doručenie
+1015,KE00101588,Miroslav Tkáč,"Údolná 48, Košice - Lorinčík",Lorinčík,Potraviny,S,23x17x11,1.64,Nie,Ekonomický,Firemná faktura,,,Doručiť osobne,2026-05-12,Čaká na doručenie
+1016,KE00101678,Richard Fedor,"Juhoslovanská 8, Košice - Sídlisko Ťahanovce",Sídlisko Ťahanovce,Náhradný diel,XXL,143x95x83,13.69,Nie,Overnight,Firemná faktura,,,Nezalomovať,2026-05-18,Čaká na doručenie
+1017,KE00101762,Veronika Török,"Mlynská 122/26, Košice - Staré Mesto",Staré Mesto,Dokument,L,59x47x35,2.79,Nie,Štandard,Firemná faktura,,278.47,,2026-05-18,Čaká na doručenie
+1018,KE00101859,Matúš Lukáč,"Čermeľská 109, Košice - Kavečany",Kavečany,Elektronika,S,16x12x8,1.15,Áno,Expres,Firemná faktura,,1181.6,Skladovať v chlade,2026-05-15,Čaká na doručenie
+1019,KE00101944,Dávid Kiss,"Krásnohorská 119/41, Košice - Krásna",Krásna,Krehký tovar,M,35x29x23,1.29,Áno,Štandard,Platba vopred,,1507.32,Volať vopred,2026-05-13,Čaká na doručenie
+1020,KE00102029,Boris Kiss,"Partizánska 110, Košice - Sídlisko KVP",Sídlisko KVP,Krehký tovar,M,31x26x21,2.02,Áno,Overnight,Platba vopred,,,Doručiť osobne,2026-05-17,Čaká na doručenie
+1021,KE00102131,Matúš Sipos,"Záhradná 138/48, Košice - Myslava",Myslava,Dokument,XXL,141x94x82,39.34,Nie,Štandard,Platba vopred,,1286.62,,2026-05-15,Čaká na doručenie
+1022,KE00102242,Alžbeta Fehér,"Nová 8, Košice - Pereš",Pereš,Liek,L,53x42x32,12.48,Áno,Štandard,Platba vopred,,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+1023,KE00102399,Stanislav Molnár,"Sácka 9, Košice - Šaca",Šaca,Oblečenie,XXL,122x81x71,43.19,Nie,Expres,Firemná faktura,,,Nezalomovať,2026-05-18,Čaká na doručenie
+1024,KE00102478,Lucia Olah,"Varšavská 18/26, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XL,73x54x45,27.44,Nie,Štandard,Dobierka,458.81,116.44,Volať vopred,2026-05-13,Čaká na doručenie
+1025,KE00102528,Helena Gál,"Kyjevská 93/31, Košice - Juh",Juh,Dokument,S,19x14x9,1.61,Nie,Štandard,Firemná faktura,,,,2026-05-15,Čaká na doručenie
+1026,KE00102699,Tereza Bogdán,"Potočná 129/17, Košice - Krásna",Krásna,Potraviny,L,56x44x33,8.95,Nie,Ekonomický,Platba vopred,,,Krehké - opatrne,2026-05-14,Čaká na doručenie
+1027,KE00102781,Lucia Hegedűs,"Dĺžková 27, Košice - Nad jazerom",Nad jazerom,Dokument,S,18x13x9,0.62,Nie,Overnight,Firemná faktura,,1810.07,Doručiť osobne,2026-05-14,Čaká na doručenie
+1028,KE00102816,Kristína Baláž,"Vietnamská 42/16, Košice - Sever",Sever,Náhradný diel,S,23x17x11,1.97,Nie,Štandard,Platba vopred,,,,2026-05-16,Čaká na doručenie
+1029,KE00102990,Martin Lukáč,"Moldavská 43, Košice - Krásna",Krásna,Balík,XS,8x8x4,0.17,Nie,Štandard,Firemná faktura,,69.3,Nevystavovať vlhku,2026-05-12,Čaká na doručenie
+1030,KE00103085,Alžbeta Nagy,"Potočná 99, Košice - Krásna",Krásna,Dokument,M,26x21x17,2.23,Nie,Štandard,Dobierka,278.75,1887.38,,2026-05-13,Čaká na doručenie
+1031,KE00103112,Patrik Rácz,"Opátska 124, Košice - Vyšné Opátske",Vyšné Opátske,Oblečenie,XL,84x63x52,8.26,Nie,Štandard,Platba vopred,,1548.46,Nezalomovať,2026-05-18,Čaká na doručenie
+1032,KE00103292,Radoslav Fekete,"Tichá 47, Košice - Myslava",Myslava,Dokument,XXL,124x82x72,27.5,Nie,Štandard,Dobierka,219.26,156.91,Skladovať v chlade,2026-05-12,Čaká na doručenie
+1033,KE00103311,Lukáš Török,"Poľná 77/46, Košice - Poľov",Poľov,Liek,S,23x17x11,0.2,Nie,Štandard,Firemná faktura,,,Nezalomovať,2026-05-11,Čaká na doručenie
+1034,KE00103481,Alžbeta Blaho,"Borová 50, Košice - Barca",Barca,Nábytok,M,30x25x20,2.2,Nie,Štandard,Firemná faktura,,872.56,,2026-05-18,Čaká na doručenie
+1035,KE00103558,Ondrej Katona,"Pustovnícka 31, Košice - Vyšné Opátske",Vyšné Opátske,Knihy,XXL,119x79x69,34.57,Nie,Štandard,Firemná faktura,,914.4,,2026-05-11,Čaká na doručenie
+1036,KE00103610,Lukáš Šimko,"Rybárska brána 61, Košice - Staré Mesto",Staré Mesto,Knihy,L,57x46x34,11.7,Nie,Štandard,Platba vopred,,166.53,Nezalomovať,2026-05-12,Čaká na doručenie
+1037,KE00103719,Jana Lukács,"Ovocná 19/24, Košice - Barca",Barca,Liek,M,35x29x23,1.03,Nie,Štandard,Platba vopred,,377.91,Volať vopred,2026-05-11,Čaká na doručenie
+1038,KE00103867,Lukáš Király,"Varšavská 142, Košice - Dargovských hrdinov",Dargovských hrdinov,Potraviny,XXL,124x82x72,47.6,Nie,Štandard,Firemná faktura,,,,2026-05-13,Čaká na doručenie
+1039,KE00103926,Vladimír Baláž,"Fábryho 94, Košice - Sídlisko KVP",Sídlisko KVP,Liek,XL,75x56x46,10.93,Áno,Overnight,Platba vopred,,,,2026-05-18,Čaká na doručenie
+1040,KE00104070,Matúš Tóth,"Javorová 1/2, Košice - Barca",Barca,Knihy,XS,10x10x5,0.19,Nie,Štandard,Platba vopred,,,Volať vopred,2026-05-16,Čaká na doručenie
+1041,KE00104121,Mária Vincze,"Tatranskápre 42/40, Košice - Západ",Západ,Náhradný diel,M,24x20x16,0.9,Nie,Expres,Platba vopred,,,,2026-05-14,Čaká na doručenie
+1042,KE00104210,Tereza Rácz,"Šírková 19, Košice - Nad jazerom",Nad jazerom,Knihy,M,24x20x16,0.8,Nie,Ekonomický,Platba vopred,,,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
+1043,KE00104335,Lukáš Molnár,"Bajkalská 28/43, Košice - Západ",Západ,Balík,S,19x14x9,1.55,Nie,Expres,Firemná faktura,,,,2026-05-18,Čaká na doručenie
+1044,KE00104499,Petra Szőke,"Partizánska 119, Košice - Sídlisko KVP",Sídlisko KVP,Liek,M,32x26x21,0.52,Nie,Štandard,Platba vopred,,,,2026-05-14,Čaká na doručenie
+1045,KE00104521,Anna Pintér,"Bačíkova 37/34, Košice - Košická Nová Ves",Košická Nová Ves,Potraviny,XL,81x61x51,8.76,Nie,Štandard,Dobierka,238.75,,Skladovať v chlade,2026-05-17,Čaká na doručenie
+1046,KE00104618,Ladislav Fehér,"Kláštorná 122, Košice - Vyšné Opátske",Vyšné Opátske,Dokument,XS,8x8x4,0.41,Nie,Štandard,Dobierka,388.47,,Môže zanechať u suseda,2026-05-12,Čaká na doručenie
+1047,KE00104779,Katarína Papp,"Záhradná 55/47, Košice - Myslava",Myslava,Elektronika,M,30x25x20,4.47,Áno,Štandard,Firemná faktura,,,Skladovať v chlade,2026-05-18,Čaká na doručenie
+1048,KE00104890,Barbora Máté,"Lorinčícka 110, Košice - Lorinčík",Lorinčík,Oblečenie,S,23x17x11,1.99,Nie,Ekonomický,Platba vopred,,1843.06,,2026-05-13,Čaká na doručenie
+1049,KE00104911,Jana Tóth,"Poľná 36/22, Košice - Košická Nová Ves",Košická Nová Ves,Balík,L,56x45x33,13.98,Nie,Štandard,Platba vopred,,1133.5,Skladovať v chlade,2026-05-13,Čaká na doručenie
+1050,KE00105074,Marek Varga,"Prešovská 86/21, Košice - Sídlisko KVP",Sídlisko KVP,Balík,L,52x42x31,5.33,Nie,Expres,Platba vopred,,,Nevystavovať vlhku,2026-05-17,Čaká na doručenie
